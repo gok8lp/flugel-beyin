@@ -1,0 +1,35 @@
+FLUGEL SERVER - RESOURCE PROTECTION AND LOGIN AUDIT
+Date: 2026-10-21
+Do not store application passwords or database secrets in this file.
+
+1. Resource protection
+- /usr/local/sbin/kaynak-gozcu.sh runs every 2 minutes via kaynak-gozcu.timer. It checks memory pressure, swap, memory PSI, VMs, GPU temperature, and recent OOM events; it notifies on new state changes.
+- /usr/local/sbin/ai-vm-koruma.sh runs every 10 seconds via ai-vm-koruma.timer. The libvirt qemu hook also calls it before a VM reserves host RAM.
+- When any VM starts or is running, these AI containers are stopped: open-webui, lingarr, immich_machine_learning, subgen, ollama. The flugel-akis container stays up so feed collection continues; translation and scoring wait until Ollama returns.
+- AI containers also stop if all VMs are off but MemAvailable falls below 2500 MB. They resume only when all VMs are off and MemAvailable is at least 4000 MB. Only containers stopped by the guard are restarted.
+- For GPU passthrough, the qemu hook also stops GPU containers plex, immich_server, beszel-agent, stirling-pdf, and convertx, then restarts them after VM shutdown.
+- Backups before changes: /usr/local/sbin/ai-vm-koruma.sh.before-ramguard, /etc/libvirt/hooks/qemu.before-ai-vm-pause, and qemu.before-gpu-container-audit.
+
+2. AdGuard memory setting and OOM history
+- On Oct 18, 19, and 21, AdGuard was killed after reaching its 768 MiB container limit. On Oct 21 the limit was raised to 1 GiB and querylog.size_memory was lowered from 1000 to 500 records.
+- Before-change copies: /srv/yedek/2026-10-21-codex/server-optimize/adguard/
+- AdGuard was recreated; UI returned HTTP 302 and the container was running without OOM.
+- On Oct 21 the W11 QEMU process was killed by global OOM. AI containers are now stopped by the libvirt hook before VM startup.
+- Official AdGuard configuration docs say querylog.size_memory is the number of query records kept in RAM before being flushed to disk.
+
+3. Disk and backup observations
+- Oct 21 check: / at 43%, /mnt/side at 55%, /mnt/sidemain at 87% (about 120 GB free).
+- Check /srv/rehber/06-YEDEK-DURUMU-CANLI.txt for current backups; files marked LIVE are regenerated overnight.
+- Docker log rotation is set to 10 MiB x 3 in daemon.json. About 69 GB of unused Docker images were retained because root disk space is sufficient and they provide rollback images.
+- Uptime Kuma was the only container without a memory cgroup limit; set to 512 MiB memory and 768 MiB combined memory+swap. Container recreated and health returned healthy.
+
+4. Application login audit (passwords are not stored in this file)
+- BookStack admin email is admin@admin.com; its database password hash still matches the installation default. Default info was sent directly to the user; change it at first login.
+- GLPI glpi, tech, normal, and post-only account hashes still match installation defaults. Change these passwords or disable unused accounts.
+- Beszel admin email is gokalpgoksuu@gmail.com, username users920689. Its password is stored as a one-way hash in data.db; no plaintext was found. No SMTP configuration was found in compose/env.
+- Dozzle and Cup have no login/auth configured. Host ports are bound to 127.0.0.1 and Tailscale Serve routes are tailnet-only: Dozzle :49443, Cup :50443.
+- Beszel :34443, BookStack :46443, and GLPI :47443 appeared tailnet-only in Tailscale Serve.
+
+5. Last check
+- Oct 21: all three VMs off; no unhealthy Docker containers; GPU 4 MiB/6 GiB and 0%; model unloaded from Ollama; about 5.2 GiB RAM available.
+- Verify AdGuard's 1 GiB limit over the next day. The libvirt protection has only been syntax/service checked; it has not yet been verified by actually starting and stopping W11-GPU.

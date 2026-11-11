@@ -1,0 +1,41 @@
+YEDEKLER — nerede, ne zaman, nasıl geri yüklenir (20 Ekim 2026)
+==============================================================
+
+1) UYGULAMA YEDEKLERİ  (her gece 03:30, uygulama-yedek.timer)
+   Ana kopya .... /mnt/side/backups/uygulamalar/<uygulama>/<uygulama>_<tarih>.tar.zst
+   Güncel kopya . /srv/backups/current/uygulamalar/<uygulama>.tar.zst          (sistem SSD'si)
+                  /mnt/sidemain/backups/current/uygulamalar/<uygulama>.tar.zst  (ana veri diski)
+   Sürüm ........ uygulama başına 3. Tüm arşivler 25 GiB'ı veya tek arşiv 3 GiB'ı aşarsa 2'ye düşer (otomatik).
+                  İlk tam çalışma: 34 uygulama, toplam 1,94 GiB → 3 sürüm geçerli.
+   İçerik ....... compose klasörü + ayar/durum klasörleri + Docker volume'ları.
+                  PostgreSQL: pg_dumpall dökümü (_flugel/pg-<container>.sql). SQLite: tutarlı .backup kopyası (orijinal yolunda).
+                  İçermez: film/dizi/kitap/fotoğraf/Nextcloud dosyaları (bkz. 3), model/önbellek/günlük klasörleri.
+   Geri yükleme . 1. sudo docker compose -f /opt/stacks/<uygulama>/compose.yaml stop
+                  2. sudo tar --zstd -xpf <arşiv> -C /
+                  3. PostgreSQL varsa: tar --zstd -xOf <arşiv> _flugel/pg-<c>.sql | sudo docker exec -i <c> psql -U <kullanıcı> -d postgres
+                  4. sudo docker compose -f ... up -d
+   Arşivi incele  tar --zstd -tvf <arşiv> | less    |    tar --zstd -xOf <arşiv> _flugel/BILGI.json
+   Elle çalıştır  sudo systemctl start uygulama-yedek.service   (günlük: /var/log/uygulama-yedek.log)
+
+2) SANAL MAKİNE GERİ DÖNÜŞ YEDEKLERİ  (her VM kapanışında + her gün 05:15 kontrol)
+   Yer .......... /mnt/side/backups/vm/w11/<tarih>/        (W11 ve W11-GPU ortak diski)
+                  /mnt/side/backups/vm/mullvad-ts/<tarih>/
+   Sürüm ........ disk seti başına en fazla 2. Yeni yedek: son yedek ≥ 3 günlük VE disk değişmişse.
+   İçerik ....... disk.qcow2 (zstd sıkıştırılmış), VM XML'leri, UEFI NVRAM, TPM durumu (BitLocker anahtarı TPM'de!), BILGI.txt
+   Mevcut ....... w11/2026-10-19_2316 (50 GB, VM kapalıyken alındı), mullvad-ts/2026-10-17_1123 (eski elle kopya)
+   Geri dönüş ... sudo vm geri-yukle w11 <tarih> --evet     (VM kapalı olmalı; mevcut disk .geri-yukleme-oncesi-* adıyla saklanır)
+   Güncel kopya . sidemain'e: disk %90 sınırını aşacağı için ŞU AN ATLANIYOR. SSD'ye: bilerek yazılmıyor (bkz. 09).
+
+3) KRİTİK VERİ AYNASI  (her gece 04:30, kritik-yedek.timer)
+   Yer .......... /mnt/side/backups/kritik/   (immich, nextcloud_data, "yedek amk", srv/appdata, stacks, etc, development)
+   Silinen/değişen dosyalar 30 gün: /mnt/side/backups/kritik/.silinenler/<tarih>/
+   YENİ: aynalamadan önce tutarlı veritabanı dökümleri alınır → /mnt/side/backups/kritik/veritabanlari/
+         (pg-immich_postgres.sql, pg-guac-db.sql, nextcloud-owncloud.db)
+
+4) WINDOWS VM ECLIPSE PROJELERİ  → /srv/project (bkz. 05-SANAL-MAKINELER.txt)
+
+5) TAŞIMA ÖNCESİ GÜVENLİK YEDEĞİ (20 Ekim 2026)
+   (20.10 akşam silindi) /mnt/side/backups/tasima-oncesi-2026-10-20/  ayarlar.tar.zst (6,5 GB), db/ (37 SQLite + Immich/Guacamole dökümü), inspect-*.json
+
+ÖNEMLİ SINIR: Tüm yedekler aynı sunucunun içinde. Hırsızlık, yangın, elektrik hasarı veya sunucunun ele geçirilmesine karşı
+sunucu DIŞINDA bir kopya yok (bkz. 09).

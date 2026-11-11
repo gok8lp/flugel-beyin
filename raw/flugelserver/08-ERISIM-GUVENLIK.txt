@@ -1,0 +1,27 @@
+ERİŞİM VE GÜVENLİK (20 Ekim 2026)
+================================
+
+Yollar
+  Tailscale (özel ağ)   https://flugelserver.tail42f1f4.ts.net:<port>   — yalnız tailnet cihazları. Port listesi: Akış paneli / 02.
+  Cloudflare (internet) *.gokalpgoksu.com — iki tünel:
+     ana tünel "homeserver": rotalar Cloudflare PANELİNDEN yönetilir (Zero Trust > Tunnels). /etc/cloudflared/config.yml
+        artık çalışan yapılandırmanın birebir kopyasıdır (belge). Yerel dosyayı değiştirmek rotaları DEĞİŞTİRMEZ.
+     akış tüneli: /etc/cloudflared/akis.yml (yerel yönetilir) — akis, status, masaustu, gokalpgoksu.com, indir, suwayomi
+  Tailscale Funnel (internet): 10000 → Immich, 443 → Jellyfin 8096 (önceden açılmış; Cloudflare Access korumaz)
+
+20 Ekim sıkılaştırmaları
+  File Browser   ÖNCE: root (0:0), tüm "/" yazılabilir, kimlik doğrulama YOK (noauth), 0.0.0.0:8085 → ağdaki herkes sunucunun
+                       tamamına root olarak yazabiliyordu.
+                 SONRA: flugel (1000) kullanıcısı; yalnız /mnt/side, /mnt/sidemain, /srv/dev; port yalnız 127.0.0.1 →
+                       erişim yalnız Tailscale: https://flugelserver.tail42f1f4.ts.net:26443
+                 Not: uygulamanın kendi girişi hâlâ kapalı (noauth); koruma Tailscale kimliğidir.
+  Samba          ÖNCE: guest ok + 0777, herkes parolasız yazabiliyordu; bozuk satırlı yapılandırma.
+                 SONRA: yalnız "flugel" (mevcut Samba parolası), misafir kapalı, 0664/0775, yalnız ev ağı + VM ağı + Tailscale,
+                       SMB2.1+, şifreleme tercihli. Paylaşımlar: side, sidemain, project. Parola: sudo smbpasswd flugel
+  Gluetun        Mullvad WireGuard özel anahtarı compose dosyasından /opt/stacks/gluetun/.env'e (600) taşındı.
+  Suwayomi       Sabit Docker IP (172.17.0.2) bağımlılığı kaldırıldı: gluetun 127.0.0.1:4567 yayınlar;
+                 Tailscale 45443 ve nginx (suwayomi.gokalpgoksu.com) buraya bakar.
+  Webtop/Kasm    tamamen kaldırıldı (container, imaj, veri, servis, rota, Telegram komutu, ana sayfa).
+
+Açık kalan riskler (bkz. 09): flugel için parolasız tam sudo, Docker soketi bağlı yönetim araçları, Cloudflare'de
+portainer/admin(Cockpit)/office alt alan adları, Funnel yolları, self-heal.sh içinde düz metin API anahtarları.

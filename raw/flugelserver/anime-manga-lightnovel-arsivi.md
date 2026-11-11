@@ -1,0 +1,327 @@
+# flugelserver Anime, Manga ve Light Novel Arşivi (/mnt/sidemain/media/books)
+
+Suwayomi, Komga, Kavita ve Kamiyomu tarafından kullanılan tüm manga ve hafif roman (Light Novel) klasör ağacı.
+
+## 1. Light Novel Arşivi (/mnt/sidemain/media/books/ln)
+- `.` (0 dosya, alt klasörler: books)
+- `books` (0 dosya, alt klasörler: English, Türkçe, Yuklenen)
+- `books/English` (0 dosya, alt klasörler: Alya, ReZero)
+- `books/English/Alya` (9 dosya, alt klasörler: )
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 03 [Yen Press][Kobo].epub`
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 04 [Yen Press][Kobo].epub`
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 04.5 [Yen Press][Kobo].epub`
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 05 [Yen Press][Kobo].epub`
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 05 [Yen Press][Kobo_LNWNCentral].pdf`
+- `books/English/ReZero` (0 dosya, alt klasörler: EX, Extras, IF Stories, Light Novel, Short Stories, Web Novel)
+- `books/Türkçe` (0 dosya, alt klasörler: ReZero)
+- `books/Türkçe/ReZero` (0 dosya, alt klasörler: Re Zero - EX, Re Zero - IF Rotaları, Re Zero - Light Novel (Eraxy), Re Zero - Light Novel (TimeOfMortally PDF), Re Zero - Light Novel 21-25 (PDF, çevirmen belirsiz), Re Zero - Web Novel, Re Zero - Web Novel (Epik Novel, tek dosya), Re Zero - Web Novel (TimeOfMortally PDF), Re Zero - Yan Hikâyeler)
+- `books/Yuklenen` (0 dosya, alt klasörler: )
+
+## 2. Manga Arşivi (/mnt/sidemain/media/books/manga)
+- `.` (27 dosya, alt klasörler: Alya, Alya_Sometimes_Hides_Her_Feelings_In_Russian, Bocchi_The_Rock_Anthology_Comic, Bocchi_the_Rock_Epigraph, Bocchi_the_Rock_Side_Story_Kikuri_Hiroi_s_Heavy-Drinking_Diary, Chainsaw_Man, Class_De_2_Banme_Ni_Kawaii_Onna_No_Ko_To_Tomodachi_Ni_Natta, Class_De_2_Banme_Ni_Kawaii_Onna_No_Ko_To_Tomodachi_Ni_Natta_1, Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta, Frieren_Beyond_Journey_s_End, Girls_Last_Tour, Girls_Last_Tour_Official_Anthology_Comic, Haimiya-senpai [Pixiv Edition], Haimiya-senpai wa Kowakute Kawaii, JoJo_s_Bizarre_Adventure_Part_8_JoJolion, Jujutsu_Kaisen, Kaguya-sama_Love_is_War_Colored_Edition_, Kusunoki-san_wa_Koukou_Debut_ni_Shippai_Shite_Iru, Laid-Back_Camp, Mayonaka_Heart_Tune)
+  - `Alya Sometimes Hides Her Feelings in Russian - Momoco's Art Book [Yen Press].epub`
+  - `Chainsaw_Man-3.0-15_2025-10-06_1209.avif`
+  - `Chi_no_Wadac-3.0-3_2025-05-09_1328.jpg`
+  - `Class_de_2-b-24.1-8_2026-01-12_1800.png`
+  - `Class_de_2-b-3.0-6_2025-12-30_0317.jpg`
+- `Alya` (2 dosya, alt klasörler: )
+  - `Alya Sometimes Hides Her Feelings in Russian - Momoco's Art Book [Yen Press].epub`
+  - `Alya Sometimes Hides Her Feelings in Russian - Volume 05 [Yen Press][Kobo].epub.temp`
+- `Alya_Sometimes_Hides_Her_Feelings_In_Russian` (78 dosya, alt klasörler: )
+  - `0_Chapter_0.cbz`
+  - `10_Chapter_10_Yuri_Sisters_I_do3.cbz`
+  - `11_Chapter_11_Yuri_Sisters_I_Do4.cbz`
+  - `12_Chapter_12_Yuri_Sisters_I_Do5.cbz`
+  - `13_Chapter_13_Yuri_Sisters_I_Do6.cbz`
+- `Bocchi_The_Rock_Anthology_Comic` (18 dosya, alt klasörler: )
+  - `0_chapter_1.cbz`
+  - `10_chapter_11.cbz`
+  - `11_chapter_11_5.cbz`
+  - `12_Chapter_12.cbz`
+  - `13_Chapter_13.cbz`
+- `Bocchi_the_Rock_Epigraph` (1 dosya, alt klasörler: )
+  - `Bocchi_the_Rock_Epigraph.cbz`
+- `Bocchi_the_Rock_Side_Story_Kikuri_Hiroi_s_Heavy-Drinking_Diary` (17 dosya, alt klasörler: )
+  - `0_Chapter_1.cbz`
+  - `10_Chapter_11.cbz`
+  - `11_Chapter_12.cbz`
+  - `12_Chapter_13.cbz`
+  - `13_Chapter_14.cbz`
+- `Chainsaw_Man` (228 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Class_De_2_Banme_Ni_Kawaii_Onna_No_Ko_To_Tomodachi_Ni_Natta` (56 dosya, alt klasörler: )
+  - `0_chapter_1.cbz`
+  - `10_chapter_11.cbz`
+  - `11_chapter_12.cbz`
+  - `12_chapter_13.cbz`
+  - `13_Chapter_14.cbz`
+- `Class_De_2_Banme_Ni_Kawaii_Onna_No_Ko_To_Tomodachi_Ni_Natta_1` (58 dosya, alt klasörler: )
+  - `0_chapter_1.cbz`
+  - `10_chapter_11.cbz`
+  - `11_chapter_12.cbz`
+  - `12_chapter_13.cbz`
+  - `13_Chapter_14.cbz`
+- `Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta` (60 dosya, alt klasörler: )
+  - `0_Kindred_Souls.cbz`
+  - `10_The_Visit.cbz`
+  - `11_Form_Of_Kindness.cbz`
+  - `12_The_Other_Side_of_the_Door.cbz`
+  - `13_Secret_Rendezvous.cbz`
+- `Frieren_Beyond_Journey_s_End` (147 dosya, alt klasörler: )
+  - `0_The_End_of_the_Adventure.cbz`
+  - `100_Breakthrough.cbz`
+  - `101_A_Draw.cbz`
+  - `102_Time_for_Retribution.cbz`
+  - `103_A_Visit_to_Her_Grave.cbz`
+- `Girls_Last_Tour` (49 dosya, alt klasörler: )
+  - `0_Chapter_1.cbz`
+  - `10_Chapter_11.cbz`
+  - `11_Chapter_12.cbz`
+  - `12_Chapter_13.cbz`
+  - `13_Chapter_14.cbz`
+- `Girls_Last_Tour_Official_Anthology_Comic` (58 dosya, alt klasörler: )
+  - `0_Chapter_1_Meals_Last_Issue_-_o.cbz`
+  - `10_Chapter_11_Factory_-_by_Kikia.cbz`
+  - `11_Chapter_12_Last_Recipe_-_Soto.cbz`
+  - `12_Chapter_13_Youth_By_Moyazou.cbz`
+  - `13_Vol_1_Chapter_14.cbz`
+- `Haimiya-senpai [Pixiv Edition]` (13 dosya, alt klasörler: )
+  - `Haimiya-senpai [Pixiv Edition] - Ch.1 - The Super Scary Senpai Who's Weirdly Kind Only to Me.cbz`
+  - `Haimiya-senpai [Pixiv Edition] - Ch.10 - My Senpai from Kansai is difficult.cbz`
+  - `Haimiya-senpai [Pixiv Edition] - Ch.11 - Haimiya Gallery.cbz`
+  - `Haimiya-senpai [Pixiv Edition] - Ch.12 - Pocky Day.cbz`
+  - `Haimiya-senpai [Pixiv Edition] - Ch.2 - The Super Scary Senpai Who's Weirdly Kind Only to Me 2.cbz`
+- `Haimiya-senpai wa Kowakute Kawaii` (74 dosya, alt klasörler: )
+  - `Haimiya-senpai wa Kowakute Kawaii - Ch.36.cbz`
+  - `Haimiya-senpai wa Kowakute Kawaii - Ch.37.cbz`
+  - `Haimiya-senpai wa Kowakute Kawaii - Ch.38.cbz`
+  - `Haimiya-senpai wa Kowakute Kawaii - Ch.39.cbz`
+  - `Haimiya-senpai wa Kowakute Kawaii - Ch.40.cbz`
+- `JoJo_s_Bizarre_Adventure_Part_8_JoJolion` (109 dosya, alt klasörler: )
+  - `0_1.cbz`
+  - `100_101.cbz`
+  - `101_102.cbz`
+  - `102_103.cbz`
+  - `103_104.cbz`
+- `Jujutsu_Kaisen` (275 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Kaguya-sama_Love_is_War_Colored_Edition_` (2 dosya, alt klasörler: )
+  - `cover.jpg`
+  - `index.json`
+- `Kusunoki-san_wa_Koukou_Debut_ni_Shippai_Shite_Iru` (52 dosya, alt klasörler: )
+  - `0_I_decided_to_never_interact_ws.cbz`
+  - `10_Like_this_aren_t_we_gonna_be_.cbz`
+  - `11_You_can_t_get_by_in_a_girl_ss.cbz`
+  - `12_With_a_communication_disordes.cbz`
+  - `13_She_is_the_trauma_that_stilly.cbz`
+- `Laid-Back_Camp` (1 dosya, alt klasörler: )
+  - `Laid-Back_Camp.cbz`
+- `Mayonaka_Heart_Tune` (67 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Neon_Genesis_Evangelion` (101 dosya, alt klasörler: )
+  - `0_Angel_Attack.cbz`
+  - `10_Third_Child_Wandering.cbz`
+  - `11_Fumbling_Towards_Kindness.cbz`
+  - `12_White_Scars.cbz`
+  - `13_The_Warped_Room.cbz`
+- `Oshi no Ko` (102 dosya, alt klasörler: )
+  - `Oshi no Ko - Vol.1 Ch.1 - Mother and Child.cbz`
+  - `Oshi no Ko - Vol.1 Ch.10 - Introduction.cbz`
+  - `Oshi no Ko - Vol.1 Ch.2 - Brother and Sister.cbz`
+  - `Oshi no Ko - Vol.1 Ch.3 - Babysitter.cbz`
+  - `Oshi no Ko - Vol.1 Ch.4 - How to Create a Smile.cbz`
+- `Oshi_no_Ko` (168 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Oshi_no_Ko_1` (175 dosya, alt klasörler: )
+  - `0_Chapter_1.cbz`
+  - `100_Chapter_99.cbz`
+  - `101_Chapter_100.cbz`
+  - `102_Chapter_101.cbz`
+  - `103_Chapter_102.cbz`
+- `Otonari_no_Tenshi-sama_ni_Itsunomanika_Dame_Ningen_ni_Sareteita_Ken` (103 dosya, alt klasörler: )
+  - `0.cbz`
+  - `1.cbz`
+  - `10.cbz`
+  - `100.cbz`
+  - `11.cbz`
+- `Otonari_no_Tenshi-sama_ni_Itsunomanika_Dame_Ningen_ni_Sareteita_Ken_after_the_rain` (6 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `cover.webp`
+- `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen` (12 dosya, alt klasörler: )
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen - Vol.1 Ch.1 - And God Said, Don't Get Ahead of Yourself.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen - Vol.1 Ch.2 - Returning the Lap Pillows Favor.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen - Vol.1 Ch.3 - The End of the Beginning.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen - Vol.1 Ch.4 - The Bitter Taste of Alcohol.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 1-shouOuto no Ichinichi-hen - Vol.1 Ch.5 - A Struggle Far Too Late.cbz`
+- `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero` (35 dosya, alt klasörler: )
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero - Vol.1 Ch.1 - A Peaceful Early Morning.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero - Vol.1 Ch.2 - The Orange Girl.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero - Vol.1 Ch.3 - Same Province.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero - Vol.1 Ch.4 - The Beggining Of The Royal Election.cbz`
+  - `ReZero kara Hajimeru Isekai Seikatsu Dai 3-shouTruth of Zero - Vol.1 Ch.5 - Declaration of Ideologies.cbz`
+- `Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Dai_1-shou_Outo_no_Ichinichi-hen` (13 dosya, alt klasörler: )
+  - `0_And_God_Said_Don_t_Get_Ahead__.cbz`
+  - `10_Starting_Life_in_Another_Word.cbz`
+  - `1_Returning_the_Lap_Pillows_Favr.cbz`
+  - `2_The_End_of_the_Beginning.cbz`
+  - `3_The_Bitter_Taste_of_Alcohol.cbz`
+- `Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Dai_3-shou_Truth_of_Zero` (36 dosya, alt klasörler: )
+  - `0_A_Peaceful_Early_Morning.cbz`
+  - `10_Extra.cbz`
+  - `11_Moving_Situation.cbz`
+  - `12_A_Disease_Known_As_Despair.cbz`
+  - `13_The_Surface_Of_Insanity.cbz`
+- `Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Dai_5-shou_Mizu_no_Miyako_to_Eiyuu_no_Uta` (20 dosya, alt klasörler: )
+  - `0_To_Priestella_The_Watergate_cy.cbz`
+  - `1.cbz`
+  - `10.cbz`
+  - `11_Wrath.cbz`
+  - `12.cbz`
+- `Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Hyouketsu_no_Kizuna` (6 dosya, alt klasörler: )
+  - `0_Part_1_2_3_4.cbz`
+  - `1.cbz`
+  - `2.cbz`
+  - `3.cbz`
+  - `cover.jpg`
+- `Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Koushiki_Anthology_Comic` (9 dosya, alt klasörler: )
+  - `0.cbz`
+  - `1.cbz`
+  - `2_Elsa-san_Lovestruck.cbz`
+  - `3_I_Prefer_To_Finish_A_Hot_Pot_e.cbz`
+  - `4_Insignia_Scramble_Chiki_Chikie.cbz`
+- `Re_zero_Kara_Hajimeru_Isekai_Seikatsu_Dai_4-Shou_Seiiki_To_Gouyoku_No_Majo` (73 dosya, alt klasörler: )
+  - `0_Chapter_1.cbz`
+  - `10_Chapter_8_5.cbz`
+  - `11_Chapter_9.cbz`
+  - `12_Chapter_10.cbz`
+  - `13_Chapter_11.cbz`
+- `Remote_Jugyou_ni_Nattara_Class_1_no_Bishoujo_to_Doukyo_suru_Koto_ni_Natta` (23 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Shinseiki_Evangelion` (99 dosya, alt klasörler: )
+  - `0_chapter_1.cbz`
+  - `10_chapter_11.cbz`
+  - `11_chapter_12.cbz`
+  - `12_chapter_13.cbz`
+  - `13_chapter_14.cbz`
+- `The_Angel_Next_Door_Spoils_Me_Rotten_After_The_Rain` (85 dosya, alt klasörler: )
+  - `0_Chapter_1.cbz`
+  - `10_Chapter_8.cbz`
+  - `11_Chapter_8_1.cbz`
+  - `12_Chapter_8_2.cbz`
+  - `13_Chapter_8_3.cbz`
+- `Tonari_no_Neko_to_Koi_Shirazu` (47 dosya, alt klasörler: )
+  - `0.cbz`
+  - `1.cbz`
+  - `10.cbz`
+  - `11.cbz`
+  - `12.cbz`
+- `Tune_In_To_The_Midnight_Heart` (105 dosya, alt klasörler: )
+  - `0_chapter_1.cbz`
+  - `100_Chapter_101.cbz`
+  - `101_Chapter_102.cbz`
+  - `102_Chapter_103.cbz`
+  - `10_chapter_11.cbz`
+- `Ushiro_no_Seki_no_Gal_ni_Sukarete_Shimatta_Mou_Ore_wa_Dame_Kamoshirenai_` (24 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Vagabond` (329 dosya, alt klasörler: )
+  - `Bölüm 001.cbz`
+  - `Bölüm 002.cbz`
+  - `Bölüm 003.cbz`
+  - `Bölüm 004.cbz`
+  - `Bölüm 005.cbz`
+- `Yotsuba_to_` (124 dosya, alt klasörler: )
+  - `0.cbz`
+  - `1.cbz`
+  - `10.cbz`
+  - `100.cbz`
+  - `101.cbz`
+- `_Oshi_no_Ko_` (103 dosya, alt klasörler: )
+  - `0_Mother_and_Child.cbz`
+  - `100_Volume_16_Extras.cbz`
+  - `10_Audition.cbz`
+  - `11_The_Third_Option.cbz`
+  - `12_Formalities.cbz`
+- `kamiyomu` (0 dosya, alt klasörler: Haimiya Is Scary Cute, Haimiya-senpai is Scary and Cute, Neon Genesis Evangelion, Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital, Re:ZERO -Starting Life in Another World-, The Frozen Bond, Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology)
+- `kamiyomu/Haimiya Is Scary Cute` (73 dosya, alt klasörler: )
+  - `Haimiya Is Scary Cute Ch.0001.cbz`
+  - `Haimiya Is Scary Cute Ch.0002.cbz`
+  - `Haimiya Is Scary Cute Ch.0003.cbz`
+  - `Haimiya Is Scary Cute Ch.0004.cbz`
+  - `Haimiya Is Scary Cute Ch.0005.cbz`
+- `kamiyomu/Haimiya-senpai is Scary and Cute` (12 dosya, alt klasörler: )
+  - `Haimiya-senpai is Scary and Cute Ch.0001.cbz`
+  - `Haimiya-senpai is Scary and Cute Ch.0002.cbz`
+  - `Haimiya-senpai is Scary and Cute Ch.0003.cbz`
+  - `Haimiya-senpai is Scary and Cute Ch.0004.cbz`
+  - `Haimiya-senpai is Scary and Cute Ch.0005.cbz`
+- `kamiyomu/Neon Genesis Evangelion` (84 dosya, alt klasörler: )
+  - `Neon Genesis Evangelion Ch.0000.cbz`
+  - `Neon Genesis Evangelion Ch.0001.cbz`
+  - `Neon Genesis Evangelion Ch.0002.cbz`
+  - `Neon Genesis Evangelion Ch.0003.cbz`
+  - `Neon Genesis Evangelion Ch.0004.cbz`
+- `kamiyomu/Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital` (13 dosya, alt klasörler: )
+  - `Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital Ch.0001.cbz`
+  - `Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital Ch.0002.cbz`
+  - `Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital Ch.0003.cbz`
+  - `Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital Ch.0004.cbz`
+  - `Re:ZERO - Starting Life in Another World - Chapter 1: A Day in the Capital Ch.0005.cbz`
+- `kamiyomu/Re:ZERO -Starting Life in Another World-, The Frozen Bond` (58 dosya, alt klasörler: )
+  - `Re:ZERO -Starting Life in Another World-, The Frozen Bond Ch.0001.cbz`
+  - `Re:ZERO -Starting Life in Another World-, The Frozen Bond Ch.0002.cbz`
+  - `Re:ZERO -Starting Life in Another World-, The Frozen Bond Ch.0003.cbz`
+  - `Re:ZERO -Starting Life in Another World-, The Frozen Bond Ch.0004.cbz`
+  - `Re:ZERO -Starting Life in Another World-, The Frozen Bond Ch.0005.cbz`
+- `kamiyomu/Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology` (5 dosya, alt klasörler: )
+  - `Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology Ch.0001.cbz`
+  - `Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology Ch.0002.cbz`
+  - `Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology Ch.0003.cbz`
+  - `Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology Ch.0006.cbz`
+  - `Re:Zero Kara Hajimeru Isekai Seikatsu Official Anthology Ch.0007.cbz`
+- `suwayomi` (0 dosya, alt klasörler: mangas, thumbnails)
+- `suwayomi/mangas` (0 dosya, alt klasörler: MANGA Plus by SHUEISHA (EN), MangaDex (EN), MangaFire (EN), MangaFox (EN), MangaHub (EN), MangaKatana (EN), MangaPill (EN), Mangahere (EN), Mangakakalot (EN), Manganato (EN), Mangatown (EN), Weeb Central (EN))
+- `suwayomi/mangas/MANGA Plus by SHUEISHA (EN)` (0 dosya, alt klasörler: Bleach)
+- `suwayomi/mangas/MangaDex (EN)` (0 dosya, alt klasörler: Akame ga KILL!, Baki-Dou, Bocchi the Rock!, Bocchi the Rock! Epigraph, Classroom of the Elite, Cosmic Princess Kaguya!, Fullmetal Alchemist, Haimiya Is Scary Cute, I Made Friends with the Second Prettiest Girl in My Class, Itoshi no Ko, Charlotte, JoJo's Bizarre Adventure Part 9 - The JOJOLands, JoJo's Bizarre Adventure_ Part 7 – Steel Ball Run, Lycoris Recoil Koushiki Comic Anthology_ React, Lycoris Recoil_ Official Comic Anthology - Reload, Lycoris Recoil_ Recollect, More than a Married Couple, but Not Lovers, My Senpai is Annoying, Studio Cabana, The Angel Next Door Spoils Me Rotten, The Drifting Classroom)
+- `suwayomi/mangas/MangaFire (EN)` (0 dosya, alt klasörler: 1-nen A-gumi no Monster, Akira, Death Note Tanpenshuu, Go-Toubun no Hanayome, Ijiranaide, Nagatoro-san, Innocent, Italia-jin no Onnanoko ga Isourou Suru Koto ni Natta, JoJo no Kimyou na Bouken Part 1_ Phantom Blood, JoJo no Kimyou na Bouken Part 2_ Sentou Chouryuu, JoJo no Kimyou na Bouken Part 3_ Stardust Crusaders, JoJo no Kimyou na Bouken Part 5_ Ougon no Kaze, JoJo no Kimyou na Bouken Part 6_ Stone Ocean, Karakai Jouzu no (Moto) Takagi-san, Kenki Renka_ Re_Zero kara Hajimeru Isekai Seikatsu † Shinmeitan, Komi Can't Communicate, Kuroko no Basket - Replace Plus, My Dress-Up Darling, NANA, Re_Zero Kara Hajimeru Isekai Seikatsu Official Anthology, Shikanoko Nokonoko Koshitantan)
+- `suwayomi/mangas/MangaFox (EN)` (0 dosya, alt klasörler: Blue Period, Chi no Wadachi, Girls' Last Tour Official Anthology Comic, Legend of the Northern Blade, Ogami Tsumiki to Kinichijou, Yamada-kun to Lv999 no Koi wo Suru)
+- `suwayomi/mangas/MangaHub (EN)` (0 dosya, alt klasörler: 5toubun no Hanayome, Azumanga Daioh, Kuroiwa Medaka ni Watashi no Kawaii ga Tsuujinai, Mob Psycho 100, Oyasumi Punpun, Re_zero Kara Hajimeru Isekai Seikatsu Dai 4-Shou - Seiiki To Gouyoku No Majo, Slam Dunk, The Promised Neverland, Tokidoki Bosotto Roshiago de Dereru Tonari no Alya-san (Novel))
+- `suwayomi/mangas/MangaKatana (EN)` (0 dosya, alt klasörler: Attack on Titan, Grand Blue, Is This Hero for Real_, Kaguya-sama wa Kokurasetai - Tensai-tachi no Renai Zunousen, Kimetsu no Yaiba, Kono Subarashii Sekai ni Shukufuku wo! Megumin Anthology Aka, Kusuriya no Hitorigoto, Oshi no Ko)
+- `suwayomi/mangas/MangaPill (EN)` (0 dosya, alt klasörler: Fetiple, Hochiya-san wa Amari Aru, Hunter x Hunter, JoJo's Bizarre Adventure Part 4_ Diamond Is Unbreakable, Kaguya-sama wo Kataritai, Shiotaiou no Satou-san ga Ore ni dake Amai, Watashi ni xx Shinasai!, Yuru Camp△)
+- `suwayomi/mangas/Mangahere (EN)` (0 dosya, alt klasörler: Bakemonogatari, Boku no Hero Academia, Death Note, Mayonaka Heart Tune, Re_Zero kara Hajimeru Isekai Seikatsu - Daigoshou - Mizu no Miyako to Eiyuu no Uta, Spy X Family, Tokidoki Bosotto Roshiago de Dereru Tonari no Alya-san, Tsumi to Kai)
+- `suwayomi/mangas/Mangakakalot (EN)` (0 dosya, alt klasörler: Billy Bat, Danjo No Yujou Wa Seiritsu Suru_ (Iya, Shinai!!), Delicious in Dungeon, Frieren_ Beyond Journey'S End, Hokkaido Gals Are Super Adorable!, Jojo No Kimyou Na Bouken - Jojorion, Nee, Mou Isso Tsukiacchau_ Osananajimi no Bishoujo ni Tanomarete, Camo Kareshi Hajimemashita, Rikei ga Koi ni Ochita no de Shoumei shitemita, She Is In Love With The Mob, The Fragrant Flower Blooms With Dignity)
+- `suwayomi/mangas/Manganato (EN)` (0 dosya, alt klasörler: Blame!, Garbage Time, Liar Game, One Punch Man, Redo Of Healer, Seishun Buta Yarou wa Siscon Idol no Yume o Minai, Toradora!, Villain with a Crush)
+- `suwayomi/mangas/Mangatown (EN)` (0 dosya, alt klasörler: Ansatsu Kyoushitsu, Beck, Claymore, DARLING in the FRANXX, Fire Punch, Horimiya, Kuroko no Basket, Yofukashi no uta)
+- `suwayomi/mangas/Weeb Central (EN)` (0 dosya, alt klasörler: 20th Century Boys, Adabana, Another, Bakuman, Before You Go Extinct, Berserk, Bleach, Bocchi the Rock! Side Story - Kikuri Hiroi’s Heavy-Drinking Diary, Cat-Eyed Boy, Chainsaw Man, Dandadan, Days with My Stepsister, Girls' Last Tour, Goodbye, Eri, I Want to Love You Till Your Dying Day, Ibitsu, Jujutsu Kaisen, Jumyou wo Kaitotte Moratta. Ichinen ni Tsuki, Ichimanen de, Kagurabachi, Konosuba_ An Explosion on This Wonderful World!)
+- `suwayomi/thumbnails` (45 dosya, alt klasörler: )
+  - `10488.jpg`
+  - `11044.jpg`
+  - `11465.jpg`
+  - `12011.jpg`
+  - `12495.jpg`

@@ -1,0 +1,31 @@
+FLUGEL SUNUCU REHBERİ  —  /srv/rehber
+=====================================
+Son elle düzenleme: 20 Ekim 2026. "CANLI" yazan dosyalar her gece 06:00'da sistemden yeniden üretilir.
+
+Bu klasörde ne var?
+  00-OKU-BENI.txt              bu dosya; en sık işler
+  01-HARITA.txt                sunucuda neyin nerede olduğu (klasör haritası)
+  02-UYGULAMALAR.txt           CANLI: her Docker uygulaması, portu, ayar/veri klasörleri
+  03-DISKLER-CANLI.txt         CANLI: disk doluluğu ve ana klasörlerin içeriği
+  04-YEDEKLER.txt              yedekler nerede, ne zaman alınır, nasıl geri yüklenir
+  05-SANAL-MAKINELER.txt       W11 / W11-GPU / mullvad-ts: açma, otomatik kapanma, yedek, GPU
+  06-YEDEK-DURUMU-CANLI.txt    CANLI: son yedeklerin listesi ve durumu
+  07-OTOMASYONLAR.txt          zamanlanmış görevler ve ne yaptıkları
+  08-ERISIM-GUVENLIK.txt       Tailscale / Cloudflare / Samba / dosya yöneticisi erişimi
+  09-BILINEN-SORUNLAR.txt      açık riskler ve önerilen sonraki adımlar
+  10-DEGISIKLIK-GECMISI.txt    20 Ekim 2026'da yapılanlar ve geri dönüş kayıtları
+  11-KAYNAK-KORUMA-2026-10-21.txt resource protection, AdGuard OOM fix, login audit
+
+En sık işler
+  Sunucuya bağlan ............ ssh flugelserver   (LAN 192.168.0.15, Tailscale 100.86.88.1)
+  Ana sayfa .................. https://gokalpgoksu.com
+  Uygulama merkezi (Akış) .... https://flugelserver.tail42f1f4.ts.net:8443/#/uygulamalar  (Tailscale açık olmalı)
+  VM durumu / aç / kapat ..... sudo vm durum   |   sudo vm ac W11-GPU   |   sudo vm kapat W11-GPU
+  VM yedekleri ............... sudo vm yedekler
+  Uygulama yedeğini şimdi al . sudo systemctl start uygulama-yedek.service
+  Bu rehberi tazele .......... sudo rehber-guncelle.py
+
+Altın kurallar
+  * W11 ve W11-GPU AYNI Windows diskini kullanır: ikisi aynı anda açılamaz (libvirt kancası engeller).
+  * Suwayomi ana manga uygulamasıdır: verisi /srv/appdata/suwayomi, mangalar /mnt/sidemain/media/books/manga/suwayomi.
+  * Kişisel veriyi silmeden önce yedeğini doğrulayın; bu sunucuda tek fiziksel kopya olan veri vardır (bkz. 09).

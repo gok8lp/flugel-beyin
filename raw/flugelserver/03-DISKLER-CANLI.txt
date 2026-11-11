@@ -1,0 +1,148 @@
+DISKLER VE KLASORLER — canli, otomatik uretildi: 11.11.2026 06:00
+==============================================================================
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv  437G  177G  242G  43% /
+/dev/mapper/sdc_crypt              458G  295G  140G  68% /mnt/side
+/dev/mapper/sdd_crypt              916G  764G  143G  85% /mnt/sidemain
+
+
+### /
+  DATA                                     klasor
+  arrapps                                  -> srv/appdata
+  bin                                      -> usr/bin
+  boot                                     klasor
+  cdrom                                    klasor
+  dev                                      klasor
+  etc                                      klasor
+  home                                     klasor
+  lib                                      -> usr/lib
+  lib64                                    -> usr/lib64
+  lost+found                               klasor
+  media                                    klasor
+  mnt                                      klasor
+  opt                                      klasor
+  portainer                                klasor
+  proc                                     klasor
+  root                                     klasor
+  run                                      klasor
+  sbin                                     -> usr/sbin
+  side                                     klasor
+  sidemain                                 klasor
+  snap                                     klasor
+  srv                                      klasor
+  swap.img                                 dosya
+  sys                                      klasor
+  tmp                                      klasor
+  usr                                      klasor
+  var                                      klasor
+
+### /srv
+  appdata                                  klasor
+  archive                                  klasor
+  backups                                  klasor
+  dev                                      klasor
+  geri-yukleme                             klasor
+  operations                               klasor
+  project                                  klasor
+  rehber                                   klasor
+  yedek                                    klasor
+
+### /opt/stacks
+  .git                                     klasor
+  .gitignore                               dosya
+  _bakim                                   klasor
+  _kaldirildi-20261104                     klasor
+  _kaldirildi-20261105                     klasor
+  adguard                                  klasor
+  backrest                                 klasor
+  bazarr                                   klasor
+  cup                                      klasor
+  dozzle                                   klasor
+  flaresolverr                             klasor
+  giris                                    klasor
+  gluetun                                  klasor
+  guacamole                                klasor
+  immich_server                            klasor
+  izleme                                   klasor
+  jackett                                  klasor
+  jellyfin                                 klasor
+  kavita                                   klasor
+  komga                                    klasor
+  nextcloud                                klasor
+  ollama                                   klasor
+  panel                                    klasor
+  plex                                     klasor
+  prowlarr                                 klasor
+  radarr                                   klasor
+  sonarr                                   klasor
+  subgen                                   klasor
+  suwayomi                                 klasor
+  transmission2                            klasor
+  tsidp                                    klasor
+  uptime-kuma                              klasor
+  yukle                                    klasor
+
+### /mnt/side
+  .beszel                                  klasor
+  arsiv                                    klasor
+  backups                                  klasor
+  downloads                                klasor
+  files                                    klasor
+  karantina                                klasor
+  lost+found                               klasor
+  projects                                 klasor
+  restic                                   klasor
+  watch                                    klasor
+  yedek                                    -> backups
+
+### /mnt/sidemain
+  .beszel                                  klasor
+  .kurtarma                                klasor
+  appdata                                  klasor
+  backups                                  klasor
+  books                                    -> media/books
+  cloud                                    klasor
+  immich                                   -> photos/immich
+  kamiyomu                                 -> appdata/kamiyomu
+  lost+found                               klasor
+  media                                    klasor
+  movies                                   -> media/movies
+  nextcloud_data                           -> cloud/nextcloud
+  personal                                 klasor
+  photos                                   klasor
+  series                                   -> media/series
+  yedek amk                                -> personal/yedek-amk
+
+### /srv/appdata
+  .ai-backup-20261026-154636               klasor
+  _kaldirildi-20261104                     klasor
+  _kaldirildi-20261105                     klasor
+  adguard                                  klasor
+  ai-library                               klasor
+  alertmanager                             klasor
+  backrest                                 klasor
+  bazarr                                   klasor
+  dozzle                                   klasor
+  filebrowser                              klasor
+  gmail-notifier                           klasor
+  grafana                                  klasor
+  guacamole                                klasor
+  immich                                   klasor
+  jackett                                  klasor
+  jellyfin                                 klasor
+  kavita                                   klasor
+  komga                                    klasor
+  nextcloud                                klasor
+  nextcloud-db                             klasor
+  ollama                                   klasor
+  plex                                     klasor
+  prometheus                               klasor
+  prowlarr                                 klasor
+  radarr                                   klasor
+  sonarr                                   klasor
+  suwayomi                                 klasor
+  transmission                             klasor
+  uptime-kuma                              klasor
+
+### /srv/archive/appdata
+

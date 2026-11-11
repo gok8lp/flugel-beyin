@@ -1,0 +1,669 @@
+{
+  "raw/build.md": {
+    "pages": [
+      "wiki/android-arac-zinciri-ve-mimari.md",
+      "wiki/yerel-arsiv-ve-senkronizasyon.md"
+    ],
+    "sha": "93addf9a7720955c"
+  },
+  "raw/devir.md": {
+    "pages": [
+      "wiki/android-arac-zinciri-ve-mimari.md",
+      "wiki/assignr-ve-ankarabasket-kaynaklari.md",
+      "wiki/duduk-genel-bakis.md",
+      "wiki/hakem-ucret-tarifesi-2026-2027.md",
+      "wiki/tbf-eslestirme-algoritmasi.md",
+      "wiki/yerel-arsiv-ve-senkronizasyon.md"
+    ],
+    "sha": "51d5e6413c587e3b"
+  },
+  "raw/flugelserver/00-OKU-BENI.txt": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "98502e76116355a9"
+  },
+  "raw/flugelserver/01-HARITA.txt": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "1cf0b677a25c4ebb"
+  },
+  "raw/flugelserver/02-UYGULAMALAR.txt": {
+    "pages": [
+      "wiki/flugelserver-docker-uygulamalari.md",
+      "wiki/flugelserver-uygulama-baglantilari.md"
+    ],
+    "sha": "b4e20f27008185bc"
+  },
+  "raw/flugelserver/03-DISKLER-CANLI.txt": {
+    "pages": [
+      "wiki/flugelserver-dizi-film-arsivi.md",
+      "wiki/flugelserver-dosya-agaci-ve-diskler.md"
+    ],
+    "sha": "dc6e52f8301e4746"
+  },
+  "raw/flugelserver/04-YEDEKLER.txt": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "2f604ae83bb7d077"
+  },
+  "raw/flugelserver/05-SANAL-MAKINELER.txt": {
+    "pages": [
+      "wiki/flugelserver-sanal-makineler-ve-gpu.md"
+    ],
+    "sha": "731a6f0d54aba741"
+  },
+  "raw/flugelserver/06-YEDEK-DURUMU-CANLI.txt": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "b41877215505bf38"
+  },
+  "raw/flugelserver/07-OTOMASYONLAR.txt": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "639d0d2f43d7f1a1"
+  },
+  "raw/flugelserver/08-ERISIM-GUVENLIK.txt": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "5527ea172628885c"
+  },
+  "raw/flugelserver/09-BILINEN-SORUNLAR.txt": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "22e073da7c0536fe"
+  },
+  "raw/flugelserver/10-DEGISIKLIK-GECMISI.txt": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "5ff86dfbb9ef2b1d"
+  },
+  "raw/flugelserver/11-KAYNAK-KORUMA-2026-10-21.txt": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "fb8bc2ca135d6140"
+  },
+  "raw/flugelserver/AI_STATE_INDEX.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "f7c6829d191451e7"
+  },
+  "raw/flugelserver/BASLA.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "0fc8faf124ddfb1d"
+  },
+  "raw/flugelserver/CLAUDE-DEVIR-2026-10-20.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "8024c119960dce7b"
+  },
+  "raw/flugelserver/FLUGEL-OZET.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md",
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "5434febaf658ddf4"
+  },
+  "raw/flugelserver/INFRASTRUCTURE.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "1599b2c003ebf47b"
+  },
+  "raw/flugelserver/IS-DURUMU.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "b38986a74a32156d"
+  },
+  "raw/flugelserver/KAYNAKLAR.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "fa4e3ed6392b8cc5"
+  },
+  "raw/flugelserver/KULLANIM.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "61ebaa0d34270df9"
+  },
+  "raw/flugelserver/KURUMSAL-SYSADMIN-DERSLERI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "ab832f6b8395c76b"
+  },
+  "raw/flugelserver/MIMARI-DONUSUM-RAPORU-2026-10-20.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "a0da6871fbd43364"
+  },
+  "raw/flugelserver/MIMARI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md",
+      "wiki/flugelserver-uygulama-baglantilari.md"
+    ],
+    "sha": "b86bce0872326775"
+  },
+  "raw/flugelserver/WINDOWS.md": {
+    "pages": [
+      "wiki/flugelserver-sanal-makineler-ve-gpu.md"
+    ],
+    "sha": "69bccd00019987de"
+  },
+  "raw/flugelserver/anime-manga-lightnovel-arsivi.md": {
+    "pages": [
+      "wiki/flugelserver-anime-manga-lightnovel-arsivi.md",
+      "wiki/koharia-reader-ve-manga-ekosistemi.md"
+    ],
+    "sha": "bd53d2ef27fce950"
+  },
+  "raw/flugelserver/dizi-film-arsivi.md": {
+    "pages": [
+      "wiki/flugelserver-dizi-film-arsivi.md"
+    ],
+    "sha": "753336152b2d18c7"
+  },
+  "raw/flugelserver/docker-compose-yamllar.md": {
+    "pages": [
+      "wiki/flugelserver-docker-uygulamalari.md"
+    ],
+    "sha": "9961ce9ccde8bc81"
+  },
+  "raw/flugelserver/durdurulan-konteynerler-20261104.txt": {
+    "pages": [
+      "wiki/flugelserver-docker-uygulamalari.md"
+    ],
+    "sha": "bfc89c393d2f546e"
+  },
+  "raw/flugelserver/flugelserver-folder-tree.md": {
+    "pages": [
+      "wiki/flugelserver-dosya-agaci-ve-diskler.md"
+    ],
+    "sha": "65112254df16a655"
+  },
+  "raw/flugelserver/savunma-2026-11-08.txt": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "b08eec2c64271d2b"
+  },
+  "raw/flugelserver/sunucu-commit-ve-zamanlayicilar.md": {
+    "pages": [
+      "wiki/sunucu-ve-github-commit-gecmisi.md"
+    ],
+    "sha": "48732f2afe326595"
+  },
+  "raw/github/00-github-envanteri.md": {
+    "pages": [
+      "wiki/github-repolar-katalogu.md",
+      "wiki/repo-basketbol-kurallar-calisma.md",
+      "wiki/repo-c-calismalarim.md",
+      "wiki/repo-c-password-generator.md",
+      "wiki/repo-c-process-tree.md",
+      "wiki/repo-c-text-shuffler.md",
+      "wiki/repo-chrome-orta-tik-kaydirma.md",
+      "wiki/repo-clipline-linux.md",
+      "wiki/repo-cybersecurity-lab.md",
+      "wiki/repo-desktop-server-toolkit.md",
+      "wiki/repo-duduk.md",
+      "wiki/repo-end4-pc.md",
+      "wiki/repo-gnome-island.md",
+      "wiki/repo-gnome-pip-konum.md",
+      "wiki/repo-gok8lp-github-io.md",
+      "wiki/repo-gok8lp.md",
+      "wiki/repo-headset-surround-linux.md",
+      "wiki/repo-home-server-android.md",
+      "wiki/repo-home-server.md",
+      "wiki/repo-java-producer-consumer.md",
+      "wiki/repo-k380s-ubuntu-fn.md",
+      "wiki/repo-koharia-reader.md",
+      "wiki/repo-ubuntu-tam-guncelle.md",
+      "wiki/repo-wix-anilist-portfolio.md"
+    ],
+    "sha": "1235039b4b2f32c7"
+  },
+  "raw/github/01-tum-repolar-commit-gecmisi.md": {
+    "pages": [
+      "wiki/github-repolar-katalogu.md",
+      "wiki/repo-basketbol-kurallar-calisma.md",
+      "wiki/repo-c-calismalarim.md",
+      "wiki/repo-c-password-generator.md",
+      "wiki/repo-c-process-tree.md",
+      "wiki/repo-c-text-shuffler.md",
+      "wiki/repo-chrome-orta-tik-kaydirma.md",
+      "wiki/repo-clipline-linux.md",
+      "wiki/repo-cybersecurity-lab.md",
+      "wiki/repo-desktop-server-toolkit.md",
+      "wiki/repo-duduk.md",
+      "wiki/repo-end4-pc.md",
+      "wiki/repo-gnome-island.md",
+      "wiki/repo-gnome-pip-konum.md",
+      "wiki/repo-gok8lp-github-io.md",
+      "wiki/repo-gok8lp.md",
+      "wiki/repo-headset-surround-linux.md",
+      "wiki/repo-home-server-android.md",
+      "wiki/repo-home-server.md",
+      "wiki/repo-java-producer-consumer.md",
+      "wiki/repo-k380s-ubuntu-fn.md",
+      "wiki/repo-koharia-reader.md",
+      "wiki/repo-ubuntu-tam-guncelle.md",
+      "wiki/repo-wix-anilist-portfolio.md",
+      "wiki/sunucu-ve-github-commit-gecmisi.md"
+    ],
+    "sha": "1aac602f60092d21"
+  },
+  "raw/github/basketbol-kurallar-calisma.md": {
+    "pages": [
+      "wiki/ee313-ve-hakemlik-calisma-plani.md",
+      "wiki/repo-basketbol-kurallar-calisma.md"
+    ],
+    "sha": "a8923732a7d49b80"
+  },
+  "raw/github/c-calismalarim.md": {
+    "pages": [
+      "wiki/repo-c-calismalarim.md"
+    ],
+    "sha": "870121d067a39c82"
+  },
+  "raw/github/c-password-generator.md": {
+    "pages": [
+      "wiki/repo-c-password-generator.md"
+    ],
+    "sha": "e9dea6232e23957c"
+  },
+  "raw/github/c-process-tree.md": {
+    "pages": [
+      "wiki/repo-c-process-tree.md"
+    ],
+    "sha": "15096fae9e676ad6"
+  },
+  "raw/github/c-text-shuffler.md": {
+    "pages": [
+      "wiki/repo-c-text-shuffler.md"
+    ],
+    "sha": "efd35ccb4333018d"
+  },
+  "raw/github/chrome-orta-tik-kaydirma.md": {
+    "pages": [
+      "wiki/repo-chrome-orta-tik-kaydirma.md"
+    ],
+    "sha": "cb18ef8d50a7fc18"
+  },
+  "raw/github/clipline-linux.md": {
+    "pages": [
+      "wiki/repo-clipline-linux.md"
+    ],
+    "sha": "ec19f18b01b004d3"
+  },
+  "raw/github/cybersecurity-lab.md": {
+    "pages": [
+      "wiki/repo-cybersecurity-lab.md"
+    ],
+    "sha": "d1bbfe03f05b244e"
+  },
+  "raw/github/desktop-server-toolkit.md": {
+    "pages": [
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md",
+      "wiki/repo-desktop-server-toolkit.md"
+    ],
+    "sha": "76aad7d7ff570652"
+  },
+  "raw/github/duduk.md": {
+    "pages": [
+      "wiki/repo-duduk.md"
+    ],
+    "sha": "beb58ab587d0f807"
+  },
+  "raw/github/end4-pC.md": {
+    "pages": [
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md",
+      "wiki/repo-end4-pc.md"
+    ],
+    "sha": "16d1c99ea40c0244"
+  },
+  "raw/github/gnome-island.md": {
+    "pages": [
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md",
+      "wiki/repo-gnome-island.md"
+    ],
+    "sha": "2fffffda230148a3"
+  },
+  "raw/github/gnome-pip-konum.md": {
+    "pages": [
+      "wiki/repo-gnome-pip-konum.md"
+    ],
+    "sha": "07c9de066144c9dc"
+  },
+  "raw/github/gok8lp.github.io.md": {
+    "pages": [
+      "wiki/repo-gok8lp-github-io.md"
+    ],
+    "sha": "8d2a33b2d31d512f"
+  },
+  "raw/github/gok8lp.md": {
+    "pages": [
+      "wiki/repo-gok8lp.md"
+    ],
+    "sha": "93f50d4eba6785a1"
+  },
+  "raw/github/headset-surround-linux.md": {
+    "pages": [
+      "wiki/repo-headset-surround-linux.md"
+    ],
+    "sha": "efbb7708294d0481"
+  },
+  "raw/github/home-server-android.md": {
+    "pages": [
+      "wiki/repo-home-server-android.md"
+    ],
+    "sha": "46c162d2ca26315c"
+  },
+  "raw/github/home-server.md": {
+    "pages": [
+      "wiki/repo-home-server.md"
+    ],
+    "sha": "a8eb2b436adf76e3"
+  },
+  "raw/github/java-producer-consumer.md": {
+    "pages": [
+      "wiki/repo-java-producer-consumer.md"
+    ],
+    "sha": "1ab8e8c8223e5f79"
+  },
+  "raw/github/k380s-ubuntu-fn.md": {
+    "pages": [
+      "wiki/repo-k380s-ubuntu-fn.md"
+    ],
+    "sha": "f68e7dfb759042ba"
+  },
+  "raw/github/koharia-reader.md": {
+    "pages": [
+      "wiki/koharia-reader-ve-manga-ekosistemi.md",
+      "wiki/repo-koharia-reader.md"
+    ],
+    "sha": "ccd44628bd4ee8ad"
+  },
+  "raw/github/ubuntu-tam-guncelle.md": {
+    "pages": [
+      "wiki/repo-ubuntu-tam-guncelle.md"
+    ],
+    "sha": "8e6d5b3a3aeb0e1a"
+  },
+  "raw/github/wix-anilist-portfolio.md": {
+    "pages": [
+      "wiki/repo-wix-anilist-portfolio.md"
+    ],
+    "sha": "c2522e13a3154123"
+  },
+  "raw/rektwild-ikinci-beyin-rehberi.md": {
+    "pages": [
+      "wiki/ikinci-beyin-sistemi.md"
+    ],
+    "sha": "c3fc6b051da5debc"
+  },
+  "raw/ucret-tarifesi-2026-2027.txt": {
+    "pages": [
+      "wiki/hakem-ucret-tarifesi-2026-2027.md"
+    ],
+    "sha": "fc66b531b41aa8e0"
+  },
+  "raw/veri-kaynaklari.md": {
+    "pages": [
+      "wiki/assignr-ve-ankarabasket-kaynaklari.md",
+      "wiki/duduk-genel-bakis.md",
+      "wiki/tbf-eslestirme-algoritmasi.md"
+    ],
+    "sha": "a9df5876f474ec27"
+  },
+  "raw/yerel-ai/00-BASLA.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "bba0b0e91cc6f393"
+  },
+  "raw/yerel-ai/01-PC-ANALIZI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "595dba427089da96"
+  },
+  "raw/yerel-ai/02-SUNUCU-ANALIZI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "e2b0c0f2e5f58ee1"
+  },
+  "raw/yerel-ai/03-BULGULAR-VE-YOL-HARITASI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "a148a5374a766246"
+  },
+  "raw/yerel-ai/04-MIMARI-VE-SERVIS-HARITASI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "fea20c8f631b7923"
+  },
+  "raw/yerel-ai/05-CALISMA-KILAVUZU.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "df837cb93400b619"
+  },
+  "raw/yerel-ai/06-KALICI-CALISMA-TALIMATI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "2d655dcbe674c56d"
+  },
+  "raw/yerel-ai/07-CLAUDE-ENTEGRASYON.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "1722560a3853e513"
+  },
+  "raw/yerel-ai/08-YETENEKLER-VE-KAYNAK-DERSLERI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "4132836d47b3efc3"
+  },
+  "raw/yerel-ai/09-MATTPOCOCK-TAM-KURULUM.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "28e8d6135f862e1d"
+  },
+  "raw/yerel-ai/AG-VE-ERISIM.md": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "567f9c55aba13da3"
+  },
+  "raw/yerel-ai/AI-KURALLARI.md": {
+    "pages": [
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md"
+    ],
+    "sha": "078adecfaf76b054"
+  },
+  "raw/yerel-ai/BAKIM.md": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "90731836fa2fa470"
+  },
+  "raw/yerel-ai/BASLA.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "21910f6b544e4331"
+  },
+  "raw/yerel-ai/CLAUDE-SUNUCU-DUZENLEME-GOREVI.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "cf31f7cf66aac434"
+  },
+  "raw/yerel-ai/CLAUDE.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "7fb24603acf78ad1"
+  },
+  "raw/yerel-ai/DEGISIKLIK-KAYDI.md": {
+    "pages": [
+      "wiki/sunucu-ve-github-commit-gecmisi.md"
+    ],
+    "sha": "89841cc6a1cc5185"
+  },
+  "raw/yerel-ai/DEPOLAMA.md": {
+    "pages": [
+      "wiki/flugelserver-dosya-agaci-ve-diskler.md"
+    ],
+    "sha": "61c0aa21b4242c4c"
+  },
+  "raw/yerel-ai/DERSLER-BILGI.md": {
+    "pages": [
+      "wiki/ee313-ve-hakemlik-calisma-plani.md"
+    ],
+    "sha": "4040036a9de98dea"
+  },
+  "raw/yerel-ai/GOREV.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "fdc76a7a680c084d"
+  },
+  "raw/yerel-ai/GUVENLIK.md": {
+    "pages": [
+      "wiki/flugelserver-ag-guvenlik-ve-tuneller.md"
+    ],
+    "sha": "4a9ef36d97221d0b"
+  },
+  "raw/yerel-ai/IS-KUYRUGU.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "3062154bbde63615"
+  },
+  "raw/yerel-ai/IZLEME-VE-BILDIRIM.md": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "d183bbf09972c075"
+  },
+  "raw/yerel-ai/KAYNAKLAR.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "c5a55071f73e2926"
+  },
+  "raw/yerel-ai/KORUMA-SISTEMI-PLANI.md": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "e2085c908178246c"
+  },
+  "raw/yerel-ai/KURULUM.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "4e35e6256cff3032"
+  },
+  "raw/yerel-ai/MIMARI.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "f87d1c3fbfa375bb"
+  },
+  "raw/yerel-ai/SANAL-MAKINELER.md": {
+    "pages": [
+      "wiki/flugelserver-sanal-makineler-ve-gpu.md"
+    ],
+    "sha": "d7373cd6ddf0e651"
+  },
+  "raw/yerel-ai/UZAK-MASAUSTU.md": {
+    "pages": [
+      "wiki/flugelserver-sanal-makineler-ve-gpu.md"
+    ],
+    "sha": "3edb8e631f47c75b"
+  },
+  "raw/yerel-ai/YEDEKLEME.md": {
+    "pages": [
+      "wiki/flugelserver-yedekleme-ve-otomasyon.md"
+    ],
+    "sha": "83bd5ec8fe41d482"
+  },
+  "raw/yerel-ai/YENI-KAPSAM.md": {
+    "pages": [
+      "wiki/flugel-akis-ve-botlar.md"
+    ],
+    "sha": "4a2295fedbef1492"
+  },
+  "raw/yerel-ai/ai-workspace-AGENTS.md": {
+    "pages": [
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md"
+    ],
+    "sha": "6e6ee9701c425d57"
+  },
+  "raw/yerel-ai/devir-hakem-vize-13kasim.md": {
+    "pages": [
+      "wiki/ee313-ve-hakemlik-calisma-plani.md"
+    ],
+    "sha": "56022f62b5e8a6d2"
+  },
+  "raw/yerel-ai/dosya-ekosistemi.md": {
+    "pages": [
+      "wiki/flugelserver-uygulama-baglantilari.md"
+    ],
+    "sha": "955e0c55551bb7d5"
+  },
+  "raw/yerel-ai/home-server-SUNUCU.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "3d453e64e3d66d3a"
+  },
+  "raw/yerel-ai/kisayol-karsilastirma.md": {
+    "pages": [
+      "wiki/flugelserver-uygulama-baglantilari.md",
+      "wiki/pc-masaustu-hyprland-ve-gnome-araclari.md"
+    ],
+    "sha": "6586d1f3ccde832e"
+  },
+  "raw/yerel-ai/manga-ad-denetimi-2026-11-04.md": {
+    "pages": [
+      "wiki/flugelserver-anime-manga-lightnovel-arsivi.md",
+      "wiki/koharia-reader-ve-manga-ekosistemi.md"
+    ],
+    "sha": "7a4bfa9619c7b455"
+  },
+  "raw/yerel-ai/sunucu-entegrasyon-fikirleri.md": {
+    "pages": [
+      "wiki/flugelserver-uygulama-baglantilari.md"
+    ],
+    "sha": "a056c8d9c6dcb431"
+  },
+  "raw/yerel-ai/vize-calisma-plani.md": {
+    "pages": [
+      "wiki/flugelserver-genel-mimari.md"
+    ],
+    "sha": "6133a3c9499c94aa"
+  }
+}

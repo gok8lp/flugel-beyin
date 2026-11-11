@@ -1,0 +1,122 @@
+## dinleyen portlar
+*:6767
+*:7878
+*:80
+*:8091
+*:8096
+*:8295
+*:8296
+*:8889
+*:8989
+*:9091
+*:9117
+*:9696
+0.0.0.0:139
+0.0.0.0:22
+0.0.0.0:2283
+0.0.0.0:3012
+0.0.0.0:32400
+0.0.0.0:445
+0.0.0.0:51413
+100.86.88.1%tailscale0:10000
+100.86.88.1%tailscale0:10443
+100.86.88.1%tailscale0:10444
+100.86.88.1%tailscale0:12443
+100.86.88.1%tailscale0:15443
+100.86.88.1%tailscale0:443
+100.86.88.1%tailscale0:44443
+100.86.88.1%tailscale0:60634
+100.86.88.1%tailscale0:9443
+100.86.88.1:5357
+100.86.88.1:9090
+172.16.0.2:5357
+172.17.0.1:5357
+172.18.0.1:5357
+172.19.0.1:5357
+172.20.0.1:5357
+172.21.0.1:5357
+172.22.0.1:5357
+172.23.0.1:5357
+172.24.0.1:5357
+172.25.0.1:5357
+172.30.0.1:5357
+172.31.0.1:5357
+192.168.0.15:5357
+192.168.0.15:8443
+192.168.112.1:5357
+192.168.122.1:53
+192.168.122.1:5357
+192.168.128.1:5357
+192.168.16.1:5357
+192.168.176.1:5357
+192.168.192.1:5357
+192.168.208.1:5357
+192.168.32.1:5357
+192.168.48.1:5357
+192.168.80.1:5357
+192.168.96.1:5357
+[::]:139
+[::]:22
+[::]:2283
+[::]:445
+[::]:51413
+[fd7a:115c:a1e0::8435:5801]%tailscale0:10000
+[fd7a:115c:a1e0::8435:5801]%tailscale0:10443
+[fd7a:115c:a1e0::8435:5801]%tailscale0:10444
+[fd7a:115c:a1e0::8435:5801]%tailscale0:12443
+[fd7a:115c:a1e0::8435:5801]%tailscale0:15443
+[fd7a:115c:a1e0::8435:5801]%tailscale0:39331
+[fd7a:115c:a1e0::8435:5801]%tailscale0:443
+[fd7a:115c:a1e0::8435:5801]%tailscale0:44443
+[fd7a:115c:a1e0::8435:5801]%tailscale0:9443
+[fe80::1052:55ff:fe31:6a19]%br-cdcd78cef8ed:5357
+[fe80::1085:18ff:fe72:5d81]%veth654e048:5357
+[fe80::28d2:8eff:fe4a:a593]%br-db8efc2113d3:5357
+[fe80::2d8:61ff:fe34:98cd]%enp37s0:5357
+[fe80::3006:adff:fe9e:8856]%br-58c2f7d69b46:5357
+[fe80::3482:3ff:fed8:ba5]%vethcfb7ec0:5357
+[fe80::38cb:98ff:fe36:3581]%veth6c30a32:5357
+[fe80::3ca8:20ff:fef9:b4a4]%br-cb20c3498dba:5357
+[fe80::4883:f0ff:fef9:f18e]%br-68197215244d:5357
+[fe80::48c9:88ff:fea2:76b]%vethbb7b965:5357
+[fe80::4cc:beff:fea4:ddcd]%vethc3b684d:5357
+[fe80::5071:fdff:fedb:2f54]%br-48ec3da539d9:5357
+[fe80::5448:e5ff:fe20:d55a]%br-6e2d960e7e7c:5357
+[fe80::5c8a:a7ff:fe16:520c]%br-c18ec4a005b4:5357
+[fe80::682e:f4ff:fe8f:966]%br-9f4f240609a4:5357
+[fe80::7880:f7ff:fe05:b61c]%br-267053ae90ea:5357
+[fe80::7c4c:91ff:fe37:3aaf]%veth5e2ea10:5357
+[fe80::8852:b4ff:fe94:b7b3]%br-363b1660168b:5357
+[fe80::9c05:3eff:fe6d:6a3d]%br-c47ac2eddc2c:5357
+[fe80::9cab:21ff:fec8:f799]%br-fda9f7023eec:5357
+[fe80::9cb2:e0ff:fea2:fc6a]%vethfa8bf1f:5357
+[fe80::a8ae:aeff:febb:1ea7]%br-868bcad0e6e1:5357
+[fe80::b184:a744:2c8:f594]%tailscale0:5357
+[fe80::bc01:1eff:fec6:3840]%br-6cffad3c88af:5357
+[fe80::c4dc:b4ff:fe21:4c93]%br-0f00a2974ad1:5357
+[fe80::d8df:8eff:fe22:21f7]%br-af035e0d990c:5357
+[fe80::d8ef:ddff:fe89:fb48]%veth0747c87:5357
+[fe80::e01f:76ff:febb:26d7]%vethe85d418:5357
+[fe80::e096:79ff:fed8:b062]%vethf3e1ff3:5357
+[fe80::e0ff:e0ff:fe04:8e58]%docker0:5357
+[fe80::e414:fbff:fee6:f5ad]%br-1a63f646ea21:5357
+[fe80::e41a:92ff:fe8b:1f19]%veth77fd696:5357
+[fe80::e4f7:3dff:fefb:3026]%veth0fd3e3b:5357
+[fe80::ec04:deff:fe2d:833]%vethbfabc46:5357
+[fe80::ec6e:c2ff:fe2f:7cfa]%vethf176a30:5357
+[fe80::ec73:5eff:fec7:ba50]%br-4319b397a068:5357
+[fe80::ec75:3bff:fe59:7f27]%br-67fd5210e7c6:5357
+[fe80::f044:b8ff:fe8a:eaf0]%vetha9b06d6:5357
+## sshd
+permitrootlogin no
+passwordauthentication no
+permitemptypasswords no
+## güncellenebilir paket
+16
+## sağlıksız/yeniden başlayan container
+## .env geniş izin
+## başarısız systemd
+● flugel-ilk-geri-yukleme-testi.service loaded    failed failed FLUGEL: ilk yedek bitince geri yukleme testi
+● webmin.service                        not-found failed failed webmin.service
+## disk>85%
+## docker.sock bağlı

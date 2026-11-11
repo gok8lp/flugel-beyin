@@ -1,0 +1,62 @@
+BİLİNEN SORUNLAR VE ÖNERİLEN SONRAKİ ADIMLAR (20 Ekim 2026)
+==========================================================
+Önem sırasıyla.
+
+1) SİSTEM SSD'Sİ DARBOĞAZ — TRIM KAPALI  (en önemli performans bulgusu)
+   Kingston A400 (DRAM'siz). LUKS katmanında discard yok → haftalık fstrim kök diski HİÇ kırpmıyor. 18.025 saat, 86 TB yazılmış,
+   ömrün %22'si gitmiş. Ölçüm (20.10 00:20): saniyede 7–9 MB yazarken gecikme 4,7 sn, %100 doluluk, I/O baskısı %94, yük 84.
+   Öneri (bakım penceresinde, konsol başında): /etc/crypttab'ta dm_crypt-0 satırına ",discard" ekle → sudo update-initramfs -u →
+   yeniden başlat → sudo fstrim -v /. TPM ile açılan kök diskte yapıldığı için uzaktan/gözetimsiz YAPILMADI.
+   Orta vade: VM diskini ve Docker'ı ayrı/iyi bir SSD'ye almak; swap'ı (4 GB, sık dolu) zram ile desteklemek.
+
+2) ÇÖZÜLDÜ (20.10 06:07) — /arrapps → /srv/appdata taşıması tamamlandı. 19 uygulama klasörü taşındı (mv, aynı disk),
+   compose'lar güncellendi, yalnız etkilenen container'lar tek tek yeniden oluşturuldu ve doğrulandı (Immich 14.866 öğe,
+   Nextcloud kurulu, *arr/Jellyfin/Plex/Ollama yanıt veriyor). Kullanılmayan 23 klasör → /srv/archive/appdata; jellyfin/ollama/plex
+   compose'ları → /opt/stacks/<uygulama>/compose.yaml. /arrapps artık /srv/appdata'ya bağ. Hiçbir container /arrapps bağlamıyor.
+   Eski boş klasör karantinası hâlâ duruyor (incelenip silinebilir): /srv/operations/changes/2026-10-20-fhs/yanlis-olusan-bos-klasorler
+   Kayıt ve betikler: /srv/operations/changes/2026-10-20-fhs-tamamla (islem.log, appdata-tasi.sh, grup-tasi.sh, onceki/).
+
+3) ÇÖZÜLDÜ (20.10 06:37) — /mnt/side ve /mnt/sidemain lower-kebab düzenine alındı (bkz. 01-HARITA). Hiçbir dosya silinmedi
+   (side dosya sayısı önce/sonra 307.913). Downloads → downloads/manual, Projects+projects+workspaces → projects/.
+   Kökteki 11 dosya ödev/ ile bayt bayt aynıydı → /mnt/side/archive/duplicates-2026-10-20 (incelenip silinebilir);
+   farklı/tek 6 JPG → files/images. Servislerin kullandığı eski yollarda bağ bırakıldı (side/yedek; sidemain/movies, series, books,
+   immich, nextcloud_data, kamiyomu, "yedek amk"). Kökteki 15 dosya ile downloads/manual içindekiler hâlâ ikişer kopya (679 MB).
+   Windows/SMB eşlemeleri eski alt klasörleri (Downloads, Projects, ödev, eclipse-workspace ...) gösteriyorsa yeni yola güncellenmeli.
+
+4) SUNUCU DIŞINDA YEDEK YOK — tüm kopyalar aynı kasada. Harici disk veya bulut (ör. restic + B2/Hetzner) önerilir.
+5) sidemain %88 dolu — VM yedeğinin güncel kopyası buraya sığmıyor. Medya temizliği veya yeni disk gerekli.
+6) side %77 dolu — 2. W11 yedeği (+50 GB) eklendiğinde ~%88 olur. İndirmeler aynı diskte.
+7) sidemain USB diski: 18 Ekim USB reset + I/O hatası; side: tarihsel CRC. Kablo/kutu/güç yolu kontrol edilmeli.
+8) Windows C: BitLocker — kurtarma anahtarının sunucu dışında saklandığını doğrulayın; TPM durumu VM yedeklerinde var.
+9) W11-GPU 18 Ekim'den beri donmuştu (VNC siyah) — kök neden bilinmiyor; QEMU konuk ajanı kurulması önerilir.
+10) Güvenlik: flugel için parolasız tam sudo (/etc/sudoers.d/90-bakim-gecici), self-heal.sh içinde düz metin WhatsApp/Gotify
+    anahtarları, Docker soketi bağlı Portainer/Dockge/Homepage/Kuma/Netdata, Cloudflare'de portainer/admin/office alt alan adları
+    (Access kuralı panelden doğrulanmalı), File Browser'ın kendi girişi kapalı (yalnız Tailscale ile korunuyor).
+11) Sunucudaki Eclipse (webtop) kaldırıldı; Oomph/Kate sorunu bu yüzden düzeltilmedi. Eclipse VM'de kullanılacak.
+12) Yeniden başlatma testi (tam sunucu reboot) gözetimsiz yapılmadı; container'ların hepsinde restart politikası var.
+
+13) Nextcloud SQLite + kritik-yedek çakışması: 20.10 06:38'deki elle kritik-yedek çalışmasında (DB dökümü + aynı USB diskte
+    rsync) Nextcloud'un 5 php-fpm işçisinin hepsi owncloud.db'de bekledi ve status.php ~5 dk yanıt vermedi; yedek bitince de
+    toparlamadı, container yeniden başlatılınca düzeldi. Gece 04:30'da da olabilir (günlükte 00:07'den beri "Slow session_start").
+    Öneri: Nextcloud'u SQLite'tan MariaDB/PostgreSQL'e taşımak; kritik-yedek sonrası status.php kontrolü.
+    20.10 18:35 hafifletme: /srv/appdata/nextcloud/php/www2.conf → pm.max_children=10, request_terminate_timeout=120s
+    (takılan işçi 2 dk sonra öldürülür, site tamamen düşmez). Kök çözüm (veritabanı taşıma) hâlâ yapılmadı.
+
+EK (20 Ekim sabah) — SİZİN ÇALIŞTIRMANIZ GEREKENLER (Claude'un izin denetimi bu işlemleri engelledi)
+  A) YAPILDI (20.10 18:32) — LUKS başlığına kalıcı allow-discards eklendi (başlık yedeği: /srv/archive/security/luks/ ve
+     /mnt/side/backups/guvenlik/). 18:38'de LVM tablosu yenilendi ve ilk fstrim 209,7 GiB kırptı;
+     artık haftalık fstrim.timer otomatik çalışır.
+  B) YAPILDI (20.10 18:34) — 9 betikteki WhatsApp/Gotify anahtarları /etc/sistem-bakim/bildirim.env (root, 600) dosyasına taşındı;
+     betikler bu dosyayı yükler. Anahtar içeren .bak kopyaları /srv/operations/changes/2026-10-20-anahtarlar (700) altına alındı.
+     YAPMANIZ GEREKEN: CallMeBot anahtarı ve telefon 20.10 akşamı bir Claude oturum kaydında göründü → CallMeBot'ta anahtarı yenileyin
+     ve yalnız bildirim.env'i güncelleyin. /opt/scripts/gmail-notifier.py'de de eski CallMeBot anahtarı duruyor (kullanılmıyor).
+  C) flugel parolasız sudo (/etc/sistem-bakim değil, /etc/sudoers.d/90-bakim-gecici): uzaktan kilitlenme riski nedeniyle
+     dokunulmadı. flugel parolanızı bildiğinizden emin olduktan sonra NOPASSWD'yi yalnız gereken komutlarla sınırlayın.
+  D) Sunucu dışı yedek: bir hedef seçilmeli (harici USB disk, Backblaze B2, Hetzner Storage Box vb.); hesap/anahtar sizden gelmeli.
+  E) Windows VM içinde: \\192.168.122.1\project\windows\eclipse-esitle-kur.ps1 (bir kez) ve QEMU konuk ajanı (virtio-win ISO).
+  F) BEKLİYOR — *arr çıkış trafiği Mullvad'dan (kullanıcı seçti): gluetun'da şifreli HTTP proxy açıp Sonarr/Radarr/Bazarr/Jackett/
+     Lingarr'ı ona yönlendirmek. Hazır betik: /tmp/vpn-proxy.sh değil → /srv/operations/changes/2026-10-20-vpn-proxy (henüz çalışmadı).
+     Claude'un otomatik modu gluetun'u yeniden oluşturmayı engelledi (Transmission/Prowlarr/Suwayomi kısa süre kesilir).
+  G) BEKLİYOR — BT entegrasyonları (kullanıcı seçti): Authelia tek giriş (2FA yok), Vaultwarden şifre kasası, Prometheus+Grafana
+     izleme ve Telegram uyarısı, Diun güncelleme bildirimi + otomatik güvenlik güncellemeleri.
+

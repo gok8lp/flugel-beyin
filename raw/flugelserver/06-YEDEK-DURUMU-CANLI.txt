@@ -1,0 +1,56 @@
+YEDEK DURUMU — canli, otomatik uretildi: 11.11.2026 06:00
+==============================================================================
+Son uygulama yedegi: 2026-11-04 03:41:00   toplam: 8.41 GiB   kural: 3 (toplam > 25 GiB veya arsiv > 3 GiB ise 2)
+Hatalar: yok
+Guncel kopya notlari: /srv/backups/current/uygulamalar/jackett.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/giris.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/ollama.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/nextcloud.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/convertx.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/sonarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/pairdrop.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/tsidp.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/adguard.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/flaresolverr.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/suwayomi.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/stirling-pdf.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/immich.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/prowlarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/subgen.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/portainer.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/openbooks.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/it-merkezi.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/jellyfin.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/gluetun.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/it-tools.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/transmission.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/plex.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/dockge.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/guacamole.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/kavita.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/panel.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/bazarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/dozzle.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/lingarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/beszel.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/komga.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/filebrowser.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/cup.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/uptime-kuma.tar.zst: ATLANDI (disk %90 sinirini asardi); /srv/backups/current/uygulamalar/radarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/jackett.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/giris.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/ollama.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/nextcloud.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/convertx.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/sonarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/pairdrop.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/tsidp.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/adguard.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/flaresolverr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/suwayomi.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/stirling-pdf.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/immich.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/prowlarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/subgen.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/portainer.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/openbooks.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/it-merkezi.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/jellyfin.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/gluetun.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/it-tools.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/transmission.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/plex.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/dockge.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/guacamole.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/kavita.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/panel.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/bazarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/dozzle.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/lingarr.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/beszel.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/komga.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/filebrowser.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/cup.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/uptime-kuma.tar.zst: ATLANDI (disk %90 sinirini asardi); /mnt/sidemain/backups/current/uygulamalar/radarr.tar.zst: ATLANDI (disk %90 sinirini asardi)
+
+Uygulama basina mevcut surumler (/mnt/side/backups/uygulamalar/<uygulama>/):
+  adguard                2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  bazarr                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  beszel                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  convertx               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  cup                    2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  dockge                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  dozzle                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  filebrowser            2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  flaresolverr           2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  giris                  2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  gluetun                2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  guacamole              2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  immich                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  it-merkezi             2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  it-tools               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  jackett                2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  jellyfin               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  kavita                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  komga                  2026-11-03_0335, 2026-11-04_0334
+  lingarr                2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  nextcloud              2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  ollama                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  openbooks              2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  pairdrop               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  panel                  2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  plex                   2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  portainer              2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  prowlarr               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  radarr                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  sonarr                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  stirling-pdf           2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  subgen                 2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  suwayomi               2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  transmission           2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  tsidp                  2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+  uptime-kuma            2026-11-02_0334, 2026-11-03_0335, 2026-11-04_0334
+
+VM geri donus yedekleri (/mnt/side/backups/vm/<disk-seti>/):
+[w11] (W11 W11-GPU)  -> /mnt/side/backups/vm/w11
+[mullvad-ts] (mullvad-ts)  -> /mnt/side/backups/vm/mullvad-ts
+
+Kritik veri aynasi (/mnt/side/backups/kritik): son calisma 2026-11-04 04:42:28
+
+Zamanlayicilar:
+NEXT                        LEFT LAST                              PASSED UNIT              ACTIVATES
+Thu 2026-11-12 02:30:00 UTC  20h Wed 2026-11-11 02:30:00 UTC 3h 30min ago proje-surum.timer proje-surum.service
+
+1 timers listed.
+

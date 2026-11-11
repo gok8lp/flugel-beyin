@@ -1,0 +1,131 @@
+UYGULAMALAR (Docker) — canli liste, otomatik uretildi: 11.11.2026 06:00
+==============================================================================
+Her blok bir compose yigini. 'Ayar/veri' = container'in diske yazdigi yerler (bind mount).
+Baslat/durdur:  cd <compose klasoru> && sudo docker compose up -d   |   sudo docker compose stop
+Gunluk:         sudo docker logs --tail 100 <container>
+
+### /opt/stacks/bazarr
+  - bazarr   [running]   imaj: lscr.io/linuxserver/bazarr:latest
+      portlar: 127.0.0.1:16767->6767/tcp
+      yazilabilir: /mnt/sidemain/media/series  ->  /tv
+      yazilabilir: /srv/appdata/bazarr  ->  /config
+      yazilabilir: /mnt/sidemain/media/movies  ->  /movies
+
+### /opt/stacks/flaresolverr
+  - flaresolverr   [running]   imaj: ghcr.io/flaresolverr/flaresolverr:latest
+      portlar: ag: container:be978ccf92e5f90389f9db86e2c6eac4da26e87d72e8211c0f8959b816d1da80 (VPN uzerinden)
+      yazilabilir: /var/lib/docker/volumes/9b6ad27b640f1fe77194f920bf6591ef4684959948fd847536013b03ce9883c2/_data  ->  /config
+
+### /opt/stacks/giris
+  - giris   [running]   imaj: nginx:1.27-alpine
+      portlar: ag: host
+      salt-okunur: /opt/stacks/giris/nginx.conf  ->  /etc/nginx/conf.d/default.conf
+      salt-okunur: /opt/stacks/giris/htpasswd  ->  /etc/nginx/htpasswd
+      salt-okunur: /opt/stacks/giris/html  ->  /usr/share/nginx/html
+
+### /opt/stacks/gluetun
+  - gluetun   [running (unhealthy)]   imaj: qmcgaw/gluetun
+      portlar: 127.0.0.1:14567->4567/tcp, 0.0.0.0:51413->51413/tcp, 0.0.0.0:51413->51413/udp, 127.0.0.1:18889->8888/tcp, 127.0.0.1:19091->9091/tcp, 127.0.0.1:19696->9696/tcp
+      salt-okunur: /opt/stacks/gluetun/auth  ->  /gluetun/auth
+
+### /opt/stacks/immich_server
+  - immich_server   [running (healthy)]   imaj: ghcr.io/immich-app/immich-server:release
+      portlar: 0.0.0.0:2283->2283/tcp
+      yazilabilir: /var/lib/docker/volumes/107b85123b2a39cd1f70d790883c617300b312c3f0b51850aec2d79e170a4148/_data  ->  /data
+      yazilabilir: /mnt/sidemain/photos/immich  ->  /usr/src/app/upload
+  - immich_machine_learning   [running (healthy)]   imaj: ghcr.io/immich-app/immich-machine-learning:release-cuda
+      yazilabilir: /srv/appdata/immich/model-cache  ->  /cache
+  - immich_postgres   [running (healthy)]   imaj: ghcr.io/immich-app/postgres:14-vectorchord0.3.0-pgvectors0.2.0
+      yazilabilir: /srv/appdata/immich/postgres  ->  /var/lib/postgresql/data
+  - immich_redis   [running]   imaj: docker.io/redis:6.2-alpine
+      yazilabilir: /var/lib/docker/volumes/67bb95db7f87251b34f14dc3fdeb7c18ef380dc95c14a048a9d221a9ea7d16a7/_data  ->  /data
+
+### /opt/stacks/jackett
+  - jackett   [running]   imaj: lscr.io/linuxserver/jackett:latest
+      portlar: 127.0.0.1:19117->9117/tcp
+      yazilabilir: /srv/appdata/jackett  ->  /config
+
+### /opt/stacks/jellyfin
+  - jellyfin   [running (healthy)]   imaj: lscr.io/linuxserver/jellyfin:latest
+      portlar: 127.0.0.1:18096->8096/tcp
+      yazilabilir: /mnt/sidemain/media/movies  ->  /movies
+      yazilabilir: /dev/shm  ->  /transcode
+      yazilabilir: /srv/appdata/jellyfin  ->  /config
+      yazilabilir: /mnt/sidemain/media/series  ->  /tv
+
+### /opt/stacks/kavita
+  - kavita   [running]   imaj: lscr.io/linuxserver/kavita:latest
+      portlar: 127.0.0.1:18295->5000/tcp
+      yazilabilir: /srv/appdata/kavita  ->  /config
+      yazilabilir: /mnt/sidemain/media/books  ->  /data/books
+
+### /opt/stacks/komga
+  - komga   [running]   imaj: gotson/komga:latest
+      portlar: 127.0.0.1:18296->25600/tcp
+      yazilabilir: /srv/appdata/komga  ->  /config
+      yazilabilir: /mnt/sidemain/media/books  ->  /data
+
+### /opt/stacks/nextcloud
+  - nextcloud   [running (healthy)]   imaj: lscr.io/linuxserver/nextcloud:latest
+      portlar: 127.0.0.1:8443->443/tcp, 192.168.0.15:8443->443/tcp
+      yazilabilir: /srv/appdata/nextcloud  ->  /config
+      yazilabilir: /mnt/sidemain/cloud/nextcloud  ->  /data
+      salt-okunur: /mnt/sidemain/photos/immich/library/admin  ->  /immich-originals/Arsiv
+      salt-okunur: /mnt/sidemain/photos/immich/upload/27085ce0-8895-482e-8d17-b9aa827997c5  ->  /immich-originals/Yeni Yuklenenler
+  - nextcloud-db   [running (healthy)]   imaj: postgres:17-alpine
+      yazilabilir: /srv/appdata/nextcloud-db  ->  /var/lib/postgresql/data
+
+### /opt/stacks/panel
+  - flugel-akis   [running (healthy)]   imaj: python:3.13-alpine
+      portlar: ag: host
+      salt-okunur: /opt/stacks/panel/akis/akis.py  ->  /app/akis.py
+      salt-okunur: /opt/stacks/panel/akis/web  ->  /app/web
+      yazilabilir: /opt/stacks/panel/akis/veri  ->  /veri
+      salt-okunur: /var/lib/basket-bot  ->  /basket
+      salt-okunur: /var/lib/flugel/durum  ->  /durum
+      salt-okunur: /opt/stacks/panel/homepage/services.yaml  ->  /homepage/services.yaml
+
+### /opt/stacks/plex
+  - plex   [running (healthy)]   imaj: lscr.io/linuxserver/plex:latest
+      portlar: ag: host
+      yazilabilir: /srv/appdata/plex  ->  /config
+      yazilabilir: /mnt/sidemain/media/movies  ->  /movies
+      yazilabilir: /dev/shm  ->  /transcode
+      yazilabilir: /mnt/sidemain/media/series  ->  /tv
+
+### /opt/stacks/prowlarr
+  - prowlarr   [running]   imaj: lscr.io/linuxserver/prowlarr:latest
+      portlar: ag: container:be978ccf92e5f90389f9db86e2c6eac4da26e87d72e8211c0f8959b816d1da80 (VPN uzerinden)
+      yazilabilir: /srv/appdata/prowlarr  ->  /config
+
+### /opt/stacks/radarr
+  - radarr   [running]   imaj: lscr.io/linuxserver/radarr:latest
+      portlar: 127.0.0.1:17878->7878/tcp
+      yazilabilir: /mnt/sidemain/media/movies  ->  /movies
+      yazilabilir: /mnt/side/downloads  ->  /downloads
+      yazilabilir: /srv/appdata/radarr  ->  /config
+
+### /opt/stacks/sonarr
+  - sonarr   [running]   imaj: lscr.io/linuxserver/sonarr:latest
+      portlar: 127.0.0.1:18989->8989/tcp
+      yazilabilir: /srv/appdata/sonarr  ->  /config
+      yazilabilir: /mnt/sidemain/media/series  ->  /tv
+      yazilabilir: /mnt/side/downloads  ->  /downloads
+
+### /opt/stacks/suwayomi
+  - suwayomi   [running]   imaj: ghcr.io/suwayomi/suwayomi-server:stable
+      portlar: ag: container:be978ccf92e5f90389f9db86e2c6eac4da26e87d72e8211c0f8959b816d1da80 (VPN uzerinden)
+      yazilabilir: /srv/appdata/suwayomi  ->  /home/suwayomi/.local/share/Tachidesk
+      yazilabilir: /mnt/sidemain/media/books/manga/suwayomi  ->  /home/suwayomi/.local/share/Tachidesk/downloads
+
+### /opt/stacks/transmission2
+  - transmission   [running]   imaj: lscr.io/linuxserver/transmission:latest
+      portlar: ag: container:be978ccf92e5f90389f9db86e2c6eac4da26e87d72e8211c0f8959b816d1da80 (VPN uzerinden)
+      yazilabilir: /srv/appdata/transmission  ->  /config
+      yazilabilir: /mnt/side/downloads  ->  /downloads
+      yazilabilir: /mnt/side/watch  ->  /watch
+
+### /opt/stacks/tsidp
+  - tsidp   [running]   imaj: ghcr.io/tailscale/tsidp:latest
+      yazilabilir: /opt/stacks/tsidp/data  ->  /data
+

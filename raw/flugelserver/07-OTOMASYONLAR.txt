@@ -1,0 +1,27 @@
+OTOMASYONLAR — zamanlanmış görevler (20 Ekim 2026)
+=================================================
+Liste: systemctl list-timers --all      Günlük: journalctl -u <ad>.service
+
+YENİ (20 Ekim)
+  vm-bosta-kapat.timer      her dakika   kullanılmayan VM'yi 10 dk sonra temiz kapatır (05-SANAL-MAKINELER.txt)
+  vm-yedek-gunluk.timer     05:15        kapalı VM'lerin yedek gerekip gerekmediğini kontrol eder
+  vm-kapandi@<VM>.service   VM kapanınca yedek + Eclipse proje eşitleme (libvirt kancası başlatır)
+  uygulama-yedek.timer      03:30        34 uygulamanın arşivi, 3/2 sürüm, her diske güncel kopya
+  proje-surum.timer         02:30        /srv/project sürümleri
+  rehber-guncelle.timer     06:00        bu rehberin CANLI dosyalarını yeniler
+
+ÖNCEDEN VAR OLANLAR
+  kritik-yedek.timer        04:30        fotoğraf/Nextcloud/ayar aynası (+ YENİ: önce tutarlı DB dökümleri)
+  self-heal.timer           ~3 dk        çöken servis/container'ı yeniden başlatır (restart=no ve bilerek-durdurulanları atlar)
+  docker-watcher.timer      ~5 dk        container hata/sağlık izleme ve bildirim
+  disk-koruyucu.timer       ~10 dk       SMART/I/O hatası izler; ağır durumda container'ları durdurabilir
+  swap-flush.timer          ~5 dk        eşik aşılırsa swap boşaltma
+  ai-gozcu.timer            15 dk        sağlık kontrolü + (bellek/disk rahatsa) Ollama özeti
+  island-veri / torrent-bekci  ~20 sn    panel durumu / torrent kontrolü
+  vpn-ip-degistir.timer     saatlik      gluetun çıkış IP'sini yeniler
+  basket-bot, anime-takip, imdb-puan, morning-report, weekly-maintenance, virus-tarama   botlar ve bakım
+  root crontab              Pazar 03:00  docker image/builder temizliği
+                            (20 Ekim: "docker system prune" kaldırıldı — bilerek durdurulan container'ları siliyordu)
+
+Bilerek kapalı tutulanlar: /etc/sistem-bakim/bilerek-durdurulan (suwayomi, stirling-pdf, open-webui) — self-heal bunlara dokunmaz.
+Bildirimler: /usr/local/bin/bildirim → Telegram + /var/lib/flugel/durum/bildirimler.log

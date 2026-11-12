@@ -33,3 +33,12 @@ Bağlantılar: [[HARITA]] · [[hafiza]] · [[kararlar]] · [[Veri Tuzakları ve 
 ## 4. Ders Çalışma ve Çoklu Ajan Dersleri
 - **Ekranda açma doğrulanmalı:** Okular'a açma komutu göndermek pencerenin görünür olduğunu kanıtlamaz; 11 Kasım'da pencereler kapanmıştı. `hyprctl clients -j` ile doğrula ([[notes/claude-hafizasi]]).
 - **Ortak dosya çakışması:** Claude ve Codex aynı `YOL_HARITASI.md` dosyasını üst üste yazdı; ortak dosyalara yalnız sona ekleme yapılır, yazmadan önce yeniden okunur ([[notes/claude-hafizasi]]).
+
+## 5. Laptop Kurulum Dersleri (2026-11-12)
+- **Anahtarsız sunucuya giriş:** `flugelserver` yalnız publickey kabul ediyor; yeni makineden `ssh-copy-id` çalışmaz. Tailscale'e katıl ve Tailscale SSH ile bağlan ([[notlar/laptop-thinkbook-arch-hyprland-kurulumu]]).
+- **Hyprland Lua + shell'ler:** Hyprland 0.57 Lua config'inde bazı shell'ler (Ambxst 1.3.15) renk değerlerini çift tırnaklıyor ve yeni kısayolları mevcutlarla çakıştırıyor; aynı tuşa iki bağ olunca **ikisi birden** çalışır. Kurulumdan sonra `hyprctl configerrors` ve kısayol çakışması kontrol edilmeli.
+- **Bluetooth butonu çalışmıyorsa** önce `rfkill list` bak; soft block varken `bluetoothctl power on` başarısız olur.
+- **sudo şifresi sekme başınadır:** Bir terminal sekmesinde `sudo -v` yapmak başka sekmeye/ajana geçmez.
+- **Hibrit laptopta global NVIDIA env yok:** Ekran Intel'e bağlıyken `LIBVA_DRIVER_NAME=nvidia` gibi genel değişkenler Chrome/Electron'u NVIDIA'da video çözmeye zorlar → siyah video + uyanık NVIDIA. NVIDIA yalnız gereken uygulamaya PRIME değişkenleriyle verilir ([[notlar/laptop-thinkbook-arch-hyprland-kurulumu]]).
+- **Hyprland 0.57 Lua özel layout (`hl.layout.register`) hedef çoğaltması:** Çalışma alanı kuralıyla `dwindle` → `lua:...` geçişi yapıldığında `ctx.targets` listesinde aynı pencere birden fazla hedef olarak gelebilir; `recalculate(ctx)` içinde hedefler pencere adresine göre tekilleştirilmeli ve yeniden hesaplama için `dwindle`'a dönmek yerine iki Lua layout adı (`a`/`b`) arasında geçiş yapılmalı ([[notlar/laptop-dux-ozellestirme-oturumu-2026-11-13]]).
+- **Döşeme zorlaması ile eski yüzen yerleşim betikleri çarpışır:** Tüm pencereleri `float=false` yapan kanca (`yuzmeyi_kapat`) aktifken arka planda `float=on` + sabit boyut veren `alan-yerlesim` / `pencere-duzenle` çalıştırılırsa `dwindle` bölünme oranları bozulup pencereler ince şeritlere (`39px`, `29px`) sıkışır; tüm yerleşim betikleri döşeme tabanlı olmalıdır.

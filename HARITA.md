@@ -63,6 +63,10 @@ guncelleme: 2026-11-11
 - [[notlar/sanal-makineler-w11-gpu-ve-moonlight]] — `W11`, `W11-GPU`, `GTX 1660 Ti` passthrough ve `Apollo`/`Moonlight`
 - [[notlar/sunucu-yedekleme-ve-systemd-otomasyonlari]] — `uygulama-yedek.py`, `kritik-yedek.sh`, `self-heal.sh`, `ai-gozcu.sh` ve systemd zamanlayıcıları
 - [[notlar/pc-arch-hyprland-ve-ubuntu-gnome-analizi]] — PC donanım, Hyprland/GNOME masaüstü ve AI çalışma alanı analizi
+- [[notlar/laptop-thinkbook-arch-hyprland-kurulumu]] — Laptop (ThinkBook 16p G4) Arch + Hyprland kurulum günlüğü: sürücüler, Tailscale, taşınan config, Noctalia/Ambxst denemeleri, greeter
+- [[notlar/laptop-thinkbook-dosya-agaci]] — Laptop disk düzeni (LUKS + btrfs alt birimleri) ve ev klasörü ağacı
+- [[notlar/laptop-dux-shell-arayuzu]] — Laptop arayüzü: Dux Modular Shell kurulumu, Caelestia benzeri çerçeve/dock, özel önizleme yaması
+- [[notlar/laptop-dux-ozellestirme-oturumu-2026-11-13]] — Laptop Dux/Hyprland özelleştirme oturumu (12-13 Kasım 2026): yapılanlar, dosya haritası, pencere sistemi ve sol-panel düzeltmeleri, bekleyen işler
 - [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]] — Gazi EEM Güz 2026 dersleri ve vize çalışma takvimi
 - [[notlar/tbf-basketbol-kurallari-ve-fiba-2026]] — TBF kural kitabı ve FIBA 2026 değişiklikleri
 - [[notes/ee317-vize-calismasi-2026-11-11]] — EE317 Güç Elektroniği I vizesi (12 Kasım 2026): kapsam D1–D4, dosyalar, H01–H10 konumları, ilerleme

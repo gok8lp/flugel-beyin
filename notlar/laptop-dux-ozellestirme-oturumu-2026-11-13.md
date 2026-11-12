@@ -90,7 +90,7 @@ Kaynak: Claude Code oturumu (sen, sohbette, 2026-11-12/13). Makine: laptop, kull
 
 ## 3. Yapılmayanlar / bekleyenler
 
-1. **Pencere düğmeleri (küçült / tam ekran / kapat):** `hyprbars` eklentisi gerekir; resmi depoda yok, `hyprpm`/`cmake`/`meson` kurulu değil. Kurulum sudo ister, yapılmadı. Super+F = `hl.dsp.window.fullscreen({ mode = "fullscreen" })`.
+1. ~~**Pencere düğmeleri (küçült / tam ekran / kapat):**~~ **TAMAMLANDI (13 Kasım):** `hyprbars` resmi `hyprwm/hyprland-plugins` kaynağından `g++` ve `Makefile` ile sudo/cmake/meson gerektirmeden derlendi (`~/.local/share/hypr/plugins/hyprbars.so`), Hyprland'e yüklendi ve `user.lua`'ya eklendi (sağ üstte Kapat `×`, Büyüt `□`, Küçült `–` düğmeleri + `~/.local/bin/pencere-kucult` ile `special:kucuk` küçültme ve `Super+Alt+M` geri getirme).
 2. **VPN düğmesi:** Tailscale + Mullvad için kullanılacak, zemini siyah olacak (şu an pembe), açılışta Tailscale'e bağlanacak, Mullvad yalnız Discord için açık olacak (çözüm vault'ta olmalı). Başlanmadı. Mullvad hesap numarasını kullanıcı girecek.
 3. **Maç takibi göstergesi:** zilin yanında basket topu simgesi + maç sayısı, veri `duduk` sunucusundan. Başlanmadı.
 4. **Hava konumu:** Dux'ta konum kayıtlı değil, varsayılan New York kullanılıyor (üst çubuktaki sıcaklık New York'un). Dux ayarlarından Ankara girilmeli.

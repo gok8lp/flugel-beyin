@@ -144,3 +144,31 @@ Kullanıcı kararı: bu bilgisayarda **hiçbir pencere yüzmeyecek**, hepsi ekra
 - **Sorun 2 — Özel düzenlerde yer değiştirme (swap):** `duzen.lua` dikdörtgenleri sabit `d.order` tablosuna kilitlediği için pencerelerin yeri değiştirildiğinde eski kutularına geri zıplıyordu. Artık yalnız ilk uygulamada (`d.ilk = true`) başlangıç sırası alınıyor; sonrasında `ctx.targets` sırası izlenerek `Super+Shift+Ok` ve `Super+Ctrl+Ok` ile özel düzen içinde de pencerelerin yer değiştirmesi sağlandı.
 - **Sorun 3 — `alan-yerlesim` / `pencere-duzenle` ile `yuzmeyi_kapat` kavgası:** `ozel-alanlar.lua` her Super+M/D/R/T basışında `~/.local/bin/alan-yerlesim` çalıştırıp pencereleri `float=on` yapmaya çalışıyor, `user.lua`'daki `yuzmeyi_kapat` ise anında `float=disable` yaparak `dwindle` bölünme oranlarını `39x607` ve `250x29` gibi ince şeritlere sıkıştırıyordu. `ozel-alanlar.lua`, `alan-yerlesim`, `alanlari-baslat` ve `pencere-duzenle` tamamen döşeme (`float=false` / `sol-panel`) tabanlı hale getirildi; özel alanların düzenleri düzeltildi ve her reload'da otomatik korunması sağlandı.
 - **Sorun 4 — `Super+Ctrl` kısayolları:** `user.lua` içine `Super+Ctrl+Ok` (pencereleri kendi içinde sola/sağa/yukarı/aşağı taşı/yer değiştir), `Super+Ctrl+1..9/0` (pencereyi 1..10 numaralı çalışma alanına taşı; eski 11/21/31 grup atlaması kaldırıldı) ve `Super+Ctrl+U/I/Page_Up/Page_Down` (komşu çalışma alanına taşı) eklendi.
+
+
+## 9. Gece turu 4 — Ölçekleme, Chrome Küçült, Medya Şarkı Sözü & VPN (13 Kasım, 01:25–02:15)
+
+- **XWayland / Kesirli Ölçek (1.25):** `user.lua` içine `xwayland = { force_zero_scaling = true }`, `GDK_SCALE=1`, `QT_AUTO_SCREEN_SCALE_FACTOR=1` eklendi; uygulamaların bulanıklaşması ve sol-üst köşede küçük kalması önlendi.
+- **Chrome Küçült Düğmesi:** `~/.local/bin/pencere-kucult` ile Chrome başlık çubuğundaki küçült düğmesi (`mouse:272`, `release = true, non_consuming = true`) ve `SUPER + ALT + M` (geri getir) bağlandı.
+- **VPN Düğmesi & Medya Sözleri:** Üst bardaki VPN düğmesinin arka planı diğer bar simgeleriyle uyumlu hale getirildi; medya çubuğu şarkı sözü takibinde (`MediaLyricLine.qml`) akıcı kelime/şerit vurgusu düzenlendi.
+
+## 10. Yerel Git Yedeği (`laptop-dux`) ve Eklenti Özelliği (13 Kasım, 02:20–02:42)
+
+- **Depo:** Tüm Hyprland, DMS ve Quickshell/sol-panel yapılandırmaları GitHub'a gönderime hazır şekilde `/home/gokalp/laptop-dux` yerel Git deposuna (`main`) kaydedildi.
+- **Eklenti Sistemi:** DMS eklenti desteği etkinleştirildi ve özel `pencereDuzen` widget'ı (`/home/gokalp/.config/dms/plugins/PencereDuzen`) oluşturuldu (`modernClock` ve `materialWeather` ile birlikte 3 temel eklenti aktif).
+
+## 11. `Win + Sol Tık` (`SUPER + mouse:272`) Pencere Yer Değiştirme Düzeltmesi (13 Kasım, 02:42–03:03)
+
+- **Touchpad Uyumu:** Sağ tık yeniden boyutlandırma (`SUPER + mouse:273`) kaldırıldı.
+- **Küçülme/Havada Kalma Sorununun Kök Çözümü:** Hyprland'in yerleşik `hl.dsp.window.drag()` komutu touchpad'de tıklandığı anda pencereyi küçültüp yüzer kutuya çevirdiği için tamamen kaldırıldı (`laptop-dux` commit `1e10117`).
+- **Doğrudan Takas (Swap):** `user.lua` içine `SUPER + mouse:272` basıldığında imleç altındaki kaynak pencereyi seçen, bırakıldığında (`release = true`) hedef pencereyle `hl.dsp.window.swap({ window = kaynak, target = hedef })` yapan bas-bırak işleyicisi yazıldı (`hyprctl reload` ve `hyprctl binds -j` ile doğrulandı).
+
+## 12. Eklenti Taraması, Profil, Medya OSD, `Win+H` ve Sunucu Duvar Kağıtları (13 Kasım, 03:03–03:26)
+
+- **Eklenti Taraması (17 eklenti):** İndirilen 14 yeni eklenti tarandı (`screenCapture` Niri istediği için Hyprland'de çalışmaz; `aiOverviewControl` için `jq`, `screenCaptureToolbar` için `gpu-screen-recorder`/`satty`/`jq`, `dankKDEConnect` için `kdeconnect-cli`/`valent` eksik). Hepsi bir anda açık kalmasın diye kapatılıp sıra sıra ilerlemeye geçildi:
+  - **1/14 `wallpaperCarousel`:** Açıldı (`loaded`) ve `user.lua` içinde **`SUPER + H` (`Win + H`)** kısayoluna bağlandı (`dms ipc call wallpaperCarousel toggle`, `laptop-dux` commit `3f3d5d2`).
+  - **2/14 `dankKDEConnect`:** Açıldı (`loaded`; `kdeconnect-cli`/`valent` kurulu değil, kullanıcı kararı bekleniyor).
+  - **Aktif olan diğerleri:** `pencereDuzen`, `modernClock`, `materialWeather`.
+- **Alttan Çıkan Medya OSD'si Kapatıldı:** `/home/gokalp/.config/dms/settings.json` içinde `"osdMediaPlaybackEnabled": false` yapıldı.
+- **Profil Görseli:** `~/Downloads/Subaru Greed GIF.gif` (`360×480`) üst-orta hizadan `360×360` kare olarak kırpılıp `~/.face` dosyasına kaydedildi ve `AccountsService` (`SetIconFile`) üzerinden profil fotoğrafı olarak ayarlandı.
+- **Sunucudan Duvar Kağıtları:** `flugelserver:/mnt/sidemain/cloud/nextcloud/flugel/files/Yedekler/Arch PC - 2026-11-12/Pictures/Wallpapers` altındaki tüm duvar kağıtları `/home/gokalp/Pictures/Wallpapers/` klasörüne indirildi (toplam 171 öğe). `settings.json` içinde `"currentThemeName": "dynamic"` aktif olduğu için duvar kağıdı değiştikçe sistem renkleri (`matugen`) otomatik güncellenir.

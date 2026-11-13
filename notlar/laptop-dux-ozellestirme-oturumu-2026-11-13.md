@@ -218,3 +218,17 @@ Kaynak: Claude Code oturumu (Opus 5.5). `laptop-dux` commit `72780c7`.
   - **Large/Base derinlik:** ikisinde de 3B "no suitable foreground subject was found" verdi (bocchi araba sahnesi); `small`'a dönüldü, 3B tekrar çalışıyor. Büyük modeller diskte kullanılmadan duruyor (~1,7 GB).
   - **Çalışma alanı kayması:** kodda 3B ile dışlayıcı (`parallaxEnabled && !spatialEnabled`); geliştirici de "üründen kaldırıldı" demiş. 3B tutuldu, kayma kapalı.
 - **Yanlış "asıl duvar kâğıtları":** §13'te geri indirilen `1792340393*.jpg` (6 dosya) duvar kâğıdı DEĞİL, laboratuvar fotoğrafları (multimetre probları, güç kaynağı). Gemini `/mnt/side/files/images`'ı yanlış yorumlamıştı. Kullanıcı kararı bekleniyor.
+
+## 17. Mağaza eklentileri, masaüstü, GitHub hazırlığı (13 Kasım, 04:30–04:55)
+
+- **Mağazadan kuruldu** (`dms plugins install`): sshConnections (`;` → flugelserver), dankObsidian (`\obs`; kodda `isFlatpak: true` sabitti → `false`), calculator (`=`), emojiLauncher (`:e`), dankHyprlandWindows (`!`), recentFiles (`rf`), quickCapture, claudeCodeUsage (**`jq` eksik → %0**; `sudo pacman -S jq`). Başlatıcı eklentileri `dms ipc call launcher openQuery "<sorgu>"` ile görüntüyle test edildi.
+- **Kaldırılan/kapatılan:** networkIndicator (kullanıcı istemedi), usbManager (sürekli `list failed`), EnderPulse çubukta boşluk bırakıyordu (kaldırıldı), masaüstünde systemMonitor ("çirkin").
+- **Sistem tepsisi klasörde:** `SystemTrayBar.qml` yaması, `trayMaxVisibleItems: -1` → tüm tepsi simgeleri "⌄" açılır düğmesinde.
+- **Screen Recorder X** Çince açılıyordu → `langIndex: 1` (İngilizce).
+- **Masaüstü widget'ları:** Modern Clock (üst orta), Material Weather (sağ alt), Sticky Notes (sol üst), Dank Album Widget (sol alt), Dank Audio Visualizer (albümün sağı). Görüntüyle doğrulandı.
+- **GitHub (YAPILMADI — giriş yok):** laptopta ve sunucuda (`flugel`) `gh` yok, GitHub SSH anahtarı yok, kayıtlı token yok. Hazırlık yapıldı: e-posta (`plugin_settings.json` `lastAccount`) tüm geçmişten `filter-branch` ile temizlendi (öncesi yedek: `~/yedekler/laptop-dux-onceki-*`), ayrıntılı README yazıldı, `kur.sh` tema-oto servisini kuruyor. Paket: laptop `~/laptop-dux.bundle`, sunucu `~/laptop-dux.bundle`. Kullanıcı kararı: **herkese açık**. Yayınlamak için:
+  ```bash
+  sudo pacman -S github-cli
+  gh auth login
+  cd ~/laptop-dux && gh repo create gok8lp/laptop-dux --public --source . --push
+  ```

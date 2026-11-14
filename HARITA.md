@@ -73,6 +73,7 @@ guncelleme: 2026-11-14
 - [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]] — Gazi EEM Güz 2026 dersleri ve vize çalışma takvimi
 - [[notlar/tbf-basketbol-kurallari-ve-fiba-2026]] — TBF kural kitabı ve FIBA 2026 değişiklikleri
 - [[notlar/ee317-vize-calismasi-2026-11-11]] — EE317 Güç Elektroniği I vizesi (12 Kasım 2026): kapsam D1–D4, dosyalar, H01–H10 konumları, ilerleme
+- [[notlar/ikinci-beyin-avenox-serisi]] — Avenox İkinci Beyin video serisi öğrenimleri, V3 geçişi ve Jev kurulumu (2026-11-14)
 - [[notlar/claude-hafizasi]] — Claude Code belleğinin aktarımı: ders çalışma tercihleri, Claude–Codex ortak klasör düzeni
 - [[notlar/flugel-akis-mobil-uygulama]] — FLUGEL Akış `akis.gokalpgoksu.com` (şifresiz, Tailscale'siz) ve Android kabuğu `FLUGEL-Akis.apk` 2.0: derleme, imza, dağıtım, geri alma
 - [[notlar/assignr-api-yapisi]] · [[notlar/ankarabasket-rsc-flight-ayristirma]] · [[notlar/tbf-bulanik-mac-eslestirme]] · [[notlar/hakem-kazanc-ve-bolge-kurali]] · [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]]

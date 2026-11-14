@@ -45,5 +45,3 @@ knowledge/v3/
 .agents/skills/beyin-yakala/
 .pi/extensions/beyin-v3.ts
 .claude/hooks/session-start.sh
-.agents/skills/ai-ekibi
-.agents/skills/ajan-orkestrasyonu

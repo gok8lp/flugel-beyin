@@ -42,8 +42,8 @@ Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tara
 | **Orta backend**: API ucu, CRUD, test, hata ayıklama | `--sec orta` → **GPT-6.1-Sol** (medium) | `codex exec … -m gpt-6.1-sol -c model_reasoning_effort="medium"` |
 | **Üst backend**: performans, eşzamanlılık, güvenlik, büyük refactor | `--sec ust` → **GPT-6-Astra** (high) | `codex exec … -m gpt-6-astra -c model_reasoning_effort="high"` |
 | **Görsel üretimi** | `--sec gorsel` → **GPT-6-Astra** + Codex'in görsel aracı (gpt-image). **Aynı anda en fazla 3** görsel ajanı | `codex exec … -m gpt-6-astra -s workspace-write -C <çıktı klasörü> "gpt-image ile … üret, <dosya>.png olarak kaydet"` |
-| **Bağlam toplama, keşif, okuma** | Claude **Sonnet** ya da **Haiku** (`Agent`, salt okunur), büyük belgelerde **Gemini** | `Agent` / `agy --print-timeout 120s -p "…" < /dev/null` |
-| **Kontrol ve doğrulama** | Uygulayandan **farklı** ve taze bir ajan: Claude **Sonnet/Opus**. Kritikse Codex **Sol** | `Agent` ya da `codex exec` |
+| **Bağlam toplama, keşif, okuma** | Claude **Sonnet** ya da **Haiku** (`Agent`, salt okunur), büyük belgelerde **Gemini** | `ai-limitler --sec basit` sonra `Agent` / `agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","list_dir(*)","grep_search(*)"]}}' -p "…" < /dev/null` |
+| **Kontrol ve doğrulama** | Uygulayandan **farklı** ve taze bir ajan: Claude **Sonnet/Opus**. Kritikse Codex **Sol** | `ai-limitler --sec orta` sonra `Agent` ya da `codex exec` |
 | **Planlama ve son karar** | Claude **Opus 5.5** (lider, yani sen) | Kendin |
 
 **Emin olmadığın zor teknik/mimari karar:**
@@ -95,7 +95,7 @@ python3 scripts/filo.py durdur --ad inceleme --log-dizini /tmp/filo
 
 ## 9. Sabit değerlendirme ve dış karşılaştırma
 - [Değerlendirme koşumu ve skorlama](evals/README.md): girdiyi beklenen cevabı göstermeden uygula; sabit kabul ölçütleriyle puanla, süre ve token maliyetini kaydet. Skoru iyileştirmek için ölçütü gevşetme.
-- Gerçek vakalar: [kota kapısı](evals/01-kota-kapisi.md), [Codex sandbox ve .git](evals/02-sandbox-git.md), [agy bayrak sırası](evals/03-agy-timeout.md), [transkript 429](evals/04-transkript-429.md), [aynı dosyaya iki yazıcı](evals/05-dosya-cakismasi.md).
+- Gerçek vakalar: [kota kapısı](evals/01-kota-kapisi.md), [Codex sandbox ve .git](evals/02-sandbox-git.md), [agy bayrak sırası](evals/03-agy-timeout.md), [transkript 429](evals/04-transkript-429.md), [aynı dosyaya iki yazıcı](evals/05-dosya-cakismasi.md), [agy izin listesi](evals/06-agy-izin-listesi.md).
 - [codex-fleet karşılaştırması](references/codex-fleet-karsilastirma.md), yerel var/yok/benimsendi durumunu ve dayanak sınırını tutar. Uzak skill'in kurulu veya güncel tam metninin doğrulanmış olduğunu varsayma; körlemesine içe aktarma.
 
 ## 10. Kurallar

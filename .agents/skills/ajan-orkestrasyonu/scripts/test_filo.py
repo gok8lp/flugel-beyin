@@ -117,6 +117,78 @@ class FiloTest(unittest.TestCase):
         child_pid = int((self.directory / 'agac.log').read_text().strip())
         self.assertFalse(Path('/proc', str(child_pid)).exists())
 
+    def test_lider_bitince_kalan_alt_surec_temizlenir_rc_korunur(self):
+        for native_rc in (0, 7):
+            with self.subTest(native_rc=native_rc):
+                name = 'yetim' + str(native_rc)
+                # Alt süreç TERM'i yok saysın; hazır olmadan lider çıkmasın.
+                child_code = ('import signal,time; '
+                              'signal.signal(signal.SIGTERM, signal.SIG_IGN); '
+                              'print("hazir", flush=True); time.sleep(30)')
+                code = ('import subprocess,sys; '
+                        'child=subprocess.Popen([sys.executable,"-c",' + repr(child_code) +
+                        '],stdout=subprocess.PIPE); child.stdout.readline(); '
+                        'print(child.pid,flush=True); sys.exit(' + str(native_rc) + ')')
+                self.start(name, 0.3, sys.executable, '-c', code)
+                result = self.cli('bekle', check=False)
+                self.assertEqual(result.returncode, 0 if native_rc == 0 else 1)
+                self.assertEqual(self.record(name)['rc'], native_rc)
+                child_pid = int((self.directory / (name + '.log')).read_text().strip())
+                stat = Path('/proc', str(child_pid), 'stat')
+                # Yetim zombie'yi host init'i toplar; çalışan alt süreç kalmamalı.
+                if stat.exists():
+                    self.assertEqual(stat.read_text().rsplit(')', 1)[1].split()[0], 'Z')
+
+    def test_baslangic_kaydi_yarisi_kayip_gozetici_sayilmaz(self):
+        # İlk atomik JSON ile gözetici kimliği yazımı arasını bir kapıyla sabitle.
+        # Rastgele scheduler zamanlamasına güvenmeden gerçek CLI okuyucularını çalıştır.
+        marker = self.directory / 'ilk-kayit'
+        gate = self.directory / 'devam'
+        wrapper = """import pathlib,sys,time
+scope={'__name__':'filo_test','__file__':sys.argv[1]}
+exec(compile(pathlib.Path(sys.argv[1]).read_text(),sys.argv[1],'exec'),scope)
+original=scope['atomic']
+log_directory=sys.argv[2]
+def delayed(path, record):
+    original(path, record)
+    if record.get('state')=='starting' and record.get('supervisor_pid') is None:
+        pathlib.Path(log_directory,'ilk-kayit').touch()
+        while not pathlib.Path(log_directory,'devam').exists(): time.sleep(0.01)
+scope['atomic']=delayed
+sys.argv=[sys.argv[1],'baslat','--ad','yaris','--zaman-asimi','5',
+          '--log-dizini',sys.argv[2],'--','sleep','0.4']
+sys.exit(scope['main']())
+"""
+        starter = subprocess.Popen([sys.executable, '-c', wrapper, str(SCRIPT),
+                                    str(self.directory)], stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE, text=True)
+        readers = []
+        try:
+            deadline = time.monotonic() + 5
+            while not marker.exists() and time.monotonic() < deadline:
+                time.sleep(0.01)
+            self.assertTrue(marker.exists(), 'başlangıç penceresi kurulamadı')
+            self.assertIsNone(self.record('yaris')['supervisor_pid'])
+            for action in ('durum', 'bekle'):
+                reader = subprocess.Popen([sys.executable, str(SCRIPT), action,
+                                           '--log-dizini', str(self.directory)],
+                                          stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                          text=True)
+                readers.append(reader)
+                # Geçici kaydı görüp rc2/bitti(bilinmiyor) dönmek yerine kilidi bekler.
+                with self.assertRaises(subprocess.TimeoutExpired):
+                    reader.communicate(timeout=0.25)
+        finally:
+            gate.touch()
+            start_out, start_err = starter.communicate(timeout=10)
+            outcomes = [reader.communicate(timeout=10) for reader in readers]
+        self.assertEqual(starter.returncode, 0, start_out + start_err)
+        for reader, (out, err) in zip(readers, outcomes):
+            self.assertEqual(reader.returncode, 0, out + err)
+            self.assertNotIn('gözetici kayıp', out + err)
+            self.assertNotIn('bilinmiyor', out + err)
+        self.assertEqual(self.record('yaris')['rc'], 0)
+
     def test_gecersiz_cagri_ve_mevcut_lane(self):
         for name in ('../kacis', '.sakli', 'iki kelime'):
             self.assertNotEqual(self.cli('baslat', '--ad', name, '--zaman-asimi', '1',

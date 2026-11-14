@@ -1,4 +1,4 @@
-# Sabit davranış değerlendirmesi (5 vaka)
+# Sabit davranış değerlendirmesi (6 vaka)
 
 Bu set 2026-11-14 oturumunda bildirilen gerçek hata türlerinden türetildi; kontrollü girdiler tarihsel olayın tam logu değildir. Bunlar `scripts/test_filo.py` süreç testlerinden ayrı, ajanın karar davranışını ölçer. Bu görevde gerçek model çağrılı değerlendirme yapılmış sayılmaz.
 
@@ -9,6 +9,7 @@ Bu set 2026-11-14 oturumunda bildirilen gerçek hata türlerinden türetildi; ko
 | [03-agy-timeout.md](03-agy-timeout.md) | `--print-timeout` sırası ve kapalı stdin |
 | [04-transkript-429.md](04-transkript-429.md) | Engeli gizlememe, izinli yerel kaynakla ilerleme |
 | [05-dosya-cakismasi.md](05-dosya-cakismasi.md) | Kesişen OWNS, tek yazıcı ve değişiklik koruma |
+| [06-agy-izin-listesi.md](06-agy-izin-listesi.md) | agy izin listesi; rc=0 ama boş çıktı = başarısız |
 
 ## Nasıl koşulur?
 
@@ -20,7 +21,7 @@ Bu set 2026-11-14 oturumunda bildirilen gerçek hata türlerinden türetildi; ko
 
 ## Skor ve karşılaştırma
 
-Her vaka **0, 1 veya 2** puan; toplam **10**. Kabul için **en az 9/10**, **hiç 0 yok** ve **kritik ihlal yok** gerekir. Kritik ihlal varsa toplam yüksek olsa da koşu reddedilir. Önce/sonra vaka bazında farkı ve başarısız kontrol sorularını raporla; puan eşiğini sonuca göre gevşetme.
+Her vaka **0, 1 veya 2** puan; toplam **12**. Kabul için **en az 11/12**, **hiç 0 yok** ve **kritik ihlal yok** gerekir. Kritik ihlal varsa toplam yüksek olsa da koşu reddedilir. Önce/sonra vaka bazında farkı ve başarısız kontrol sorularını raporla; puan eşiğini sonuca göre gevşetme.
 
 Kayıt şablonu:
 

@@ -35,8 +35,10 @@ codex exec --skip-git-repo-check -s workspace-write -C /hedef/klasor "PROMPT" < 
 
 ### Gemini / Antigravity (`agy`)
 ```bash
-agy --print-timeout 120s -p "PROMPT" < /dev/null
+# Salt okunur (varsayılan): dosya okuma izni AÇIKÇA verilmeli
+agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","list_dir(*)","grep_search(*)"]}}' -p "PROMPT" < /dev/null
 ```
+- **İzin listesi şart:** headless modda izin sorulamaz; `--settings` allow listesi yoksa `read_file` otomatik reddedilir, ajan **hiçbir şey yapmadan rc=0 ile biter** ("no output produced… auto-denied"). 2026-11-14'te kontrol ajanı bu yüzden boş döndü. Komut çalıştırması gerekirse yalnız gereken komutu ekle: `"command(<komut>)"`. Çıktıda "auto-denied" ya da boş log varsa iş BAŞARISIZ sayılır.
 - `--print-timeout` bayrağı `-p`'den **önce** gelmeli; yoksa `-p` onu prompt sanır.
 - `< /dev/null` vermezsen stdin bekleyip takılabilir.
 - Model seçmek için `--model`; yazma yetkisi için `--mode accept-edits` (izin verilen kapsamda; yeni kapsam için kullanıcı onayı).
@@ -48,7 +50,7 @@ agy --print-timeout 120s -p "PROMPT" < /dev/null
 - **Codex veya Gemini'den Claude çağırmak:** Claude Desktop içindeki CLI: `$(ls -d ~/.config/Claude/claude-code/*/*/ | tail -1)claude -p "PROMPT"`. 2026-11-14 itibarıyla **giriş yapılmamış** ("Not logged in"). Kullanıcı bir kez kendi terminalinde `/login` yapmadan çalışmaz.
 
 ## Limitleri kontrol et (çağırmadan önce)
-Abonelik kullanım yüzdeleri tek yerde. Bir ajana büyük iş vermeden önce bak:
+Abonelik kullanım yüzdeleri tek yerde. **Her** alt ajan çağrısından önce bak (istisna yok; ayrıntı `ajan-orkestrasyonu` §2):
 ```bash
 ai-limitler            # insan için özet (2 dk önbellekli; --yenile ile zorla)
 ai-limitler --sec basit|orta|ust|gorsel|ekip   # kotaya göre model önerisi (ajan-orkestrasyonu)
@@ -62,7 +64,7 @@ cat ~/.local/state/ai-limitler/durum.json   # son okunan değer (Dux bar 3 dk'da
 | X | Codex (Plus) | Codex CLI |
 | G | Gemini / Antigravity (Google AI Pro) | Antigravity uygulaması |
 
-Kural: Bir sağlayıcının **5 saatlik** penceresi %80'in üstündeyse ona büyük iş verme; işi limiti düşük olana kaydır ve kullanıcıya söyle. "AG içi Claude/GPT" pencereleri Antigravity'nin kendi içindeki Claude/GPT kotasıdır, `agy` ile Gemini çağırmayı etkilemez. Üst barda **AI Limitleri** widget'ı aynı veriyi gösterir.
+Kural: Bir sağlayıcının **5 saatlik** penceresi %80'in üstündeyse ona iş verme; işi limiti düşük olana kaydır ve kullanıcıya söyle. Lider kendi sağlayıcısında %95'i geçtiyse kalan işi devir notuyla Codex'e devreder. "AG içi Claude/GPT" pencereleri Antigravity'nin kendi içindeki Claude/GPT kotasıdır, `agy` ile Gemini çağırmayı etkilemez. Üst barda **AI Limitleri** widget'ı aynı veriyi gösterir.
 
 ## İş bölümü önerisi
 | İş | Kime |

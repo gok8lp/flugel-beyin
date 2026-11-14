@@ -4,6 +4,8 @@
 Her lane'in ayrık gözeticisi çıkış kodunu atomik JSON'a yazar. Takılma bir
 şüphedir: log yazmayan sağlıklı süreç kendiliğinden öldürülmez. Zaman aşımı
 başlatmadan itibaren işler; bekle açık olmasa da gözetici süreyi uygular.
+Lider komut normal bitse de grupta kalan alt süreçler TERM/KILL ile temizlenir;
+liderin doğal çıkış kodu korunur, temizlik bitmeden lane bitmiş sayılmaz.
 """
 import argparse
 from contextlib import contextmanager
@@ -116,6 +118,9 @@ def supervise(directory, name, run_id):
             while True:
                 rc = proc.poll()
                 if rc is not None:
+                    # Liderin sonucu korunur; arka planda bıraktığı alt süreçler
+                    # lane yaşam döngüsünden ve süre sınırından kaçamaz.
+                    terminate(proc)
                     reason = 'bitti'
                     break
                 # Monotonic saat aynı host/boot içinde duvar saati değişiminden etkilenmez.
@@ -188,7 +193,11 @@ def start(args, directory):
 def records(directory):
     for path in sorted(directory.glob('*.json')):
         if not path.name.startswith('.'):
-            yield read(path)
+            # Başlatma kaydı ile gözetici kimliği aynı kilit altında yayımlanır.
+            # Ara 'starting/pid=None' görüntüsünü kayıp süreç sanma.
+            with locked(directory, path.stem):
+                record = read(path)
+            yield record
 
 
 def status(record, stale_minutes):
@@ -198,6 +207,8 @@ def status(record, stale_minutes):
         return 'bitti(rc={}) — {}'.format(record['rc'], record.get('reason', ''))
     if not alive(record['supervisor_pid'], record['supervisor_start']):
         return 'bitti(rc=bilinmiyor) — gözetici kayıp; süreç ayrıca incelenmeli'
+    if record['state'] == 'starting':
+        return 'çalışıyor (başlatılıyor)'
     if time.monotonic() >= record['deadline_monotonic']:
         return 'zaman aşımı (durduruluyor)'
     age = max(0, time.time() - Path(record['log']).stat().st_mtime)

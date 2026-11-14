@@ -5,3 +5,4 @@ CLAUDE.local.md
 .env
 *.tmp
 *.bak
+__pycache__/

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Beyni Güncelle
+Comment=Kurulu beyni resmi yeni surume guncelle
+Terminal=true
+Exec=/bin/sh "/home/gokalp/Documents/ai_workplace/flugel-beyin/Beyni Güncelle.sh"
+Icon=system-software-update

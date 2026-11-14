@@ -6,3 +6,42 @@ CLAUDE.local.md
 *.tmp
 *.bak
 __pycache__/
+
+# --- Avenox İkinci Beyin V3 (2026-11-14), docs/v3/MULTI-MACHINE.md önerisi ---
+# Beyin kurulumu: her makine Beyin'i kendisi kurar ve günceller
+.beyin-runtime.json
+.beyin-version
+beyin.py
+Beyni Guncelle.cmd
+.claude/settings.local.json
+.claude/scripts/
+.claude/hermes-plugin/
+.claude/skills/beyin/
+.claude/skills/beyin-doktor/
+.claude/skills/beyin-guncelle/
+.claude/skills/beyin-kontrol/
+.agents/hooks.json
+.agents/skills/beyin/
+.agents/skills/beyin-doktor/
+.agents/skills/beyin-guncelle/
+.agents/skills/beyin-kontrol/
+.codex/config.toml
+.codex/hooks.json
+.kiro/hooks/beyin-v3.json
+.kiro/skills/beyin/
+.kiro/skills/beyin-doktor/
+.kiro/skills/beyin-guncelle/
+.kiro/skills/beyin-kontrol/
+.opencode/plugins/beyin-v3.js
+.omp/hooks/pre/beyin-v3.ts
+# companion-compact süreçler arası kilidi; kalıcıdır ama kullanıcı verisi değildir
+**/.beyin-compact.lock
+# Aynı makinedeki not yazarlarının yerel kilidi, istekleri ve tam bayt yedekleri
+.beyin-note-write/
+# Yerel veritabanından üretilen görünümler: her makine kendisininkini üretir
+daily/v3/
+knowledge/v3/
+.claude/skills/beyin-yakala/
+.agents/skills/beyin-yakala/
+.pi/extensions/beyin-v3.ts
+.claude/hooks/session-start.sh

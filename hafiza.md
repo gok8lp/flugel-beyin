@@ -35,7 +35,7 @@ Bağlantılar: [[HARITA]] · [[simdi]] · [[kararlar]] · [[dersler]] · [[kisil
   - Canlı uç yolları: `/v1/health`, `/v1/bundle`, `/v1/stats`; sunucuda konteyner `duduk-server` → `127.0.0.1:18420` (`~/duduk-server`).
   - Emülatör (`flugelserver`): SDK `/home/flugel/android-sdk`, AVD `duduk_avd` (`system-images;android-35;google_apis;x86_64`).
   - Aktif sezon: `2026-2027`, TBF `seasonId=174`.
-  - Not: eski `memory.md` PC kullanıcısı `flugel` için "`sudo` yok" diyordu; laptop kurulum notları `sudo` kullanıyor, güncelliği doğrulanmalı.
+  - `sudo`: Bu PC'de (kullanıcı `flugel`/gokalp) **sudo var** (kullanıcı teyidi, 2026-11-14). Ajanlar sudo'yu yalnız kullanıcı görev için açıkça izin verdiğinde kullanır; yedek/geri dönüş/rapor kuralları: `~/Documents/ai_workplace/AGENTS.md`. Eski "sudo yok" notu yanlıştı.
 
 ## 3. Güvenlik ve Gizlilik Kuralları
 - Parola, token, `.env`, `local.properties` (özellikle `/home/flugel/Projects/koharia-reader/local.properties`), SSH anahtarı veya çerezler **asla** okunmaz, sohbete yazılmaz ve vault'a/git'e kaydedilmez.

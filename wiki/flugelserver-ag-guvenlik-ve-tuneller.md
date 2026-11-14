@@ -1,4 +1,5 @@
 ---
+remote_allowed: false
 title: flugelserver Ağ, Cloudflare Tunnel, Tailscale Serve ve Güvenlik Denetimi
 sources: raw/flugelserver/08-ERISIM-GUVENLIK.txt, raw/flugelserver/09-BILINEN-SORUNLAR.txt, raw/flugelserver/10-DEGISIKLIK-GECMISI.txt, raw/flugelserver/savunma-2026-11-08.txt, raw/yerel-ai/AG-VE-ERISIM.md, raw/yerel-ai/GUVENLIK.md
 updated: 2026-11-11

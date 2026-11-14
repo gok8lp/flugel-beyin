@@ -1,3 +1,7 @@
+---
+remote_allowed: false
+---
+
 # Cloudflare Tunnel ve Tailscale Serve Bağlantı Zinciri
 
 Bağlantılar: [[HARITA]] · [[hafiza]] · [[kararlar]] · [[CLAUDE.local]] · [[android-arac-zinciri-ve-mimari]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]]

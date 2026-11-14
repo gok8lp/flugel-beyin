@@ -1,4 +1,5 @@
 ---
+remote_allowed: false
 tur: hafiza
 etiketler:
   - hafiza

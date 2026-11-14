@@ -27,6 +27,6 @@ guncelleme: 2026-11-11
 ## İlgili Projeler ve Bağlantılar
 - **Projeler:** [[projeler/duduk]] · [[projeler/okul-guz-2026]]
 - **Kişiler:** [[kisiler/ahmet-gokalp-goksu]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[notlar/gazi-eem-2026-guz-dersleri]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]
 
 > Kaynak: `<dosya-yolu veya "sen, sohbette, YYYY-AA-GG">`

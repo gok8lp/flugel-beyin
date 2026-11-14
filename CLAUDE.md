@@ -9,6 +9,7 @@
 
 ## 1. Bilgiler Nerede Durur (`where things live`)
 - **`HARITA.md`** ([[HARITA]]): En üst giriş noktası. Her bilgi türünün hangi klasörde/dosyada yaşadığını gösterir.
+- **`ARSIV-SISTEMI.md`** ([[ARSIV-SISTEMI]]): Klasör sistemi, "yeni bilgi nereye konur" karar tablosu ve isimlendirme kuralı.
 - **`simdi.md`** ([[simdi]]): Bu hafta odaktaki aktif işler ve sıradaki adımlar.
 - **`hafiza.md`** ([[hafiza]]): Kalıcı tercihler, cihazlar, sunucu ve kimlik gerçekleri.
 - **`kararlar.md`** ([[kararlar]]): Tarih, karar, neden ve alternatifler.
@@ -16,13 +17,14 @@
 - **`gelen-kutusu.md`** ([[gelen-kutusu]]): Hızlı notlar; haftalık gözden geçirmede uygun yere taşınır.
 - **`notlar/`**: Kişisel ve teknik bilgi notları (her dosyada tek konu).
 - **`kisiler/`**: Kişi kartları (rol, sorumluluk alanı, iletişim yolu, ilgili projeler).
-- **`projeler/`**: Her projede durum, sıradaki adım ve bağlantılar.
+- **`projeler/`**: Her projede durum, sıradaki adım ve bağlantılar. Büyük projelerin derin referansı alt klasörde durur (ör. `projeler/duduk-derin-referans/`).
 - **`kurallar/`**: Yol kapsamlı kurallar (`kurallar/kisiler.md`, `kurallar/projeler.md`, `kurallar/notlar.md`, `kurallar/guvenlik.md`).
 - **`sablonlar/`**: Kişi, proje, karar ve not için Obsidian şablonları (`sablonlar/*.md`).
 - **`raw/`**: Ham kaynaklar. Model yalnızca okur, **asla düzenlemez** (`Edit(/raw/**)` yasaklı).
 - **`wiki/`**: `raw/` kaynaklarından derlenen kavram sayfaları (`title`, `sources`, `updated` frontmatter + `> "birebir metin" - raw/<dosya>` alıntı satırı zorunlu).
 - **`wiki/hot.md`**: En fazla ~15 satırlık sıcak bağlam önbelleği.
 - **`wiki/index.md`**: `python3 brain.py index` ile otomatik üretilen wiki indeksi.
+- **`_arsiv/`**: Aktif olmayan ama silinmeyen içerik (`_arsiv/eski/`: birleştirilmiş eski İngilizce kök dosyalar). Buraya yeni bilgi yazılmaz; cevap kaynağı olarak yalnız açıkça istenirse kullanılır.
 
 ## 2. Nasıl Cevap Verilir (`how to answer`)
 1. Önce `HARITA.md` ve `wiki/hot.md` dosyalarına bak; cevabı haritanın gösterdiği dosyadan ver ve dosya adını açıkça belirt.

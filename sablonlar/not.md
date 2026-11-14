@@ -22,6 +22,6 @@ Bu notun ele aldığı tekil kavramın, protokolün veya çözümün kısa özet
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]]
 - **İlgili Projeler ve Kişiler:** [[projeler/duduk]] · [[kisiler/ahmet-gokalp-goksu]]
 - **Wiki Sayfaları:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/index]]
-- **Bilgi Notları:** [[notlar/assignr-api-yapisi]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Bilgi Notları:** [[notlar/assignr-api-yapisi]] · [[flugelserver-genel-mimari]]
 
 > Kaynak: `<dosya-yolu veya "sen, sohbette, YYYY-AA-GG">`

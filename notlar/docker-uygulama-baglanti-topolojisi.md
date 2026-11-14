@@ -17,7 +17,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-uygulama-baglantilari]] · [[wiki/flugelserver-docker-uygulamalari]] · [[wiki/flugelserver-ag-guvenlik-ve-tuneller]] · [[wiki/koharia-reader-ve-manga-ekosistemi]] · [[wiki/flugel-akis-ve-botlar]] · [[wiki/duduk-genel-bakis]]
 > **İlgili Notlar:** [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] · [[notlar/docker-medya-ve-arr-yigini]] · [[notlar/docker-manga-ve-kitap-yigini]] · [[notlar/docker-bulut-ve-fotograf-yigini]] · [[notlar/docker-ag-panel-ve-altyapi-yigini]]
-> **İlgili Projeler:** [[projeler/flugelserver-ev-sunucusu]] · [[projeler/koharia-reader-flugel-manga]] · [[projeler/duduk-hakem-uygulamasi]]
+> **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]] · [[projeler/flugel-manga]] · [[projeler/duduk]]
 
 ---
 

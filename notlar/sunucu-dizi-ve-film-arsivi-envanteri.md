@@ -19,7 +19,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-dizi-film-arsivi]] · [[wiki/flugelserver-anime-manga-lightnovel-arsivi]] · [[wiki/flugelserver-docker-uygulamalari]] · [[wiki/flugelserver-dosya-agaci-ve-diskler]]
 > **İlgili Notlar:** [[notlar/docker-medya-ve-arr-yigini]] · [[notlar/sunucu-anime-manga-ve-rezero-arsivi]] · [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] · [[notlar/docker-uygulama-baglanti-topolojisi]]
-> **İlgili Projeler:** [[projeler/flugelserver-ev-sunucusu]]
+> **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]]
 
 ---
 

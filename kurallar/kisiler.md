@@ -38,6 +38,6 @@ Bu kural dosyası yalnızca `kisiler/**` dizini altındaki kişi kartları oluş
 - **Kök ve Harita:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[simdi]]
 - **Diğer Kurallar ve Şablonlar:** [[kurallar/guvenlik]] · [[kurallar/projeler]] · [[kurallar/notlar]] · [[sablonlar/kisi]]
 - **Örnek Kişi Kartı:** [[kisiler/ahmet-gokalp-goksu]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[notlar/gazi-eem-2026-guz-dersleri]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

@@ -5,7 +5,7 @@ etiketler:
   - mimari
   - ikinci-beyin
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-14
 ---
 
 # kararlar.md — Mimari ve Operasyonel Karar Kaydı
@@ -25,5 +25,7 @@ Bağlantılar: [[HARITA]] · [[hafiza]] · [[dersler]] · [[simdi]]
 | **2026-11-11** | **Düdük** uygulamasında WorkManager sürümünü `2.10.5`'te sabitleme ([[android-arac-zinciri-ve-mimari]]) | WorkManager 2.11+ sürümlerinin bazı API 34 cihazlarda `JobScheduler.forNamespace()` nedeniyle açılışta çökmesi | WorkManager 2.11+ (reddedildi) |
 | **2026-11-11** | `BÖLGE` yerel lig maç ücretini `0 TL` yerine `null` ("ücret tanımsız") başlatma ([[hakem-ucret-tarifesi-2026-2027]]) | İl Müdürlüğü bordro tutarının açık kaynaklarda yer almaması ve `0 TL` saymanın toplam kazancı bozması | Sabit tahmini tutar gömmek veya `0 TL` saymak (reddedildi) |
 | **2026-11-11** | `duduk.gokalpgoksu.com` adresini `flugelserver` üzerinde `akis.yml` (`cloudflared-akis.service`) tüneline bağlama | `config.yml` tünelinin Cloudflare Zero Trust tarafından uzaktan yönetildiği için yerel satırları yok sayması | `config.yml` (uzaktan yönetildiği için çalışmadı) |
+| **2026-11-11** | **Düdük** maç birincil anahtarını yalnız `matchNumber` yerine birleşik `matchNumber\|date\|time` yapma ([[notlar/assignr-api-yapisi]]) | `assignr` ertelenen maçları eski kaydı silmeden aynı `matchNumber` ile ikinci kez yayınlıyor (`ANK-U16E-C-2026-153`) | Yalnız `matchNumber` anahtarı (çakışma yarattığı için reddedildi) |
+| **2026-11-11** | **Düdük** uygulamasının çalışma zamanında `ankarabasket.org.tr/api/*` uçlarına istek atmaması; `season-teams`, `clubs`, `tbf-catalog`, `venues` verilerini APK içine gömülü katalog (`assets/katalog/`) olarak koyma ([[notlar/ankarabasket-rsc-flight-ayristirma]]) | `ankarabasket.org.tr/robots.txt` içinde `Disallow: /api` kuralı bulunması | Çalışma zamanında `/api` uçlarını çağırmak (robots.txt nedeniyle reddedildi) |
 | **2026-11-11** | Tüm projeler için tek bir merkezi **İkinci Beyin Vault'u** (`HARITA.md` + `notlar/kisiler/projeler` + `raw/wiki` + `brain.py`) kurma ve Nextcloud `files/Obsidian/flugel-beyin/` ile eşitleme | Her oturumda bağlamı sıfırdan anlatmayı bitirmek ve model halüsinasyonlarını `brain.py lint` ile deterministik olarak yakalamak | Proje başına ayrı not klasörleri veya yalnız RAG (reddedildi) |
-| **2026-11-05** | FLUGEL Akış'ı `akis.gokalpgoksu.com` üzerinden **şifresiz** açma; Android kabuğunu bu adrese bağlama ([[notes/flugel-akis-mobil-uygulama]]) | Kullanıcı okulda ve evde Tailscale olmadan kullanmak istedi; "şifre olsa ne yarar zaten aç hemen" | giris nginx üzerinden basic auth + APK'ya gömülü kullanıcı (kullanıcı istemedi); Tailscale serve `:8443` (çalışmıyordu) |
+| **2026-11-05** | FLUGEL Akış'ı `akis.gokalpgoksu.com` üzerinden **şifresiz** açma; Android kabuğunu bu adrese bağlama ([[notlar/flugel-akis-mobil-uygulama]]) | Kullanıcı okulda ve evde Tailscale olmadan kullanmak istedi; "şifre olsa ne yarar zaten aç hemen" | giris nginx üzerinden basic auth + APK'ya gömülü kullanıcı (kullanıcı istemedi); Tailscale serve `:8443` (çalışmıyordu) |

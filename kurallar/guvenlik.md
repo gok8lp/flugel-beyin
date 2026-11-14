@@ -42,6 +42,6 @@ Bu kural dosyası tüm vault genelinde (`**`), yerel iş istasyonunda (`flugelub
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]]
 - **Diğer Kurallar:** [[kurallar/kisiler]] · [[kurallar/projeler]] · [[kurallar/notlar]]
 - **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]] · [[projeler/siber-guvenlik-ve-sistem-lab]]
-- **Wiki ve Notlar:** [[wiki/flugelserver-ag-guvenlik-ve-tuneller]] · [[wiki/ikinci-beyin-sistemi]] · [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/flugelserver-ag-guvenlik-ve-tuneller]] · [[wiki/ikinci-beyin-sistemi]] · [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]] · [[flugelserver-genel-mimari]]
 
 > Kaynaklar: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`, `raw/flugelserver/FLUGEL-OZET.md`, `raw/yerel-ai/DERSLER-BILGI.md`

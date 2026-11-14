@@ -18,7 +18,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/ee313-ve-hakemlik-calisma-plani]] · [[wiki/duduk-genel-bakis]] · [[wiki/ikinci-beyin-sistemi]]
 > **İlgili Notlar:** [[notlar/tbf-basketbol-kurallari-ve-fiba-2026]] · [[notlar/pc-arch-hyprland-ve-ubuntu-gnome-analizi]] · [[notlar/docker-bulut-ve-fotograf-yigini]]
-> **İlgili Projeler:** [[projeler/gazi-eem-guz-2026]] · [[projeler/duduk-hakem-uygulamasi]]
+> **İlgili Projeler:** [[projeler/okul-guz-2026]] · [[projeler/duduk]]
 
 ---
 

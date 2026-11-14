@@ -67,7 +67,7 @@ Kaynak: Fakültenin 16.10.2026 tarihli taslak ara sınav programı.
   - [[wiki/ee313-ve-hakemlik-calisma-plani]]
   - [[wiki/ikinci-beyin-sistemi]]
 - **Bilgi Notları:**
-  - [[notlar/gazi-eem-2026-guz-dersleri]]
-  - [[notlar/gazi-eem-vize-takvimi-2026]]
+  - [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]
+  - [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]
 
 > Kaynaklar: `raw/yerel-ai/DERSLER-BILGI.md`, `raw/yerel-ai/vize-calisma-plani.md`, `raw/yerel-ai/devir-hakem-vize-13kasim.md`

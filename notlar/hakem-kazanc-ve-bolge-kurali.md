@@ -1,6 +1,6 @@
 # Hakem Kazanç Hesabı ve BÖLGE Ücreti Kuralı
 
-Bağlantılar: [[map]] · [[decisions]] · [[hakem-ucret-tarifesi-2026-2027]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]]
+Bağlantılar: [[HARITA]] · [[kararlar]] · [[hakem-ucret-tarifesi-2026-2027]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]]
 
 ## Düzenlenebilir Ücret Tablosu (`KazancHesaplayici.kt`)
 - Hiçbir tutar koda sabit gömülmemiştir; `ucret_tablosu.json` içinde saklanır ve uygulama içinden düzenlenebilir.

@@ -40,6 +40,6 @@ Bu kural dosyası `projeler/**` dizini altındaki tüm proje takip dosyalarını
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]]
 - **Diğer Kurallar ve Şablonlar:** [[kurallar/kisiler]] · [[kurallar/notlar]] · [[kurallar/guvenlik]] · [[sablonlar/proje]]
 - **Projeler:** [[projeler/duduk]] · [[projeler/flugel-manga]] · [[projeler/okul-guz-2026]] · [[projeler/hakemlik]] · [[projeler/flugel-sunucu-ve-akis]] · [[projeler/linux-masaustu-araclari]] · [[projeler/siber-guvenlik-ve-sistem-lab]] · [[projeler/web-portfolyo]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/github-repolar-katalogu]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/github-repolar-katalogu]] · [[flugelserver-genel-mimari]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

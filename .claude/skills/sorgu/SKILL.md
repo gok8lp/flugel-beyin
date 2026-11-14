@@ -43,7 +43,7 @@ Kullanıcının projeler, dersler, hakemlik veya `flugelserver` mimarisi hakkın
 ## İlgili Sayfalar ve Bağlantılar
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]]
 - **Kurallar:** [[kurallar/notlar]] · [[kurallar/projeler]] · [[kurallar/kisiler]] · [[kurallar/guvenlik]]
-- **Wiki ve Notlar:** [[wiki/hot]] · [[wiki/index]] · [[wiki/ikinci-beyin-sistemi]] · [[notlar/assignr-api-yapisi]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/hot]] · [[wiki/index]] · [[wiki/ikinci-beyin-sistemi]] · [[notlar/assignr-api-yapisi]] · [[flugelserver-genel-mimari]]
 - **Projeler:** [[projeler/duduk]] · [[projeler/flugel-manga]] · [[projeler/okul-guz-2026]] · [[projeler/hakemlik]] · [[projeler/flugel-sunucu-ve-akis]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

@@ -16,7 +16,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-dosya-agaci-ve-diskler]] · [[wiki/flugelserver-genel-mimari]] · [[wiki/flugelserver-yedekleme-ve-otomasyon]] · [[wiki/repo-home-server]]
 > **İlgili Notlar:** [[notlar/docker-uygulama-baglanti-topolojisi]] · [[notlar/sunucu-yedekleme-ve-systemd-otomasyonlari]] · [[notlar/sunucu-dizi-ve-film-arsivi-envanteri]] · [[notlar/sunucu-anime-manga-ve-rezero-arsivi]] · [[notlar/sanal-makineler-w11-gpu-ve-moonlight]]
-> **İlgili Projeler:** [[projeler/flugelserver-ev-sunucusu]] · [[projeler/ikinci-beyin-kurulumu]]
+> **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]] · [[ikinci-beyin-sistemi]]
 
 ---
 

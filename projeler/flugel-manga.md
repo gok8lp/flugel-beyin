@@ -60,6 +60,6 @@ Proje **aktif** durumdadır (son commit 31 Ekim 2026; 14 günlük güncellik eş
   - [[wiki/android-arac-zinciri-ve-mimari]]
 - **Bilgi Notları:**
   - [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]]
-  - [[notlar/flugelserver-mimari-ozeti]]
+  - [[flugelserver-genel-mimari]]
 
 > Kaynaklar: `raw/github/00-github-envanteri.md`, `raw/github/01-tum-repolar-commit-gecmisi.md`, `raw/github/koharia-reader.md`

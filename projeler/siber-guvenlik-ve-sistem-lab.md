@@ -66,6 +66,6 @@ Savunma odaklı siber güvenlik eğitim/laboratuvar prototipi (`cybersecurity-la
   - [[wiki/repo-java-producer-consumer]]
   - [[wiki/github-repolar-katalogu]]
 - **Bilgi Notları:**
-  - [[notlar/flugelserver-mimari-ozeti]]
+  - [[flugelserver-genel-mimari]]
 
 > Kaynaklar: `raw/github/00-github-envanteri.md`, `raw/github/01-tum-repolar-commit-gecmisi.md`, `raw/flugelserver/FLUGEL-OZET.md`

@@ -18,8 +18,8 @@ status: active
 
 # 💾 03 — Yerel Arşiv, Birleştirme ve Değişiklik Tespiti
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
-➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[04 - Hakem İstatistikleri ve Ücret Tarifesi (2026-2027)]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler, Arayüz ve Sunucu Zinciri]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
+➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve API Analizi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]]
 
 > [!IMPORTANT] Temel Tasarım Felsefesi: "Hiçbir Kayıt Silinmez"
 > `assignr.immensus.io` yalnızca son 2 haftanın atamalarını döndürdüğü ve geçmiş haftaları veren hiçbir arşiv ucu bulunmadığı için (`docs/VERI-KAYNAKLARI.md §1.4`), **Düdük** uygulaması çektiği her veriyi kendi yerel JSON arşivine (`files/duduk_veri/arsiv.json`) kalıcı olarak ekler (`upsert`). Sezon boyunca tüm hakem istatistikleri, partner analizleri ve kazanç tabloları bu birikimli arşiv üzerinden hesaplanır.

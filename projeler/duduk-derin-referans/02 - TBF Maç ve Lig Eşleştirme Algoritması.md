@@ -18,8 +18,8 @@ status: active
 
 # 🧠 02 — TBF Maç ve Lig Eşleştirme Algoritması
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
-➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
+➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve API Analizi]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]]
 
 > [!IMPORTANT] Neden Bulanık Eşleştirme Gerekiyor?
 > - `ankarabasket.org.tr` ana sayfasındaki `days` JSON verisi `code == matchNumber` taşıdığı için son 2 günün `BÖLGE` maçlarını doğrudan bağlar.

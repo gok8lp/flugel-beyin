@@ -5,12 +5,12 @@ etiketler:
   - moc
   - ikinci-beyin
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-14
 ---
 
 # HARITA.md — İkinci Beyin Ana Haritası
 
-> **Fırtınanın Merkezi:** Her oturumda ilk bu dosya okunur. Bilgi nerede yaşar, dosyalar nasıl adlandırılır ve sorular nasıl yanıtlanır burada tanımlıdır. Odak dosyaları: [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[gelen-kutusu]] · [[CLAUDE]].
+> **Fırtınanın Merkezi:** Her oturumda ilk bu dosya okunur. Bilgi nerede yaşar, dosyalar nasıl adlandırılır ve sorular nasıl yanıtlanır burada tanımlıdır. Klasör sistemi ve "yeni bilgi nereye?" kuralları: [[ARSIV-SISTEMI]]. Odak dosyaları: [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[gelen-kutusu]] · [[CLAUDE]].
 
 ---
 
@@ -31,6 +31,8 @@ guncelleme: 2026-11-11
 | **`sablonlar/`** | Kişi, proje, karar ve not şablonları | [[sablonlar/not]], [[sablonlar/proje]], [[sablonlar/kisi]], [[sablonlar/karar]] |
 | **`raw/`** | Ham kaynaklar (`flugelserver`, `github`, `yerel-ai`, `duduk`) | **Salt okunur** (`Edit(/raw/**)` yasaklı) |
 | **`wiki/`** | `raw/` kaynaklarından derlenen doğrulanmış wiki sayfaları | `python3 brain.py lint` ile denetlenir (`0 problem`) |
+| **`projeler/duduk-derin-referans/`** | Düdük için uzun, modüler derin teknik referans (eski `Düdük - Side Brain/`) | Dosya adları korunur; giriş: [[00 - Düdük MOC (Ana Merkez)]] |
+| **`_arsiv/`** | Artık aktif olmayan, ama silinmeyen içerik (`_arsiv/eski/`: eski İngilizce kök dosyalar) | Salt arşiv; yeni bilgi yazılmaz. Kurallar: [[ARSIV-SISTEMI]] |
 
 ---
 
@@ -39,8 +41,9 @@ guncelleme: 2026-11-11
 
 ---
 
-## 3. Projeler (`projeler/` ve `projects/duduk/`)
+## 3. Projeler (`projeler/`)
 - [[projeler/duduk]] — **Düdük** Android hakem takip uygulaması ve `flugelserver` Docker arka ucu (`gok8lp/duduk`, `v0.1.0`)
+  - **Düdük Derin Teknik Referans (`projeler/duduk-derin-referans/`):** [[00 - Düdük MOC (Ana Merkez)]] · [[01 - Veri Kaynakları ve API Analizi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]] · [[Veri Tuzakları ve Uç Durumlar Kataloğu]]
 - [[projeler/flugel-manga]] — **Flugel Manga (`koharia-reader`)** Android manga okuyucu (`Komga`, `Kavita`, `Suwayomi` entegrasyonu)
 - [[projeler/okul-guz-2026]] — **Gazi EEM 2026 Güz Dönemi** (`EE313 Elektrik Makinaları I`, `EE333 Endüstriyel Otomasyon`, vize çalışma planı)
 - [[projeler/hakemlik]] — **2026-2027 Ankara Basketbol Hakemliği** (atamalar, TBF/FIBA 2026 kuralları, görevli ücretleri)
@@ -51,7 +54,7 @@ guncelleme: 2026-11-11
 
 ---
 
-## 4. Bilgi Notları (`notlar/` ve `notes/`)
+## 4. Bilgi Notları (`notlar/`)
 - [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] — `flugelserver` 3 LUKS disk (`/`, `/mnt/side`, `/mnt/sidemain`) ve tam klasör ağacı
 - [[notlar/docker-uygulama-baglanti-topolojisi]] — Tüm Docker servislerinin birbirine bağlanma topolojisi (`Gluetun`, `*arr`, `Immich`, `Nextcloud`, `Komga`, `FLUGEL Akış`, `duduk-server`)
 - [[notlar/docker-medya-ve-arr-yigini]] — `Sonarr`, `Radarr`, `Bazarr`, `Prowlarr`, `Jackett`, `FlareSolverr`, `Transmission`, `Gluetun`, `Jellyfin`, `Plex`
@@ -69,10 +72,10 @@ guncelleme: 2026-11-11
 - [[notlar/laptop-dux-ozellestirme-oturumu-2026-11-13]] — Laptop Dux/Hyprland özelleştirme oturumu (12-13 Kasım 2026): yapılanlar, dosya haritası, pencere sistemi ve sol-panel düzeltmeleri, bekleyen işler
 - [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]] — Gazi EEM Güz 2026 dersleri ve vize çalışma takvimi
 - [[notlar/tbf-basketbol-kurallari-ve-fiba-2026]] — TBF kural kitabı ve FIBA 2026 değişiklikleri
-- [[notes/ee317-vize-calismasi-2026-11-11]] — EE317 Güç Elektroniği I vizesi (12 Kasım 2026): kapsam D1–D4, dosyalar, H01–H10 konumları, ilerleme
-- [[notes/claude-hafizasi]] — Claude Code belleğinin aktarımı: ders çalışma tercihleri, Claude–Codex ortak klasör düzeni
-- [[notes/flugel-akis-mobil-uygulama]] — FLUGEL Akış `akis.gokalpgoksu.com` (şifresiz, Tailscale'siz) ve Android kabuğu `FLUGEL-Akis.apk` 2.0: derleme, imza, dağıtım, geri alma
-- [[notes/assignr-api-yapisi]] · [[notes/ankarabasket-rsc-flight-ayristirma]] · [[notes/tbf-bulanik-mac-eslestirme]] · [[notes/hakem-kazanc-ve-bolge-kurali]] · [[notes/cloudflare-ve-tailscale-baglanti-zinciri]]
+- [[notlar/ee317-vize-calismasi-2026-11-11]] — EE317 Güç Elektroniği I vizesi (12 Kasım 2026): kapsam D1–D4, dosyalar, H01–H10 konumları, ilerleme
+- [[notlar/claude-hafizasi]] — Claude Code belleğinin aktarımı: ders çalışma tercihleri, Claude–Codex ortak klasör düzeni
+- [[notlar/flugel-akis-mobil-uygulama]] — FLUGEL Akış `akis.gokalpgoksu.com` (şifresiz, Tailscale'siz) ve Android kabuğu `FLUGEL-Akis.apk` 2.0: derleme, imza, dağıtım, geri alma
+- [[notlar/assignr-api-yapisi]] · [[notlar/ankarabasket-rsc-flight-ayristirma]] · [[notlar/tbf-bulanik-mac-eslestirme]] · [[notlar/hakem-kazanc-ve-bolge-kurali]] · [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]]
 
 ---
 
@@ -82,4 +85,8 @@ guncelleme: 2026-11-11
 - **flugelserver Mimari ve Arşivler:** [[flugelserver-genel-mimari]] · [[flugelserver-docker-uygulamalari]] · [[flugelserver-uygulama-baglantilari]] · [[flugelserver-dizi-film-arsivi]] · [[flugelserver-anime-manga-lightnovel-arsivi]] · [[flugelserver-dosya-agaci-ve-diskler]] · [[flugelserver-yedekleme-ve-otomasyon]] · [[flugelserver-sanal-makineler-ve-gpu]] · [[flugelserver-ag-guvenlik-ve-tuneller]] · [[flugel-akis-ve-botlar]] · [[sunucu-ve-github-commit-gecmisi]]
 - **GitHub 23 Depo Kataloğu:** [[github-repolar-katalogu]] · [[koharia-reader-ve-manga-ekosistemi]] · [[pc-masaustu-hyprland-ve-gnome-araclari]] · [[ee313-ve-hakemlik-calisma-plani]]
   - [[repo-duduk]] · [[repo-koharia-reader]] · [[repo-basketbol-kurallar-calisma]] · [[repo-headset-surround-linux]] · [[repo-end4-pc]] · [[repo-ubuntu-tam-guncelle]] · [[repo-chrome-orta-tik-kaydirma]] · [[repo-gnome-pip-konum]] · [[repo-k380s-ubuntu-fn]] · [[repo-clipline-linux]] · [[repo-cybersecurity-lab]] · [[repo-c-password-generator]] · [[repo-c-text-shuffler]] · [[repo-gok8lp-github-io]] · [[repo-wix-anilist-portfolio]] · [[repo-java-producer-consumer]] · [[repo-c-process-tree]] · [[repo-home-server]] · [[repo-home-server-android]] · [[repo-gnome-island]] · [[repo-desktop-server-toolkit]] · [[repo-c-calismalarim]] · [[repo-gok8lp]]
-- **Derin Teknik Referans (`Düdük - Side Brain/`):** [[00 - Düdük MOC (Ana Merkez)]] · [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler, Arayüz ve Sunucu Zinciri]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]] · [[Veri Tuzakları ve Uç Durumlar Kataloğu]]
+
+---
+
+## 6. Arşiv (`_arsiv/`)
+- `_arsiv/eski/` — 2026-11-14 yeniden yapılandırmasında Türkçe karşılıklarına birleştirilen eski İngilizce kök dosyalar: [[_arsiv/eski/map|map]] (→ [[HARITA]]), [[_arsiv/eski/memory|memory]] (→ [[hafiza]]), [[_arsiv/eski/decisions|decisions]] (→ [[kararlar]]), [[_arsiv/eski/lessons|lessons]] (→ [[dersler]]), [[_arsiv/eski/inbox|inbox]] (→ [[gelen-kutusu]]) ve Obsidian varsayılan `Welcome.md`.

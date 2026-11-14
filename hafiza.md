@@ -5,7 +5,7 @@ etiketler:
   - profil
   - ortam
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-14
 ---
 
 # hafiza.md — Kalıcı Tercihler ve Gerçekler
@@ -29,6 +29,13 @@ Bağlantılar: [[HARITA]] · [[simdi]] · [[kararlar]] · [[dersler]] · [[kisil
   1. Cloudflare Tunnel (`akis.yml`): `https://duduk.gokalpgoksu.com`
   2. Tailscale Serve: `https://flugelserver.tail42f1f4.ts.net:18443`
   3. Doğrudan açık kaynaklar (`assignr`, `ankarabasket`, `TBF`)
+- **Düdük Geliştirme Ortamı** (eski `memory.md`'den birleştirildi):
+  - Depo: `https://github.com/gok8lp/duduk` (**Private**, sürüm `v0.1.0`), yerel dizin `/home/flugel/Projects/duduk`.
+  - Derleme: `cd /home/flugel/Projects/duduk && JAVA_HOME=/usr/lib/jvm/java-17-openjdk ./gradlew :app:assembleDebug :app:testDebugUnitTest`
+  - Canlı uç yolları: `/v1/health`, `/v1/bundle`, `/v1/stats`; sunucuda konteyner `duduk-server` → `127.0.0.1:18420` (`~/duduk-server`).
+  - Emülatör (`flugelserver`): SDK `/home/flugel/android-sdk`, AVD `duduk_avd` (`system-images;android-35;google_apis;x86_64`).
+  - Aktif sezon: `2026-2027`, TBF `seasonId=174`.
+  - Not: eski `memory.md` PC kullanıcısı `flugel` için "`sudo` yok" diyordu; laptop kurulum notları `sudo` kullanıyor, güncelliği doğrulanmalı.
 
 ## 3. Güvenlik ve Gizlilik Kuralları
 - Parola, token, `.env`, `local.properties` (özellikle `/home/flugel/Projects/koharia-reader/local.properties`), SSH anahtarı veya çerezler **asla** okunmaz, sohbete yazılmaz ve vault'a/git'e kaydedilmez.

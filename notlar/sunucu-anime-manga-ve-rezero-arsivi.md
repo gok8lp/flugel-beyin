@@ -19,7 +19,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-anime-manga-lightnovel-arsivi]] · [[wiki/koharia-reader-ve-manga-ekosistemi]] · [[wiki/repo-koharia-reader]] · [[wiki/flugelserver-dizi-film-arsivi]]
 > **İlgili Notlar:** [[notlar/docker-manga-ve-kitap-yigini]] · [[notlar/sunucu-dizi-ve-film-arsivi-envanteri]] · [[notlar/flugelserver-uc-disk-ve-klasor-agaci]]
-> **İlgili Projeler:** [[projeler/koharia-reader-flugel-manga]] · [[projeler/flugelserver-ev-sunucusu]]
+> **İlgili Projeler:** [[projeler/flugel-manga]] · [[projeler/flugel-sunucu-ve-akis]]
 
 ---
 

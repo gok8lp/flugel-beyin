@@ -1,6 +1,6 @@
 # ankarabasket Next.js RSC Flight Ayrıştırma ve Gömülü Katalog
 
-Bağlantılar: [[map]] · [[lessons]] · [[decisions]] · [[assignr-ve-ankarabasket-kaynaklari]] · [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[Veri Tuzakları ve Uç Durumlar Kataloğu]]
+Bağlantılar: [[HARITA]] · [[dersler]] · [[kararlar]] · [[assignr-ve-ankarabasket-kaynaklari]] · [[01 - Veri Kaynakları ve API Analizi]] · [[Veri Tuzakları ve Uç Durumlar Kataloğu]]
 
 ## `self.__next_f.push` Doğrusal Karakter Tarayıcısı
 - `https://www.ankarabasket.org.tr/` ana sayfasında bugün-2 ile bugün+4 arasındaki maçlar ve skorlar Next.js RSC Flight parçaları içinde gömülü `days` JSON dizisinde bulunur.

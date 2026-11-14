@@ -50,7 +50,7 @@ Raporu şu 5 başlık altında madde madde ve dosya/satır referanslarıyla sun:
 ## İlgili Sayfalar ve Bağlantılar
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]]
 - **Kurallar:** [[kurallar/notlar]] · [[kurallar/projeler]] · [[kurallar/kisiler]] · [[kurallar/guvenlik]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/index]] · [[wiki/hot]] · [[notlar/assignr-api-yapisi]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/index]] · [[wiki/hot]] · [[notlar/assignr-api-yapisi]] · [[flugelserver-genel-mimari]]
 - **Projeler:** [[projeler/duduk]] · [[projeler/okul-guz-2026]] · [[projeler/hakemlik]] · [[projeler/flugel-sunucu-ve-akis]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

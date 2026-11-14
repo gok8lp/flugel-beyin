@@ -16,8 +16,8 @@ status: active
 
 # 🏆 2026-2027 Ankara Lig ve Grup Eşleşme Tablosu
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
-➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
+➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve API Analizi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]]
 
 Kaynak veri: `/home/flugel/Projects/duduk/docs/samples/lig-eslesme.json` (**81 grup/lig satırı**: **59 `eslesti`**, **7 `kismi`**, **15 `eslesmedi`**; TBF Sezon ID: `174`).
 

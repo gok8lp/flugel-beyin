@@ -32,6 +32,6 @@ guncelleme: 2026-11-11
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]]
 - **İlgili Projeler:** [[projeler/duduk]] · [[projeler/flugel-sunucu-ve-akis]]
 - **Wiki Sayfaları:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/github-repolar-katalogu]]
-- **Bilgi Notları:** [[notlar/flugelserver-mimari-ozeti]]
+- **Bilgi Notları:** [[flugelserver-genel-mimari]]
 
 > Kaynak: `<dosya-yolu veya "sen, sohbette, YYYY-AA-GG">`

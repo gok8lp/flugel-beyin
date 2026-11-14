@@ -67,7 +67,7 @@ Kişisel iş istasyonu (**Lenovo ThinkBook 16p Gen 4**, RTX 4060, Arch Linux + H
   - [[wiki/repo-chrome-orta-tik-kaydirma]]
   - [[wiki/repo-ubuntu-tam-guncelle]]
 - **Bilgi Notları:**
-  - [[notlar/arch-hyprland-ve-gnome-masaustu-araclari]]
-  - [[notlar/flugelserver-mimari-ozeti]]
+  - [[pc-masaustu-hyprland-ve-gnome-araclari]]
+  - [[flugelserver-genel-mimari]]
 
 > Kaynaklar: `raw/github/00-github-envanteri.md`, `raw/github/01-tum-repolar-commit-gecmisi.md`, `raw/flugelserver/FLUGEL-OZET.md`

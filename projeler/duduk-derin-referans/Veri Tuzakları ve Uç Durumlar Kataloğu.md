@@ -16,8 +16,8 @@ status: active
 
 # ⚠️ Veri Tuzakları ve Uç Durumlar Kataloğu
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
-➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[04 - Hakem İstatistikleri ve Ücret Tarifesi (2026-2027)]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler, Arayüz ve Sunucu Zinciri]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
+➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve API Analizi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]]
 
 Bu katalog, **Düdük** projesinin tersine mühendislik ve geliştirme sürecinde keşfedilen tüm gerçek dünya veri anomalilerini, API tutarsızlıklarını ve bunlara karşı yazılan savunmacı Kotlin çözümlerini tek tabloda toplar.
 

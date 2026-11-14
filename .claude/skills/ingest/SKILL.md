@@ -69,7 +69,7 @@ git commit -m "ingest <kaynak>"
 ## İlgili Sayfalar ve Bağlantılar
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[hafiza]] · [[kararlar]]
 - **Kurallar:** [[kurallar/notlar]] · [[kurallar/guvenlik]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/index]] · [[wiki/hot]] · [[notlar/assignr-api-yapisi]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/index]] · [[wiki/hot]] · [[notlar/assignr-api-yapisi]] · [[flugelserver-genel-mimari]]
 - **İlgili Projeler:** [[projeler/duduk]] · [[projeler/flugel-sunucu-ve-akis]] · [[projeler/okul-guz-2026]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

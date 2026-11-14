@@ -18,7 +18,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/repo-basketbol-kurallar-calisma]] · [[wiki/duduk-genel-bakis]] · [[wiki/hakem-ucret-tarifesi-2026-2027]] · [[wiki/assignr-ve-ankarabasket-kaynaklari]] · [[wiki/tbf-eslestirme-algoritmasi]] · [[wiki/ee313-ve-hakemlik-calisma-plani]]
 > **İlgili Notlar:** [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]] · [[notlar/docker-ag-panel-ve-altyapi-yigini]] · [[notlar/docker-uygulama-baglanti-topolojisi]]
-> **İlgili Projeler:** [[projeler/duduk-hakem-uygulamasi]] · [[projeler/basketbol-hakemligi]]
+> **İlgili Projeler:** [[projeler/duduk]] · [[projeler/hakemlik]]
 
 ---
 

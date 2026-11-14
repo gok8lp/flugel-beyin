@@ -1,6 +1,6 @@
 # TBF Bulanık Maç ve Lig Eşleştirme Formülü
 
-Bağlantılar: [[map]] · [[lessons]] · [[tbf-eslestirme-algoritmasi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]]
+Bağlantılar: [[HARITA]] · [[dersler]] · [[tbf-eslestirme-algoritmasi]] · [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[2026-2027 Ankara Lig Eşleşme Tablosu]]
 
 ## Eşleştirme Özeti (`Eslestirme.kt`)
 - TBF WebAPI'de (`get-all-matches-for-filter`) `assignr` `matchNumber` alanı yoktur ve takım/salon adları farklı yazılır.

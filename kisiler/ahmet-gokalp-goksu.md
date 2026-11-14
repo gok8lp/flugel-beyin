@@ -51,6 +51,6 @@ guncelleme: 2026-11-11
 
 ## İlgili Wiki ve Not Sayfaları
 - **Wiki:** [[wiki/github-repolar-katalogu]] · [[wiki/duduk-genel-bakis]] · [[wiki/flugelserver-genel-mimari]] · [[wiki/ee313-ve-hakemlik-calisma-plani]] · [[wiki/koharia-reader-ve-manga-ekosistemi]]
-- **Notlar:** [[notlar/gazi-eem-2026-guz-dersleri]] · [[notlar/hakem-kazanc-ve-bolge-kurali]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Notlar:** [[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]] · [[notlar/hakem-kazanc-ve-bolge-kurali]] · [[flugelserver-genel-mimari]]
 
 > Kaynaklar: `raw/yerel-ai/devir-hakem-vize-13kasim.md`, `raw/flugelserver/FLUGEL-OZET.md`, `raw/github/00-github-envanteri.md`

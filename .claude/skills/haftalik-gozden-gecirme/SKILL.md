@@ -45,6 +45,6 @@ Vault'un dağınıklığını önlemek, bayatlayan projeleri yakalamak ve graf b
 ## İlgili Sayfalar ve Bağlantılar
 - **Kök ve Harita:** [[HARITA]] · [[simdi]] · [[gelen-kutusu]] · [[hafiza]] · [[kararlar]] · [[dersler]]
 - **Kurallar ve Şablonlar:** [[kurallar/projeler]] · [[kurallar/notlar]] · [[kurallar/kisiler]] · [[kurallar/guvenlik]] · [[sablonlar/proje]] · [[sablonlar/karar]]
-- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/hot]] · [[wiki/index]] · [[notlar/flugelserver-mimari-ozeti]]
+- **Wiki ve Notlar:** [[wiki/ikinci-beyin-sistemi]] · [[wiki/hot]] · [[wiki/index]] · [[flugelserver-genel-mimari]]
 
 > Kaynak: `/home/flugel/Projects/prompt-obsidian-ikinci-beyin-sunucu.md`

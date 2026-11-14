@@ -40,7 +40,7 @@ Ev sunucusu **flugelserver** (Ryzen 2600X, GTX 1660 Ti, 15 GB RAM, Ubuntu 26.04,
 - Akış yeniden açıldı ve **https://akis.gokalpgoksu.com** üzerinden şifresiz, Tailscale'siz erişilebilir (`cloudflared-akis` → `localhost:3012`).
 - Yeni Android kabuğu `FLUGEL-Akis.apk` 2.0 (`com.flugel.akis.app`): eski 1.0 yalnız Tailscale `:8443` adresini açıyordu ve çalışmıyordu.
 - AI özellikleri (özet, sohbet, çeviri) Ollama kaldırıldığı için kapalı.
-- Ayrıntı, derleme, imza anahtarı yeri ve geri alma: [[notes/flugel-akis-mobil-uygulama]].
+- Ayrıntı, derleme, imza anahtarı yeri ve geri alma: [[notlar/flugel-akis-mobil-uygulama]].
 
 ## Sıradaki Adımlar ve Açık Kararlar
 - [ ] **FLUGEL-Akis.apk telefonda dene:** Emülatörde doğrulandı, gerçek telefonda henüz kayıtlı test yok.
@@ -75,7 +75,7 @@ Ev sunucusu **flugelserver** (Ryzen 2600X, GTX 1660 Ti, 15 GB RAM, Ubuntu 26.04,
   - [[wiki/repo-home-server-android]]
 - **Bilgi Notları:**
   - [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]]
-  - [[notlar/flugelserver-mimari-ozeti]]
-  - [[notes/flugel-akis-mobil-uygulama]]
+  - [[flugelserver-genel-mimari]]
+  - [[notlar/flugel-akis-mobil-uygulama]]
 
 > Kaynaklar: `raw/flugelserver/FLUGEL-OZET.md`, `raw/github/00-github-envanteri.md`, `raw/github/01-tum-repolar-commit-gecmisi.md`

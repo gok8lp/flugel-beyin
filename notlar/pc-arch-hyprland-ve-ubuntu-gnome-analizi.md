@@ -19,7 +19,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/pc-masaustu-hyprland-ve-gnome-araclari]] · [[wiki/repo-end4-pc]] · [[wiki/repo-gnome-island]] · [[wiki/repo-desktop-server-toolkit]] · [[wiki/ikinci-beyin-sistemi]]
 > **İlgili Notlar:** [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] · [[notlar/docker-uygulama-baglanti-topolojisi]] · [[notlar/docker-ag-panel-ve-altyapi-yigini]]
-> **İlgili Projeler:** [[projeler/ikinci-beyin-kurulumu]] · [[projeler/flugelserver-ev-sunucusu]]
+> **İlgili Projeler:** [[ikinci-beyin-sistemi]] · [[projeler/flugel-sunucu-ve-akis]]
 
 ---
 

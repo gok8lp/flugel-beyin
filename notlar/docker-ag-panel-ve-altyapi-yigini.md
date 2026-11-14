@@ -21,7 +21,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-ag-guvenlik-ve-tuneller]] · [[wiki/flugelserver-docker-uygulamalari]] · [[wiki/flugel-akis-ve-botlar]] · [[wiki/duduk-genel-bakis]] · [[wiki/repo-duduk]]
 > **İlgili Notlar:** [[notlar/docker-uygulama-baglanti-topolojisi]] · [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] · [[notlar/sunucu-yedekleme-ve-systemd-otomasyonlari]] · [[notlar/sanal-makineler-w11-gpu-ve-moonlight]]
-> **İlgili Projeler:** [[projeler/flugelserver-ev-sunucusu]] · [[projeler/duduk-hakem-uygulamasi]]
+> **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]] · [[projeler/duduk]]
 
 ---
 

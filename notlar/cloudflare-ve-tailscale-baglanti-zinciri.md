@@ -1,6 +1,6 @@
 # Cloudflare Tunnel ve Tailscale Serve Bağlantı Zinciri
 
-Bağlantılar: [[map]] · [[memory]] · [[decisions]] · [[CLAUDE.local]] · [[android-arac-zinciri-ve-mimari]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler, Arayüz ve Sunucu Zinciri]]
+Bağlantılar: [[HARITA]] · [[hafiza]] · [[kararlar]] · [[CLAUDE.local]] · [[android-arac-zinciri-ve-mimari]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]]
 
 ## 3 Kademeli Bağlantı Sırası (`Kaynaklar.kt` & `DudukDeposu.kt`)
 1. **Cloudflare Tunnel (`duduk.gokalpgoksu.com`):**

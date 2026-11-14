@@ -18,7 +18,7 @@ guncelleme: 2026-11-11
 > **Üst Harita ve Kök Bağlantılar:** [[HARITA]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[simdi]]
 > **İlgili Wiki Sayfaları:** [[wiki/flugelserver-sanal-makineler-ve-gpu]] · [[wiki/flugelserver-genel-mimari]] · [[wiki/flugelserver-yedekleme-ve-otomasyon]] · [[wiki/repo-home-server]]
 > **İlgili Notlar:** [[notlar/flugelserver-uc-disk-ve-klasor-agaci]] · [[notlar/sunucu-yedekleme-ve-systemd-otomasyonlari]] · [[notlar/docker-ag-panel-ve-altyapi-yigini]] · [[notlar/docker-bulut-ve-fotograf-yigini]]
-> **İlgili Projeler:** [[projeler/flugelserver-ev-sunucusu]]
+> **İlgili Projeler:** [[projeler/flugel-sunucu-ve-akis]]
 
 ---
 

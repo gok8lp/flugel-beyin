@@ -11,7 +11,7 @@ guncelleme: 2026-11-11
 
 # FLUGEL Akış: Herkese Açık Adres ve Mobil Uygulama (FLUGEL-Akis.apk 2.0)
 
-Bağlantılar: [[HARITA]] · [[projeler/flugel-sunucu-ve-akis]] · [[flugel-akis-ve-botlar]] · [[notes/cloudflare-ve-tailscale-baglanti-zinciri]] · [[kararlar]] · [[dersler]]
+Bağlantılar: [[HARITA]] · [[projeler/flugel-sunucu-ve-akis]] · [[flugel-akis-ve-botlar]] · [[notlar/cloudflare-ve-tailscale-baglanti-zinciri]] · [[kararlar]] · [[dersler]]
 
 > Kaynak: sen, sohbette, 2026-11-05 ("sunucuda flugel akışı açıp bana mobil appini yapar mısın"). Durum 2026-11-11 15:02 UTC'de sunucuda yeniden doğrulandı.
 

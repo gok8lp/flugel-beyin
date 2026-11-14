@@ -37,7 +37,7 @@ CLUSTER_DEFS = [
     {"id": "skills",    "label": "skills/haftalik-gozden-gecirme", "folder": "skills",       "cx":  0.14, "cy":  0.14, "cz":  0.18, "radius": 0.20},
     {"id": "wiki",      "label": "wiki/",                    "folder": "wiki",               "cx":  0.22, "cy": -0.14, "cz": -0.10, "radius": 0.34},
     {"id": "raw",       "label": "raw/",                     "folder": "raw",                "cx":  0.48, "cy": -0.22, "cz": -0.18, "radius": 0.34},
-    {"id": "sidebrain", "label": "Düdük - Side Brain/",      "folder": "Düdük - Side Brain", "cx": -0.34, "cy": -0.32, "cz": -0.14, "radius": 0.22},
+    {"id": "sidebrain", "label": "projeler/duduk-derin-referans/", "folder": "projeler/duduk-derin-referans", "cx": -0.34, "cy": -0.32, "cz": -0.14, "radius": 0.22},
 ]
 
 
@@ -98,6 +98,8 @@ def classify_cluster(rel_path: str) -> str:
         return "local"
     if p.startswith("notlar/") or p.startswith("notes/") or p.startswith("sablonlar/"):
         return "notlar"
+    if p.startswith("projeler/duduk-derin-referans/") or p.startswith("Düdük - Side Brain/"):
+        return "sidebrain"
     if p.startswith("projeler/") or p.startswith("projects/"):
         return "projeler"
     if p.startswith("kisiler/") or p.startswith("people/"):
@@ -110,8 +112,6 @@ def classify_cluster(rel_path: str) -> str:
         return "wiki"
     if p.startswith("raw/"):
         return "raw"
-    if p.startswith("Düdük - Side Brain/"):
-        return "sidebrain"
     return "loader"
 
 
@@ -180,7 +180,7 @@ def scan_vault():
     rel_to_id = {}
 
     valid_exts = {".md", ".txt", ".py", ".sh"}
-    skip_dirs = {".obsidian", ".git", ".brain", "__pycache__"}
+    skip_dirs = {".obsidian", ".git", ".brain", "__pycache__", "_arsiv", "worktrees"}
 
     all_paths = []
     for dirpath, dirnames, filenames in os.walk(ROOT):

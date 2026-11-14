@@ -19,7 +19,7 @@ status: active
 
 # 🌐 01 — Veri Kaynakları ve Tersine Mühendislik
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
 ➡️ **İlgili Modüller:** [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[Veri Tuzakları ve Uç Durumlar Kataloğu]]
 
 > [!NOTE] Gözlem ve Doğrulama Bağlamı
@@ -75,7 +75,7 @@ flowchart LR
 | Alan | JSON Tipi | Örnek Değer | Kritik Notlar ve Normalizasyon |
 |---|---|---|---|
 | `week` | `String` | `"7-13 Kasım 2026"`, `"31 Ekim - 6 Kasım 2026"` | Biçim tutarsızdır (ay değiştiğinde tire etrafında boşluk olur). Sıralama için **asla** `week` kullanılmaz; `date` kullanılır. |
-| `matchType` | `String` | `"BÖLGE"`, `"OKUL"`, `"AGL"`, `"AA"`, `"ABL"` | Müsabaka kategorisi. Bkz. [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] ve [[04 - Hakem İstatistikleri ve Ücret Tarifesi (2026-2027)]]. |
+| `matchType` | `String` | `"BÖLGE"`, `"OKUL"`, `"AGL"`, `"AA"`, `"ABL"` | Müsabaka kategorisi. Bkz. [[02 - TBF Maç ve Lig Eşleştirme Algoritması]] ve [[04 - Hakem İstatistikleri ve 2026-2027 Ücret Tarifesi]]. |
 | `date` | `String` | `"2026-11-13"` | `YYYY-MM-DD` (Türkiye yerel tarihi). |
 | `time` | `String` | `"18:30"` | `HH:MM` (Türkiye yerel saati, `Europe/Istanbul`, UTC+3). |
 | `hall` | `String` | `"ANKARA SPOR SALONU KÜÇÜK"` | Genellikle BÜYÜK HARF (`AA` maçlarında karışık harf olabilir). |

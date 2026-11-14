@@ -19,8 +19,8 @@ status: active
 
 # 💰 04 — Hakem İstatistikleri ve Ücret / Kazanç Tarifesi (2026-2027)
 
-⬅️ **Üst Merkez:** [[00 - Ana Merkez (MOC)]]
-➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve Tersine Mühendislik]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler, Arayüz ve Sunucu Zinciri]]
+⬅️ **Üst Merkez:** [[00 - Düdük MOC (Ana Merkez)]]
+➡️ **İlgili Modüller:** [[01 - Veri Kaynakları ve API Analizi]] · [[03 - Yerel Arşiv, Birleştirme ve Değişiklik Tespiti]] · [[05 - Android Mimari, Senkronizasyon, Bildirimler ve Arayüz]]
 
 > [!IMPORTANT] Kritik İş Kuralı (Gereksinim 6): `BÖLGE` Ücreti Sıfır Sayılmaz!
 > Ankara yerel ligi (`BÖLGE`) müsabakalarının görevli ücretleri TBF Özel Müsabaka Tarifesi kapsamında **değildir** ve Gençlik ve Spor İl Müdürlüğü bütçesinden ödendiği için hiçbir açık kaynakta resmi tutar tablosu bulunamamıştır.

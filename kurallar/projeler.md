@@ -31,7 +31,7 @@ Bu kural dosyası `projeler/**` dizini altındaki tüm proje takip dosyalarını
    - **Bağlantılar (`[[wikilink]]`):** `[[HARITA]]`, `[[simdi]]`, `[[hafiza]]`, `[[kararlar]]` ile ilgili `[[kisiler/...]]`, `[[wiki/...]]` ve `[[notlar/...]]` sayfalarına bağlantılar.
 
 ## 14 Gün Bayatlık (Staleness) Kuralı
-- Son güncelleme veya son commit tarihinden itibaren **14 günden uzun süredir** (`>14 gün`) güncellenmeyen projeler `beyin-kontrol` becerisiyle gözden geçirilirken **bayat / beklemede** olarak işaretlenir.
+- Son güncelleme veya son commit tarihinden itibaren **14 günden uzun süredir** (`>14 gün`) güncellenmeyen projeler Avenox Beyin V3’ün `beyin-kontrol` becerisiyle yapılan proje denetiminde, mevcut durumları ve sıradaki adımları gözden geçirilerek **bayat / beklemede** olarak işaretlenir.
 - Bayatlayan projeler için kullanıcıya:
   1. Yeni bir sıradaki adım belirlenmesi, veya
   2. Projenin `durum: arsiv-beklemede` statüsüne çekilerek `[[simdi]]` odak listesinden çıkarılması önerilir.

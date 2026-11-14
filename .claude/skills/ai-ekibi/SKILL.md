@@ -41,7 +41,7 @@ agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","li
 - **İzin listesi şart:** headless modda izin sorulamaz; `--settings` allow listesi yoksa `read_file` otomatik reddedilir, ajan **hiçbir şey yapmadan rc=0 ile biter** ("no output produced… auto-denied"). 2026-11-14'te kontrol ajanı bu yüzden boş döndü. Komut çalıştırması gerekirse yalnız gereken komutu ekle: `"command(<komut>)"`. Çıktıda "auto-denied" ya da boş log varsa iş BAŞARISIZ sayılır.
 - `--print-timeout` bayrağı `-p`'den **önce** gelmeli; yoksa `-p` onu prompt sanır.
 - `< /dev/null` vermezsen stdin bekleyip takılabilir.
-- Model seçmek için `--model`; yazma yetkisi için `--mode accept-edits` (izin verilen kapsamda; yeni kapsam için kullanıcı onayı).
+- Model seçmek için `--model` (liste: `agy models`). **Varsayılan hafif:** okuma/özet/envanter lane'lerinde `--model gemini-3.8-flash-medium` (basit işte `-low`). Argon (`gemini-4-argon-*`) yalnız zor akıl yürütme, hakemlik veya mimari için; Gökalp tercihi (2026-11-15). Yazma yetkisi için `--mode accept-edits` (izin verilen kapsamda; yeni kapsam için kullanıcı onayı).
 - Giriş yoksa "login" ister: dur, kullanıcıdan kendi terminalinde `agy` ile giriş yapmasını iste. **Giriş kodunu asla sen girme.**
 - `~/.gemini/antigravity/bin/agentapi` yalnız Antigravity'nin kendi ajanı içinden çalışır (`ANTIGRAVITY_LS_ADDRESS` gerekir). Dışarıdan kullanma.
 

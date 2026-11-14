@@ -26,3 +26,4 @@ Devir: <süre/engel durumunda devir-sablonu.md ve V3 görevi>
 - Başlangıç ve teslim dosya listelerini/diff özetini karşılaştır. Sınır dışı değişiklik kabulü durdurur; başka lane'in işini silerek düzeltme. Lider yeniden bölüştürür.
 - Kapsam bitince dur; yeni iş üretme. Süre aşımı, erişim engeli veya kapsam değişikliği başarı değildir.
 - Yetki zaten bu görev için açıkça verilmişse tekrar isteme; sandbox engelini başka ajan veya sağlayıcıyla aşma.
+- **Dış modele veri göndermeden önce içerik sır taraması zorunlu.** Codex/Gemini'ye gidecek her paket, gönderimden önce `grep -E "PRIVATE KEY-----|\"d\"\s*:\s*\"[A-Za-z0-9_-]{16,}|(api[_-]?key|token|secret|password)\s*[:=]\s*[^*\s]"` gibi bir içerik taramasından geçer. Eşleşme varsa paket gönderilmez, maskelenir. Yalnız dosya adına dayalı sır tespiti yetmez (2026-11-15: `id_ed25519`, `oidc-key.json`, `server-ed25519` bu yüzden sızdı).

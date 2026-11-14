@@ -23,13 +23,13 @@ Bu kural dosyası kişisel bilgi notlarını barındıran `notlar/**` dizini ile
    - İçeriği doğrudan anlatan, **küçük harf**, **tireli (`-`)** ve **Türkçe karaktersiz** (`c, g, i, o, s, u`) dosya adları kullanılır (ör. `notlar/tbf-bulanik-mac-eslestirme.md`, `wiki/hakem-ucret-tarifesi-2026-2027.md`).
 3. **YAML Frontmatter:**
    - **`notlar/**` için:** `tur: not`, `etiketler`, `olusturma`, `guncelleme` alanları zorunludur (bkz. [[sablonlar/not]]).
-   - **`wiki/**` için:** Karpathy LLM Wiki standardı ve `brain.py lint` denetimi gereği `title`, `sources` (liste halinde `raw/...` yolları) ve `updated` (`YYYY-AA-GG`) alanları zorunludur.
+   - **`wiki/**` için:** Eski Karpathy LLM Wiki sayfalarının `title`, `sources` (liste halinde `raw/...` yolları) ve `updated` (`YYYY-AA-GG`) alanları korunur; `brain.py lint` artık kullanılmaz. Yeni kalıcı bilgi `knowledge/` içine kaynak bağlantısıyla yazılır.
 4. **Kaynak Gösterme ve Birebir Alıntı Kuralı:**
    - Hiçbir iddia kaynaksız bırakılmaz; kaynakta olmayan bilgi tahminle doldurulmaz ("kayıtlı değil" denir).
    - **`notlar/**` sayfalarında:** Her iddianın veya bölümün altında kaynak dosya yolu ya da `"sen, sohbette, <tarih>"` belirtilir.
    - **`wiki/**` sayfalarında:** Somut her iddia kaynak dosyada birebir geçen metinle şu formatta doğrulanır:
      `> "birebir metin" - raw/<dosya>`
-   - `wiki/` altındaki her düzenlemeden sonra `python3 brain.py lint` çalıştırılarak alıntıların kaynak dosyada birebir geçtiği ve kırık `[[link]]` olmadığı doğrulanır.
+   - `wiki/` altındaki her düzenlemeden sonra alıntıların kaynak dosyada birebir geçtiği ve `[[link]]` hedeflerinin varlığı doğrudan doğrulanır; eski `python3 brain.py lint` kaldırılmıştır.
 5. **Graf Bağlantısı:** Her not en az bir ilgili nota/projeye ve `[[HARITA]]` sayfasına `[[wikilink]]` ile bağlanır; yetim sayfa (orphan page) bırakılmaz.
 
 ## İlgili Sayfalar

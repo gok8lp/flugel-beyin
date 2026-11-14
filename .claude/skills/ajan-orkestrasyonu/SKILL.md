@@ -21,6 +21,8 @@ Kullanıcı her zaman **ekip lideriyle** (ana oturum, Claude Opus 5.5) konuşur.
 **İstisna:** Soru cevaplamak, plan ve rapor yazmak, bir-iki komutluk kontrol ve kullanıcıyla konuşmak liderin işidir; bunlar için ajan yollama. Kod yazma ve dosya değiştirme içeren her iş alt ajana gider.
 
 ## 2. Önce kotaya bak, modeli betik seçsin
+**ZORUNLU:** Her alt ajan çağrısından ÖNCE ai-limitler --sec <seviye> çalıştırılır, istisna yok. Lider kendi sağlayıcısının (bu oturum Claude 1 ise Claude 1) 5 saatlik penceresi %80'i geçtiyse Claude alt ajanı açmaz; işi Codex/Gemini'ye verir ve kendi çıktısını kısa tutar; %95'i geçtiyse kalan işi bir devir notuyla Codex'e devreder. Bu kural 2026-11-14'te Claude 1 %98'deyken Claude alt ajanları açıldığı için eklendi.
+
 ```bash
 ai-limitler                 # tüm kotalar (2 dk önbellek)
 ai-limitler --sec basit     # → "codex gpt-6-luna low" ya da "claude haiku"

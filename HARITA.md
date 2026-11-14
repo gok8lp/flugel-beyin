@@ -19,18 +19,18 @@ guncelleme: 2026-11-14
 | Klasör / Dosya | Amacı | Kapsam Kuralı |
 |---|---|---|
 | **`HARITA.md`** | Tüm bilgi ağının tek merkezi indeks haritası | Her yeni dosya eklendiğinde buraya bir satır eklenir |
-| **`simdi.md`** ([[simdi]]) | Bu hafta odaktaki aktif işler ve sıradaki adımlar | Her oturum başında `CLAUDE.md` ile yüklenir |
-| **`hafiza.md`** ([[hafiza]]) | Kalıcı tercihler, makineler, sunucu ve kimlik gerçekleri | 200 satırın altında tutulur |
-| **`kararlar.md`** ([[kararlar]]) | Tarih, karar, neden ve değerlendirilen alternatifler | Mimari/operasyonel her karar buraya işlenir |
-| **`dersler.md`** ([[dersler]]) | Öğrenilen teknik dersler, veri tuzakları ve hatalar | Tekrarlanmaması gereken hatalar |
-| **`gelen-kutusu.md`** ([[gelen-kutusu]]) | Hızlı notlar ve tasnif bekleyen girdiler | Haftalık gözden geçirmede ilgili klasöre taşınır |
+| **`🔮 850-Companion/Threads.md`** ([[🔮 850-Companion/Threads]]) ve **`tasks/`** | Aktif odak konuları, işler ve sıradaki adımlar | Odak bağlamını V3 hook’ları verir; somut işler `tasks/` içinde izlenir |
+| **`🔮 850-Companion/Core.md`** ([[🔮 850-Companion/Core]]) ve **`Kurallar.md`** ([[🔮 850-Companion/Kurallar]]) | Kalıcı tercihler, makineler, sunucu, kimlik gerçekleri ve çalışma kuralları | V3 companion bağlamı; kökteki `hafiza.md` yalnız yönlendirmedir |
+| **`knowledge/kararlar.md`** ([[knowledge/kararlar]]) | Tarih, karar, neden ve değerlendirilen alternatifler | Mimari/operasyonel her karar buraya işlenir |
+| **`knowledge/dersler.md`** ([[knowledge/dersler]]) | Öğrenilen teknik dersler, veri tuzakları ve hatalar | Tekrarlanmaması gereken hatalar |
+| **V3 Yakala (`📥 000-Inbox/Yakala`)** | Hızlı notlar ve tasnif bekleyen girdiler | Ctrl+Alt+B ile yakalanır; “yakalananları işle” ile ilgili bilgiye/işe dönüştürülür; kökteki `gelen-kutusu.md` yalnız yönlendirmedir |
 | **`notlar/`** | Kişisel ve teknik bilgi notları (her dosyada tek konu) | [[kurallar/notlar]] |
 | **`kisiler/`** | Kişi kartları (rol, sorumluluk, iletişim yolu, projeler) | [[kurallar/kisiler]] |
 | **`projeler/`** | Her projenin durumu, sıradaki adımı ve bağlantıları | [[kurallar/projeler]] |
 | **`kurallar/`** | Yol kapsamlı çalışma ve güvenlik kuralları | [[kurallar/guvenlik]] |
 | **`sablonlar/`** | Kişi, proje, karar ve not şablonları | [[sablonlar/not]], [[sablonlar/proje]], [[sablonlar/kisi]], [[sablonlar/karar]] |
 | **`raw/`** | Ham kaynaklar (`flugelserver`, `github`, `yerel-ai`, `duduk`) | **Salt okunur** (`Edit(/raw/**)` yasaklı) |
-| **`wiki/`** | `raw/` kaynaklarından derlenen doğrulanmış wiki sayfaları | `python3 brain.py lint` ile denetlenir (`0 problem`) |
+| **`wiki/`** | `raw/` kaynaklarından derlenmiş mevcut wiki sayfaları | Eski wiki lint kaldırıldı; yeni kalıcı bilgi `knowledge/` içine kaynak bağlantısıyla yazılır |
 | **`projeler/duduk-derin-referans/`** | Düdük için uzun, modüler derin teknik referans (eski `Düdük - Side Brain/`) | Dosya adları korunur; giriş: [[00 - Düdük MOC (Ana Merkez)]] |
 | **`_arsiv/`** | Artık aktif olmayan, ama silinmeyen içerik (`_arsiv/eski/`: eski İngilizce kök dosyalar) | Salt arşiv; yeni bilgi yazılmaz. Kurallar: [[ARSIV-SISTEMI]] |
 
@@ -80,7 +80,7 @@ guncelleme: 2026-11-14
 
 ---
 
-## 5. Derlenmiş Wiki (`wiki/` — `brain.py lint` ile Doğrulanmış 48 Sayfa)
+## 5. Derlenmiş Eski Wiki (`wiki/` — V3 Öncesi 48 Sayfalık Referans; Yeni Bilgi `knowledge/` İçinde)
 - **Giriş ve Özet:** [[wiki/hot]] · [[wiki/index]] · [[wiki/log]] · [[ikinci-beyin-sistemi]]
 - **Düdük Çekirdeği:** [[duduk-genel-bakis]] · [[assignr-ve-ankarabasket-kaynaklari]] · [[tbf-eslestirme-algoritmasi]] · [[yerel-arsiv-ve-senkronizasyon]] · [[hakem-ucret-tarifesi-2026-2027]] · [[android-arac-zinciri-ve-mimari]]
 - **flugelserver Mimari ve Arşivler:** [[flugelserver-genel-mimari]] · [[flugelserver-docker-uygulamalari]] · [[flugelserver-uygulama-baglantilari]] · [[flugelserver-dizi-film-arsivi]] · [[flugelserver-anime-manga-lightnovel-arsivi]] · [[flugelserver-dosya-agaci-ve-diskler]] · [[flugelserver-yedekleme-ve-otomasyon]] · [[flugelserver-sanal-makineler-ve-gpu]] · [[flugelserver-ag-guvenlik-ve-tuneller]] · [[flugel-akis-ve-botlar]] · [[sunucu-ve-github-commit-gecmisi]]

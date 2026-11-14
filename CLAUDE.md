@@ -1,50 +1,30 @@
-# CLAUDE.md — İkinci Beyin Anayasası (< 200 Satır)
+# CLAUDE.md — İkinci Beyin (Avenox Beyin V3)
 
-@HARITA.md
-@simdi.md
-@hafiza.md
-@kararlar.md
+Bu vault 2026-11-14'ten beri Avenox Beyin V3 ile çalışır. Oturum bağlamını ve ilgili notları V3 hook'ları verir; elle `@import` yoktur. Eski sistem (hafiza/simdi/kararlar/dersler, brain.py, HUD, eski skill'ler) `_arsiv/eski-sistem/` altındadır.
 
----
+## 1. Bilgiler nerede durur
+- **`🔮 850-Companion/`**: `Core.md` (kimlik, cihazlar, sunucu), `Kurallar.md` (her işte geçerli kurallar), `Threads.md` (aktif odak konuları), `Last-Session.md` (oturum devir kartları), `Journal.md`.
+- **`tasks/`**: Açık işler (`beyin.py task-create` / `task-update`).
+- **`knowledge/`**: Kalıcı bilgi; `knowledge/kararlar.md` (tarih, karar, neden, alternatifler), `knowledge/dersler.md`, `knowledge/index.md`.
+- **`notes/`**: V3 ile açılan notlar. **`notlar/`, `projeler/`, `kisiler/`, `kurallar/`**: mevcut insan notları (yerinde kalır; `note-read`/`note-edit` ile düzenlenir).
+- **`📥 000-Inbox/Yakala`**: Hızlı yakalama (Ctrl+Alt+B); "yakalananları işle" ile işlenir.
+- **`HARITA.md`**: Klasör haritası. **`ARSIV-SISTEMI.md`**: yeni bilgi nereye konur.
+- **`raw/`**: Ham kaynaklar; model yalnız okur, **asla düzenlemez** (`Edit(/raw/**)` yasak). **`wiki/`**: raw'dan derlenmiş eski kavram sayfaları; yeni kalıcı bilgi `knowledge/`'a yazılır.
+- **`_arsiv/`**: Aramadan çıkarılmış eski içerik; yalnız açıkça istenirse okunur.
+- Kökteki `hafiza.md`, `simdi.md`, `gelen-kutusu.md` yalnızca eski bağlantılar için yönlendirmedir; içine yazma.
 
-## 1. Bilgiler Nerede Durur (`where things live`)
-- **`HARITA.md`** ([[HARITA]]): En üst giriş noktası. Her bilgi türünün hangi klasörde/dosyada yaşadığını gösterir.
-- **`ARSIV-SISTEMI.md`** ([[ARSIV-SISTEMI]]): Klasör sistemi, "yeni bilgi nereye konur" karar tablosu ve isimlendirme kuralı.
-- **`simdi.md`** ([[simdi]]): Bu hafta odaktaki aktif işler ve sıradaki adımlar.
-- **`hafiza.md`** ([[hafiza]]): Kalıcı tercihler, cihazlar, sunucu ve kimlik gerçekleri.
-- **`kararlar.md`** ([[kararlar]]): Tarih, karar, neden ve alternatifler.
-- **`dersler.md`** ([[dersler]]): Öğrenilen teknik dersler ve hatalar.
-- **`gelen-kutusu.md`** ([[gelen-kutusu]]): Hızlı notlar; haftalık gözden geçirmede uygun yere taşınır.
-- **`notlar/`**: Kişisel ve teknik bilgi notları (her dosyada tek konu).
-- **`kisiler/`**: Kişi kartları (rol, sorumluluk alanı, iletişim yolu, ilgili projeler).
-- **`projeler/`**: Her projede durum, sıradaki adım ve bağlantılar. Büyük projelerin derin referansı alt klasörde durur (ör. `projeler/duduk-derin-referans/`).
-- **`kurallar/`**: Yol kapsamlı kurallar (`kurallar/kisiler.md`, `kurallar/projeler.md`, `kurallar/notlar.md`, `kurallar/guvenlik.md`).
-- **`sablonlar/`**: Kişi, proje, karar ve not için Obsidian şablonları (`sablonlar/*.md`).
-- **`raw/`**: Ham kaynaklar. Model yalnızca okur, **asla düzenlemez** (`Edit(/raw/**)` yasaklı).
-- **`wiki/`**: `raw/` kaynaklarından derlenen kavram sayfaları (`title`, `sources`, `updated` frontmatter + `> "birebir metin" - raw/<dosya>` alıntı satırı zorunlu).
-- **`wiki/hot.md`**: En fazla ~15 satırlık sıcak bağlam önbelleği.
-- **`wiki/index.md`**: `python3 brain.py index` ile otomatik üretilen wiki indeksi.
-- **`_arsiv/`**: Aktif olmayan ama silinmeyen içerik (`_arsiv/eski/`: birleştirilmiş eski İngilizce kök dosyalar). Buraya yeni bilgi yazılmaz; cevap kaynağı olarak yalnız açıkça istenirse kullanılır.
+## 2. Nasıl cevap verilir
+1. Hook'un verdiği bağlamı kullan; eksikse `python3 beyin.py --vault . context "<konu>"`.
+2. Her iddianın kaynağını yaz (dosya yolu ya da "sen, sohbette, <tarih>"). Hiçbir kaynak yoksa "kayıtlı değil" de.
+3. Kalıcı bilgiyi beyin skill'i ile kaydet (`.agents/skills/beyin/SKILL.md`): karar → `knowledge/kararlar.md`, ders → `knowledge/dersler.md`, iş → `tasks/`.
+4. Parola, token, `.env`, `local.properties`, SSH anahtarı veya çerez vault'a **asla** yazılmaz.
 
-## 2. Nasıl Cevap Verilir (`how to answer`)
-1. Önce `HARITA.md` ve `wiki/hot.md` dosyalarına bak; cevabı haritanın gösterdiği dosyadan ver ve dosya adını açıkça belirt.
-2. Her iddianın altına kaynağını yaz: dosya yolu (`notlar/...`, `wiki/...`, `raw/...`) ya da `"sen, sohbette, <tarih>"`.
-3. Hiçbir dosya konuyu kapsamıyorsa **"kayıtlı değil"** de, tahminle boşluk doldurma.
-4. Yeni bilgi kalıcıysa:
-   - Tek konulu yeni dosya aç veya ilgili dosyayı güncelle,
-   - `HARITA.md` dosyasına bir satır ekle,
-   - Kararları `kararlar.md`'ye, dersleri `dersler.md`'ye işle.
-5. Parola, token, `.env` içeriği, `local.properties`, SSH anahtarı veya oturum çerezi vault'a **ASLA** yazılmaz. Gerekirse `"parola X yöneticisinde"` gibi yer gösterici yaz.
+## 3. İsimlendirme
+- Dosya adları küçük harf, tireli, Türkçe karaktersiz. Bağlantılar Obsidian `[[wikilink]]`.
 
-## 3. İsimlendirme ve Bağlantı Kuralları (`naming`)
-- Dosya adları: içeriği anlatan, **küçük harf, tireli, Türkçe karaktersiz** (ör. `gazi-eem-vize-takvimi-ve-ders-notlari.md`; asla `not-12.md` değil).
-- Bağlantılar: Obsidian `[[wikilink]]` kullan. Her not en az bir ilgili nota ve `[[HARITA]]`'ya bağlansın.
-- `wiki/` altındaki her düzenlemeden sonra `python3 brain.py lint` çalıştırılır (`0 problem(s)` zorunlu).
-
-## 4. Her Zaman Odakta (`always in focus`)
-- Her oturum başında `@HARITA.md`, `@simdi.md`, `@hafiza.md`, `@kararlar.md` bağlama yüklenir. 2026-11-14'ten beri oturum açılış bağlamını ve her mesajdaki ilgili not parçalarını Avenox İkinci Beyin V3 hook'ları verir (eski `session-start.sh` emekliye ayrıldı). `wiki/hot.md` V3 indeksinde; gerekirse doğrudan oku.
-- Büyük `wiki/index.md` dosyasını `@import` etme; yalnız gerektiğinde oku.
-- Genel kodlama soruları için `wiki/` dizinini okuma.
+## 4. Skill'ler
+- Beyin: `beyin`, `beyin-kontrol`, `beyin-yakala`, `beyin-doktor`, `beyin-guncelle`. Ajan ekibi: `ai-ekibi`, `ajan-orkestrasyonu` (kanonik kopya `.agents/skills/`).
+- Sağlık: `python3 beyin.py --vault . doctor --human`. Panel: `beyin.py web ac --read-only`.
 
 <!-- beyin-v3:start -->
 ## V3 companion and source-backed memory

@@ -42,6 +42,19 @@ Proje **aktif** ve 8 ana geliştirme aşaması tamamlanmış durumdadır:
 - [ ] 14-20 Kasım 2026 haftası Assignr atamaları yayımlandığında değişiklik tespiti ve arşiv birleştirmesini kontrol etmek.
 - [ ] `flugelserver` `/v1` uçlarının Tailscale üzerinden mobil istemciyle uzun süreli senkronizasyon kararlılığını izlemek.
 
+## Geliştirme Ortamı ve Canlı Uçlar
+2026-11-14'te [[hafiza]] dosyasından taşındı (o dosyaya eski `memory.md`'den birleştirilmişti).
+
+- **Depo:** `https://github.com/gok8lp/duduk` (**Private**, sürüm `v0.1.0`), yerel dizin `/home/flugel/Projects/duduk`.
+- **Derleme ve test:** `cd /home/flugel/Projects/duduk && JAVA_HOME=/usr/lib/jvm/java-17-openjdk ./gradlew :app:assembleDebug :app:testDebugUnitTest`
+- **Canlı uç yolları:** `/v1/health`, `/v1/bundle`, `/v1/stats`; sunucuda konteyner `duduk-server` → `127.0.0.1:18420` (`~/duduk-server`, Compose: `~/duduk-server/docker-compose.yml`).
+- **Canlı uçlar:**
+  1. Cloudflare Tunnel (`akis.yml`): `https://duduk.gokalpgoksu.com`
+  2. Tailscale Serve: `https://flugelserver.tail42f1f4.ts.net:18443`
+  3. Doğrudan açık kaynaklar (`assignr`, `ankarabasket`, `TBF`)
+- **Emülatör (`flugelserver`):** SDK `/home/flugel/android-sdk`, AVD `duduk_avd` (`system-images;android-35;google_apis;x86_64`).
+- **Aktif sezon:** `2026-2027`, TBF `seasonId=174`.
+
 ## Son Commit Geçmişi
 - `18bfbe0` (2026-11-11): 8. Sunucu: hız sınırı, parametre doğrulaması ve güvenlik başlıkları sertleştirmesi
 - `7e2ae77` (2026-11-11): 8. Sunucu: `__pycache__` temizliği ve `.gitignore` güncellemesi

@@ -42,6 +42,9 @@ Ev sunucusu **flugelserver** (Ryzen 2600X, GTX 1660 Ti, 15 GB RAM, Ubuntu 26.04,
 - AI özellikleri (özet, sohbet, çeviri) Ollama kaldırıldığı için kapalı.
 - Ayrıntı, derleme, imza anahtarı yeri ve geri alma: [[notlar/flugel-akis-mobil-uygulama]].
 
+## Kurallar
+- (2026-11-14'te [[hafiza]] dosyasından taşındı) Sunucuda `W11` ve `W11-GPU` sanal makineleri aynı diski (`/var/lib/libvirt/images/w11`) paylaştığı için **asla aynı anda açılmaz** ve `SIGKILL` ile zorla kapatılmaz.
+
 ## Sıradaki Adımlar ve Açık Kararlar
 - [ ] **FLUGEL-Akis.apk telefonda dene:** Emülatörde doğrulandı, gerçek telefonda henüz kayıtlı test yok.
 - [ ] **Tailscale Funnel Kararı:** Jellyfin ve Immich (`:10000`) üzerinde açık olan Tailscale Funnel'ın kapatılıp yalnızca Tailnet/Cloudflare üzerinden erişime sınırlandırılması (kullanıcı onayı bekliyor).

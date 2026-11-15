@@ -12,7 +12,7 @@ Bu harita, `raw/yerel-ai/` klasörü altındaki yerel yapay zekâ çalışma ort
 
 - [[raw/yerel-ai/00-BASLA]] — Claude için PC ve ev sunucusu bilgi paketinin giriş belgesi.
 - [[raw/yerel-ai/BASLA]] — Yerel AI belgeleri için genel başlangıç rehberi.
-- [[raw/yerel-ai/CLAUDE]] — FLUGEL sistem çalışma bağlamını tanımlayan ana talimat dosyası.
+- `raw/yerel-ai/CLAUDE.md` — FLUGEL sistem çalışma bağlamını tanımlayan ana talimat dosyası.
 - [[raw/yerel-ai/AI-KURALLARI]] — FLUGEL ortamındaki yapay zekâ çalışma kuralları.
 - [[raw/yerel-ai/ai-workspace-AGENTS]] — Çalışma alanı ajanları için `AGENTS.md` yönergeleri.
 - [[raw/yerel-ai/06-KALICI-CALISMA-TALIMATI]] — Kullanıcının kalıcı çalışma tercihleri ve beklentileri.

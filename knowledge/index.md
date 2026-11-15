@@ -28,3 +28,4 @@ Her kalıcı bilgi notu için tek satır.
 - [[knowledge/raw-flugelserver]] — flugelserver ve diger ham kaynaklarin haritasi
 - [[knowledge/gorevler]] — acik/biten gorevler, sablonlar ve companion dosyalari
 - [[knowledge/ai-workplace-raporlar]] — ai_workplace calisma raporlari dizini
+- [[knowledge/concepts/agy-basiz-mod-izinleri]] — agy/Hydrogen başsız modda izin dersleri

@@ -201,4 +201,15 @@ Başlangıç noktaları: eser→M/books veya M/{movies,series}; fotoğraf→phot
 - **Hatalı kesinlikler elendi:** Immich upload varlığı takılı iş, kullanıcı klasörü sayısı aktif hesap sayısı, kök [diger] girdileri bozuk bağ kanıtı değildir. g06 aynı eser adları hash eşitliği göstermez; g10 Webmin aktif iddiası c08 failed kaydıyla değiştirildi.
 - **Kapsam sınırı:** g01–g10 ağaç/metin kesintileri; c09 inspect boş; c10 nft/ss kısmi. Sunucu güncellenmedi; yalnız bu taslak oluşturuldu. Sır değerleri rapora alınmadı.
 
+## 9. Güncelleme — 2026-11-15 geliştirme turu
+
+> Tam rapor: `~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15.md` (lane raporları, sha256, diff). Sır değerleri bu nota yazılmaz.
+
+- **Yeni uygulamalar (yalnız Tailscale, `https://flugelserver.tail42f1f4.ts.net:<port>`):** Forgejo 55443 (altyapı deposu `flugel/flugel-altyapi`, gece eşitleme), Paperless-ngx 56443 (Türkçe OCR; Syncthing ile PC klasöründen belge), Jellyseerr 57443, Vaultwarden 58443, Grafana/Prometheus 59443, n8n 60443, SearXNG 61443 (Hermes `flugel-arama`), Syncthing 62443, Audiobookshelf 63443, Changedetection 64443, IT-Tools 65443, Scrutiny 46443, Speedtest Tracker 47443, ntfy 51443, CyberChef 52443, Homebox 53443; Recyclarr (arayüzsüz, haftalık). Veri `/srv/appdata/<ad>`, stack `/opt/stacks/<ad>`.
+- **Kaldırılan:** libvirt ve üç sanal makine (imajlar silindi); `telegram-kopru.service` (Hermes aldı); Homepage.
+- **Otomasyon:** `flugel-saglik-ozet` (5 dk) → Hermes `saglik-gozcu` (15 dk) → Telegram; `flugel-onarim` kuyruğu; `gluetun-netns-onar` (2 dk); `flugel-arsiv-katalog` (günlük) + Hermes `arsiv_sorgu.py`; `flugel-manga-denetim` (pazar); `flugel-geri-yukleme-testi` (aylık); `flugel-altyapi-esitle` (gece); `bildirim` artık ntfy `flugel` konusuna da yayın yapar.
+- **Tailscale girişi (tsidp OIDC):** Komga, Kavita, Nextcloud, Immich, Grafana, Forgejo, Paperless; Audiobookshelf kurulabilir (yönetici hesabı hazır).
+- **Docker ağ havuzu:** `daemon.json` `default-address-pools` genişletildi (yeniden başlatmada etkin); o zamana kadar yeni stack'lerde `network_mode: bridge` ya da açık subnet kullan.
+- **Açık:** Cloudflare'da `masaustu.gokalpgoksu.com` genel ana bilgisayar adı ve Nextcloud Access kapısı (Gökalp), disk temizliği kararları (`/mnt/sidemain` %86), manga seri birleştirme, çekirdek `7.0.0-43` yeniden başlatması (Drive aktarımı bitince), ilk yeni-uygulama yedeği (bu gece).
+
 

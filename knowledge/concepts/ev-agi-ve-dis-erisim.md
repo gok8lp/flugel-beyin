@@ -32,6 +32,10 @@
 - AdGuard Ebeveyn Denetimi **kapalı** (Gökalp isteği, 2026-11-15). Reklam/zararlı/oltalama/kumar listeleri açık; SafeSearch kapalı.
 - DNS filtresi alan adı düzeyindedir: sosyal medya akışını dil/konu bazında süzemez.
 
+## SSH
+- `ssh flugelserver` (100.86.88.1) Tailscale SSH'tır, sunucunun `authorized_keys`'ine bakmaz. `flugel@192.168.0.15` normal sshd'dir: yalnız anahtar (parola kapalı), anahtar `~/.ssh/authorized_keys`'te olmalı. Laptop anahtarı 2026-11-15'te eklendi.
+- Her yerden: Tailscale açıkken iki adres de çalışır (192.168.0.15 alt ağ rotasıyla). Tailscale'siz doğrudan SSH CGNAT yüzünden yok.
+
 ## Mullvad proxy
 - gluetun `HTTPPROXY=on`, kimliksiz; dış port `8889` (systemd soketi, `uyg-medya-indirme-p8889`), drop-in ile yalnız 192.168.0.0/24, 100.64.0.0/10, 127/8, 172.16/12.
 - Kullanım: `192.168.0.15:8889` (evde) veya `100.86.88.1:8889` (Tailscale). Çıkış Mullvad İsveç; ölçülen ~34 Mbit/s. Dışarıda Tailscale üzerinden evin 20 Mbit/s yüklemesiyle sınırlı.

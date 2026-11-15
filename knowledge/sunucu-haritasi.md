@@ -5,11 +5,12 @@
     "sunucu",
     "flugelserver",
     "harita"
-  ]
+  ],
+  "remote_allowed": false
 }
 ---
 > Kaynak: 2026-11-15 sunucu derin taraması (indeks + 20 lane AI ordusu + çapraz kontrol + Codex Astra hakem). Ham raporlar ve sırları maskeli paketler: `~/Documents/ai_workplace/second-brain/raporlar/sunucu-envanter/` (vault dışı). Bu belge anlık durum garantisi değildir; canlı bilgi için `sunucu-indeks` kullan.
-> **Güvenlik notu:** İlk taramada 3 özel anahtar (tsidp oidc-key.json, guacamole server-ed25519, ollama id_ed25519) maskelenmeden Codex/Gemini'ye gitti; döndürülmeleri gerekiyor (bkz. tasks/sunucu-anahtar-dondurme).
+> **Güvenlik notu:** İlk taramada 3 özel anahtar (tsidp oidc-key.json, guacamole server-ed25519, ollama id_ed25519) maskelenmeden Codex/Gemini'ye gitti; 2026-11-15'te üçü de döndürüldü (bkz. tasks/sunucu-anahtar-dondurme, done). Bu not `remote_allowed: false`: Jev/TypeSafe'e gönderilmez.
 
 # flugelserver — hakem haritası
 Tarih: 15 Kasım 2026. Hazırlayan: Codex (hakem). Kapsam: 20 lane raporu, çapraz kontrol ve yerel kaynak paketler; sunucuya bağlanılmadı. Bu belge anlık canlı durum garantisi değildir.

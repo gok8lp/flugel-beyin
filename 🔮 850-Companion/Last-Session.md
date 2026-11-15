@@ -8,5 +8,6 @@
 - **Karar:** Jev modu açık kalır.
 - **Açık:** İsteğe bağlı: Cloudflare'de adguard A kaydı ve servissiz rotalar.
 - **Kaynak:** `~/Documents/ai_workplace/second-brain/raporlar/ev-agi-entegrasyon-2026-11-15.md`
+- **Devir (başka AI'ya taşıma):** `~/Documents/ai_workplace/second-brain/raporlar/ev-agi-entegrasyon-2026-11-15-DEVIR.md`; SSH anahtarı da eklendi (`flugel@192.168.0.15` çalışıyor).
 
 Henüz bir çalışma sonucu kaydedilmedi. Anlamlı çalışma sonunda sonuç, gerekçe, açık kalan adım ve kaynak bağlantılarını `## YYYY-MM-DD HH:MM · <etiket> · <session_id[:8]>` başlığıyla buraya yaz. Tarih ve saati kartı yazdığın turdaki hook bağlamının `now=` değerinden al; o turda verilmediyse yerel sistem saatini oku, tahmin etme. Paralel oturumlarda yalnız kendi kartını düzenle, başka oturumların kartlarını ezme.

@@ -1,11 +1,11 @@
 # V3 Sync Note
 
 - schema_version: `3`
-- digest: `0123df5eb18d0cd6763a83d9bcfe573d7c52a3088e4193007224299101dce8c3`
+- digest: `ace5bbe02f9dd9e2e376654b06c6026309e10b152d8c2fd46e96001e04467ec8`
 
 ```json
 {
-  "digest": "0123df5eb18d0cd6763a83d9bcfe573d7c52a3088e4193007224299101dce8c3",
+  "digest": "ace5bbe02f9dd9e2e376654b06c6026309e10b152d8c2fd46e96001e04467ec8",
   "learned": {
     "source_weights": {},
     "topics": {}
@@ -26,9 +26,11 @@
     "topics": {
       "anime": 0.65,
       "hobi": 0.85,
+      "light novel": 0.08,
       "manga": 0.6,
       "müzik": 0.55,
-      "oyun": 0.75
+      "oyun": 0.75,
+      "re:zero": 0.1
     },
     "tracked_topics": []
   },

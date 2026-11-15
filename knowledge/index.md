@@ -10,6 +10,8 @@
   ]
 }
 ---
+Giris: [[HARITA]]
+
 # Knowledge dizini
 
 Her kalıcı bilgi notu için tek satır.
@@ -18,3 +20,11 @@ Her kalıcı bilgi notu için tek satır.
 - [[knowledge/dersler]] — Öğrenilen dersler ve teknik tuzaklar (ikinci beyin, Düdük, sunucu, çoklu ajan, laptop); 2026-11-14'te eski `dersler.md`'den taşındı.
 - [[knowledge/sunucu-haritasi]] — flugelserver haritası (diskler, servisler, ağ, yedekler, riskler); 2026-11-15 derin tarama + hakem sentezi.
 - [[knowledge/mullvad-cihazlari]] — Mullvad hesabındaki iki cihaz: Useful Dodo = laptop, Warm Ghost = flugelserver (gluetun); 2026-11-15.
+
+## Haritalar (MOC)
+
+- [[knowledge/raw-yerel-ai]] — yerel AI ham kaynaklarinin haritasi
+- [[knowledge/raw-github]] — GitHub depo analizlerinin haritasi
+- [[knowledge/raw-flugelserver]] — flugelserver ve diger ham kaynaklarin haritasi
+- [[knowledge/gorevler]] — acik/biten gorevler, sablonlar ve companion dosyalari
+- [[knowledge/ai-workplace-raporlar]] — ai_workplace calisma raporlari dizini

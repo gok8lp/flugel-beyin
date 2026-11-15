@@ -1,19 +1,20 @@
 ---
 {
   "id": "sunucu-uygulama-bakimi",
-  "title": "flugelserver uygulama bakımı ve Akış yenileme (durduruldu)",
+  "title": "flugelserver geliştirme ve otomasyon (devam ediyor)",
   "kind": "task",
-  "revision": 2,
-  "status": "waiting",
+  "revision": 3,
+  "status": "active",
   "owner": "Gökalp",
   "visibility": "internal",
   "project": "flugelserver",
   "updated_at": "2026-11-15",
   "created_at": "2026-11-15",
   "facts": {
-    "rapor": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-bakim-2026-11-15.md",
-    "tamamlanan": "Medya/Arr entegrasyonları doğrulandı; Dockge/Dozzle/Cup/AdGuard/Uptime Kuma/Cockpit/Gündem Botu/Guacamole ayağa kaldırıldı (portal 25/25 acik); Homepage arşivlendi; Flugel Akış sadeleştirilip dağıtıldı; tüm uygulamalara Tailscale Serve eklendi; immich_server ve subgen sırları .env (chmod 600) dosyasına taşındı; uptime-kuma docker.sock :ro yapıldı ve başarısız systemd birimleri temizlendi.",
-    "acik": "Nextcloud Cloudflare Access kapısı (cloudflare eklentisi giriş bekliyor)"
+    "rapor": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15.md",
+    "devir": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15/DEVIR.md",
+    "tamamlanan": "13 yeni uygulama (Forgejo, Paperless, Jellyseerr, Vaultwarden, Recyclarr, Prometheus/Grafana/Alertmanager, n8n, SearXNG, Syncthing, Audiobookshelf, Changedetection, IT-Tools, Scrutiny); Hermes sağlık takibi + onarım kuyruğu + gluetun onarıcı + bildirim rölesi; arşiv kataloğu; manga izin/taşıma/denetim; Uptime Kuma 13 izleyici; Hermes flugel-sunucu ve flugel-arama becerileri; sanal makineler ve imajları kalıcı silindi; portal 36 kart; Akış simgeleri ve bayat durum kartı düzeltildi",
+    "acik": "Tailscale SSO (Grafana, Forgejo, Paperless) lane J1/J2 sürüyor; Cloudflare: masaustu adresi ve Nextcloud Access (Gökalp); Vaultwarden hesap + ilk yedek sonrası parola taşıma; disk temizliği, manga birleştirme, Re:Zero jpg, çekirdek yeniden başlatma kararları (Gökalp)"
   }
 }
 ---

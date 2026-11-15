@@ -5,7 +5,8 @@
 - **Karar:** Funnel, Cloudflare ve Tailscale birlikte kalır; Funnel bilerek açık (mobil uygulamalar).
 - **Karar:** +18 engeli kaldırıldı; Tailscale DNS AdGuard, yedek 1.1.1.1.
 - **Belirsizlik:** AdGuard istemcileri 172.18.0.1 olarak görüyor; ileride tailnet DNS'i değişirse gokalpgoksu.com kuralları yeniden ele alınmalı.
-- **Açık:** Cloudflare'de adguard A kaydı ve servissiz rotalar; Jev modu kararı.
+- **Karar:** Jev modu açık kalır.
+- **Açık:** İsteğe bağlı: Cloudflare'de adguard A kaydı ve servissiz rotalar.
 - **Kaynak:** `~/Documents/ai_workplace/second-brain/raporlar/ev-agi-entegrasyon-2026-11-15.md`
 
 Henüz bir çalışma sonucu kaydedilmedi. Anlamlı çalışma sonunda sonuç, gerekçe, açık kalan adım ve kaynak bağlantılarını `## YYYY-MM-DD HH:MM · <etiket> · <session_id[:8]>` başlığıyla buraya yaz. Tarih ve saati kartı yazdığın turdaki hook bağlamının `now=` değerinden al; o turda verilmediyse yerel sistem saatini oku, tahmin etme. Paralel oturumlarda yalnız kendi kartını düzenle, başka oturumların kartlarını ezme.

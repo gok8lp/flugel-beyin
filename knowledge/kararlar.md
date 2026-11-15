@@ -61,4 +61,5 @@ Bağlantılar: [[HARITA]] · [[Core]] · [[Threads]] · [[knowledge/dersler]]
 | **2026-11-15** | AdGuard **Ebeveyn Denetimi kapatıldı** (yetişkin içerik engeli yok); reklam/zararlı/kumar listeleri açık | Gökalp: "+18 site engellerini kaldır adguarddan" | — |
 | **2026-11-15** | NetMASTER Wi-Fi: 2,4 GHz kanal 6, 5 GHz kanal 36/80 sabit, Airtime Fairness açık, PMF Capable, misafir ağı açık (Gökalp'in kendi kullanımı için) | Kalabalık kanal 1, DFS 52 kesinti riski; Gökalp onayı | Band steering (SSID birleştirme gerektirir, yapılmadı) |
 | **2026-11-15** | Tailscale'den çevrimdışı 13 eski cihaz silindi (eski telefonlar/PC'ler, Faruk Emre S23, Kuzey MacBook, hello exit node, iki 'linux' VM); Redmi Note 10 Pro-1 kaldı | Gökalp: "şuan açık olmayan her cihazı kaldır"; Redmi kullanılan telefon olduğu için Gökalp "kalsın" dedi | — |
+| **2026-11-15** | **Jev modu `on` kalır** ("bir hafta gölge modda ölç" niyetinin yerini alır) | Gökalp: "Açık kalsın" (sohbette, 2026-11-15 19:51) | Bir hafta gölge mod, sonra `on` |
 

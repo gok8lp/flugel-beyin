@@ -10,7 +10,7 @@ guncelleme: 2026-11-14
 
 # HARITA.md — İkinci Beyin Ana Haritası
 
-> **Fırtınanın Merkezi:** Her oturumda ilk bu dosya okunur. Bilgi nerede yaşar, dosyalar nasıl adlandırılır ve sorular nasıl yanıtlanır burada tanımlıdır. Klasör sistemi ve "yeni bilgi nereye?" kuralları: [[ARSIV-SISTEMI]]. Odak dosyaları: [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[gelen-kutusu]] · [[CLAUDE]].
+> **Fırtınanın Merkezi:** Her oturumda ilk bu dosya okunur. Bilgi nerede yaşar, dosyalar nasıl adlandırılır ve sorular nasıl yanıtlanır burada tanımlıdır. Klasör sistemi ve "yeni bilgi nereye?" kuralları: [[ARSIV-SISTEMI]]. Odak dosyaları: [[simdi]] · [[hafiza]] · [[kararlar]] · [[dersler]] · [[gelen-kutusu]] · `CLAUDE.md`.
 
 ---
 
@@ -90,4 +90,4 @@ guncelleme: 2026-11-14
 ---
 
 ## 6. Arşiv (`_arsiv/`)
-- `_arsiv/eski/` — 2026-11-14 yeniden yapılandırmasında Türkçe karşılıklarına birleştirilen eski İngilizce kök dosyalar: [[_arsiv/eski/map|map]] (→ [[HARITA]]), [[_arsiv/eski/memory|memory]] (→ [[hafiza]]), [[_arsiv/eski/decisions|decisions]] (→ [[kararlar]]), [[_arsiv/eski/lessons|lessons]] (→ [[dersler]]), [[_arsiv/eski/inbox|inbox]] (→ [[gelen-kutusu]]) ve Obsidian varsayılan `Welcome.md`.
+- `_arsiv/eski/` — 2026-11-14 yeniden yapılandırmasında Türkçe karşılıklarına birleştirilen eski İngilizce kök dosyalar: `_arsiv/eski/map.md` (→ [[HARITA]]), `_arsiv/eski/memory.md` (→ [[hafiza]]), `_arsiv/eski/decisions.md` (→ [[kararlar]]), `_arsiv/eski/lessons.md` (→ [[dersler]]), `_arsiv/eski/inbox.md` (→ [[gelen-kutusu]]) ve Obsidian varsayılan `Welcome.md`.

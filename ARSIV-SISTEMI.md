@@ -10,7 +10,7 @@ guncelleme: 2026-11-14
 
 # ARSIV-SISTEMI.md — Klasör Sistemi ve Dosyalama Kuralları
 
-Bağlantılar: [[HARITA]] · [[CLAUDE]] · [[kurallar/notlar]] · [[kurallar/projeler]] · [[kurallar/kisiler]] · [[kurallar/guvenlik]]
+Bağlantılar: [[HARITA]] · `CLAUDE.md` · [[kurallar/notlar]] · [[kurallar/projeler]] · [[kurallar/kisiler]] · [[kurallar/guvenlik]]
 
 > Bu vault Avenox Beyin V3 ile çalışır; PARA eşlemesi dosyalama rehberidir. Mevcut `projeler/`, `notlar/`, `kisiler/`, `kurallar/` adları ve `[[projeler/...]]` / `[[notlar/...]]` yol bağlantıları korunur; V3 ise companion, `tasks/`, `knowledge/`, `notes/` ve Yakala alanlarını kullanır. `brain.py`, `hud-uret.py` ve eski HUD arşivdedir; oturum bağlamını V3 hook’ları verir. Ayrıntılı içerik dizini için [[HARITA]] kullanılır; bu dosya yalnız *sistemi* tanımlar.
 

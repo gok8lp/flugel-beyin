@@ -1,10 +1,10 @@
 ---
 {
   "id": "sunucu-uygulama-bakimi",
-  "title": "flugelserver geliştirme ve otomasyon (devam ediyor)",
+  "title": "flugelserver geliştirme ve otomasyon (bitti)",
   "kind": "task",
-  "revision": 7,
-  "status": "active",
+  "revision": 8,
+  "status": "done",
   "owner": "Gökalp",
   "visibility": "internal",
   "project": "flugelserver",
@@ -14,7 +14,7 @@
     "rapor": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15.md",
     "devir": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15/DEVIR.md",
     "tamamlanan": "8 yeni uygulama kaldı (Forgejo, Paperless, n8n, SearXNG, Syncthing, IT-Tools, Scrutiny, ntfy); 8 gereksiz kaldırıldı; Hermes sağlık/onarım/arşiv/arama; n8n 4 ntfy akışı; Tailscale kimlik kapısı 14 uygulamada + OIDC 7; VM'ler silindi; disk temizliği (güvenli kısım); Hermes↔agy/codex PIN onaylı köprüler kuruldu; agy girişi yapıldı (Argon/Hydrogen sunucuda çalışıyor); indirmelerdeki 20,7 GiB kalıcı silindi; Hermes'te varsayılan yanıtlayıcı Hydrogen, agy yolu hermes-ops→sudo -u flugel düzeltildi; Hermes'e tam yetki (YOLO) açık; sunucudaki codex girişi yapıldı (ChatGPT); Hermes modeli gpt-6.1-sol; Hermes'e flugel-kutuphane becerisi (Komga/Kavita okuma geçmişi); sunucu sorularına anında cevap talimatı",
-    "acik": "Gökalp: Guacamole OIDC hâlâ ÇALIŞMIYOR (script gerçek e-postayla çalıştı ama kullanıcı sayısı 1, yalnız 'flugel' var; OpenID girişi tarayıcıda reddediliyor, neden bulunamadı: Guacamole DB'de e-posta adlı kullanıcı yok ve/veya id_token yerine code dönüyor), PIN, Hermes tam yetki riski için PIN geri alınsın mı, Hermes'te Immich OCR araması becerisi isteği; ben: manga lane X1 bitince sidemain Arch PC kopyasını sil, çekirdek 7.0.0-43'e yeniden başlat (şu an -42), compose düz metin parolaları .env'e taşıma (istenirse)",
+    "acik": "Yok. Gökalp 2026-11-15'te sunucu işini bitti ilan etti. Yapılmadan bırakılanlar (karar Gökalp'in): Guacamole Tailscale (OIDC) girişi çalışmadı, normal giriş çalışıyor; PIN ayarı; ikinci Arch PC kopyasının silinmesi ve çekirdek 7.0.0-43 yeniden başlatması; compose düz metin parolaları .env'e taşıma; Hermes'te Immich OCR araması; Hermes tam yetkisi (PIN onayı kapalı, risk kabul edildi)",
     "rapor_ek": "second-brain/raporlar/hermes-varsayilan-hydrogen-2026-11-15.md"
   }
 }

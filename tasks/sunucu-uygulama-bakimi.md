@@ -3,7 +3,7 @@
   "id": "sunucu-uygulama-bakimi",
   "title": "flugelserver geliştirme ve otomasyon (devam ediyor)",
   "kind": "task",
-  "revision": 5,
+  "revision": 6,
   "status": "active",
   "owner": "Gökalp",
   "visibility": "internal",
@@ -13,8 +13,9 @@
   "facts": {
     "rapor": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15.md",
     "devir": "~/Documents/ai_workplace/second-brain/raporlar/sunucu-gelistirme-2026-11-15/DEVIR.md",
-    "tamamlanan": "8 yeni uygulama kaldı (Forgejo, Paperless, n8n, SearXNG, Syncthing, IT-Tools, Scrutiny, ntfy); 8 gereksiz kaldırıldı; Hermes sağlık/onarım/arşiv/arama; n8n 4 ntfy akışı; Tailscale kimlik kapısı 14 uygulamada + OIDC 7; VM'ler silindi; disk temizliği (güvenli kısım); Hermes↔agy/codex PIN onaylı köprüler kuruldu",
-    "acik": "Gökalp: Cloudflare masaustu + Nextcloud Access, Guacamole OIDC komutu, PIN + agy + codex girişleri, indirmelerdeki 20 GiB kararı; ben: manga düzenleme lane X1 (Argon) bitince sidemain Arch PC kopyasını sil, çekirdek 7.0.0-43 yeniden başlat"
+    "tamamlanan": "8 yeni uygulama kaldı (Forgejo, Paperless, n8n, SearXNG, Syncthing, IT-Tools, Scrutiny, ntfy); 8 gereksiz kaldırıldı; Hermes sağlık/onarım/arşiv/arama; n8n 4 ntfy akışı; Tailscale kimlik kapısı 14 uygulamada + OIDC 7; VM'ler silindi; disk temizliği (güvenli kısım); Hermes↔agy/codex PIN onaylı köprüler kuruldu; agy girişi yapıldı (Argon/Hydrogen sunucuda çalışıyor); indirmelerdeki 20,7 GiB kalıcı silindi; Hermes'te varsayılan yanıtlayıcı Hydrogen, agy yolu hermes-ops→sudo -u flugel düzeltildi; Hermes'e tam yetki (YOLO) açık",
+    "acik": "Gökalp: Guacamole OIDC script'i GERÇEK e-postayla yeniden çalıştırılacak (yer tutucuyla iki kez çalıştı, OpenID girişi reddediliyor), codex login --device-auth (sunucuda 'Not logged in'), PIN, Telegram'dan Hydrogen yanıtı onayı, Hermes tam yetki riski için PIN geri alınsın mı kararı; ben: manga lane X1 bitince sidemain Arch PC kopyasını sil, çekirdek 7.0.0-43'e yeniden başlat (şu an -42); compose dosyalarındaki düz metin parolaları .env'e taşıma (istenirse)",
+    "rapor_ek": "second-brain/raporlar/hermes-varsayilan-hydrogen-2026-11-15.md"
   }
 }
 ---

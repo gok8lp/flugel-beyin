@@ -1,5 +1,12 @@
 # Son oturum
 
+## 2026-11-15 22:29 · flugel-akis-hermes-sunucu · f2379f0f
+- **Ne yaptık (Claude 2 / Opus 5.5 lider, alt ajanlar Sonnet 5.5 + Gemini 4 Hydrogen):** Hermes↔Nextcloud köprüsü (`/usr/local/sbin/hermes-nextcloud`) + `flugel-nextcloud` yeteneği; arıza→onarım→doğrulama→beyin(Yakala)→Telegram zinciri (`flugel-ariza-zinciri` v3, Hermes cron `1d6f36dfe14d`, 3 tatbikat doğrulandı); uygulama Tailscale girişleri düzeldi (AdGuard'a `idp.tail42f1f4.ts.net` rewrite + tsidp Kavita:10000/Komga:443 dönüşleri); Sonarr/Radarr arşivi (`flugel-arr-katalog`, Akış `/api/arsiv` yalnız özel); Akış sürüm 1-3 (fragman+müzik 15 kanal, +48 RSS, kapak large, XSS bağlantı koruması, maç/hafta sonu/anime puanı/RSS koşullu GET); Cloudflare tünelinden 8 ölü rota kaldırıldı.
+- **Yarıda kesildi (Gökalp manuel devam edecek):** 50 Hydrogen analiz lane'i (49/50 bitti, öneriler uygulanmadı) — çıktılar `second-brain/raporlar/elli-ajan-analiz-2026-11-15/*.log`. Cup güncelleme lane'ine güvenli noktada durması söylendi; durum: `second-brain/raporlar/cup-guncelleme-2026-11-15.md`.
+- **Açık (Gökalp):** Cloudflare'de ölü DNS kayıtları (admin, ai, bd, convert, pdf, portainer, tools, ui, adguard); Steam Web API anahtarı; PSN kararı; Canalp girişi; clipline `opus/paste-focus` dalını dene; Telegram'dan Nextcloud akışını dene; Akış'ta public okunabilen kişisel uçlar (/api/takip, /api/uyarilar, /api/anime) Codex kapsamında; konsol fiyat kodu hazır ama Akış'a eklenmedi (`scratchpad/konsol/`); anime IMDb başlık dosyası üretilmedi.
+- **Durum:** Sunucuda başarısız birim yok, tüm konteynerler ayakta (22:3x kontrolü).
+- **Kaynak:** `~/Documents/ai_workplace/second-brain/raporlar/akis-hermes-2026-11-15.md`, `.../beyin-isleri-2026-11-15/`, `.../cup-guncelleme-2026-11-15.md`; Codex notu `/tmp/flugel-ekip.JUaP8G/exchange/opus-codex-koordinasyon.md`.
+
 ## 2026-11-15 19:44 · ev ağı entegrasyonu · f86c5534
 - **Ne yaptık:** flugelserver uygulamaları NetMASTER modem ("Residential Gateway") üzerinden ev ağına entegre edildi: modem DNS → AdGuard, evde gokalpgoksu.com doğrudan HTTPS + `.ev` adları, Tailscale DNS → AdGuard, Mullvad HTTP proxy `:8889`, Wi-Fi (kanal 6 / 36, Airtime, PMF, misafir ağı), AdGuard Ebeveyn Denetimi kapalı, 13 eski Tailscale cihazı silindi. Ayrıntı: [[knowledge/concepts/ev-agi-ve-dis-erisim]].
 - **Karar:** Funnel, Cloudflare ve Tailscale birlikte kalır; Funnel bilerek açık (mobil uygulamalar).

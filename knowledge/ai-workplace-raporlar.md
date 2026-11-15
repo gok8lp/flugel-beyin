@@ -64,4 +64,5 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 - `second-brain/raporlar/token-grafik-ai-limitleri-2026-11-15.md` — 2026-11-15 — AI Limitleri modülüne 7 günlük token ve USD grafiği eklendi.
 - `second-brain/raporlar/ubuntu-nspawn-ve-sifreli-yedek-2026-11-14.md` — 2026-11-14 — Arch içinde Ubuntu nspawn çalıştırılması ve GPG şifreli yedeklerin sunucuya alınması planlandı.
 
+- `second-brain/raporlar/ev-agi-entegrasyon-2026-11-15.md` — 2026-11-15 — flugelserver'ın NetMASTER modem, AdGuard, Tailscale DNS, evde HTTPS/.ev, Mullvad proxy ve Wi-Fi ile ev ağına entegrasyonu; eski Tailscale cihazlarının silinmesi.
 Üst harita: [[knowledge/index]]

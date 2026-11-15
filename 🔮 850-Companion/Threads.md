@@ -3,6 +3,7 @@
 ## Active Threads
 ### İkinci beyin: flugel-beyin derlemesi ve V3 geçişi
 - **Sahip:** Gökalp (ajanlarla birlikte).
+- **Durum (2026-11-15, Claude doctor kontrolü):** V3 sağlıklı: hook yolları ve global köprü ok, scheduled-check ok, güncel sürüm, bekleyen olay 0; 2026-11-15 onarımında lint kırık 0/yetim 0. Kökteki `hafiza`, `simdi`, `gelen-kutusu` yalnız yönlendirme; `kararlar`/`dersler` knowledge/'a taşınmış. Jev modu `on`; "bir hafta gölge mod" niyetiyle çelişki hâlâ Gökalp'in kararında.
 - **Durum (2026-11-14):** Vault Avenox İkinci Beyin V3.13.0'a geçti ([[knowledge/kararlar]]). Eski çekirdek dosyalar (`hafiza`, `simdi`, `gelen-kutusu`, `kararlar`, `dersler`) companion, `knowledge/` ve `tasks/` yapısına taşındı; arşivlenmeleri lider ajanın kontrolünü bekliyor. Jev: kararlar kaydında "bir hafta gölge modda ölç, sonra `on`" yazıyor, ama 2026-11-14 `doctor` çıktısında Jev modu `on` görünüyor; hangisinin güncel niyet olduğu Gökalp'e sorulmalı.
 - **11 Kasım hedefi (simdi.md'den):** 23 GitHub deposu, `flugelserver` Docker/medya/manga arşivleri ve Düdük belgelerinin `raw/` + `wiki/` + `notlar/` + `projeler/` altına eksiksiz derlenmesi ve `python3 brain.py lint` ile 0 problem; `second-brain-hud.html` canlı HUD panosu ve Obsidian Graph View renk kümeleri ([[ikinci-beyin-sistemi]]). Bu hedeflerin bitip bitmediği eski dosyalarda kayıtlı değil.
 - **Sonraki adım:** Eski dosyaları arşivle; lint ve HUD durumunu doğrula; Jev modunu Gökalp'le netleştir.
@@ -20,7 +21,7 @@
 
 ### flugelserver ağ güvenliği
 - **Sahip:** Gökalp.
-- **Durum:** `adguard.gokalpgoksu.com` A kaydı temizliği ve Tailscale Funnel (Jellyfin `:443`, Immich `:10000`) kapatma kararı açık; ikisi de tasks/ altında ([[flugelserver-ag-guvenlik-ve-tuneller]]).
-- **Sonraki adım:** Funnel kararını Gökalp verecek; sonra DNS kaydını kontrol et.
+- **Durum (2026-11-15):** Ev ağı entegrasyonu tamamlandı ([[knowledge/concepts/ev-agi-ve-dis-erisim]]): modem ve Tailscale DNS'i AdGuard'a yönlü, evde gokalpgoksu.com doğrudan HTTPS ve `.ev` adları, Mullvad proxy `:8889`, Wi-Fi ayarları, eski Tailscale cihazları silindi. **Funnel bilerek açık kalır** (Gökalp kararı; görev kapandı). `adguard.gokalpgoksu.com` A kaydı hâlâ 178.233.25.73'ü gösteriyor (CGNAT yüzünden işe yaramaz).
+- **Sonraki adım:** İstenirse Cloudflare'de `adguard.gokalpgoksu.com` A kaydını ve servissiz rotaları (tools, pdf, ai, convert, ui, bd, portainer, admin) temizle.
 
 ## Closed Threads

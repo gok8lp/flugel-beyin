@@ -1,11 +1,11 @@
 # V3 Sync Note
 
 - schema_version: `3`
-- digest: `59452fe53523787bed55bf67872992ced68b64a46b4e636a1a95528b5bbba1a5`
+- digest: `78724adfde501ea86c0dc647c38add92f989f2476201460659396a2660ef01c4`
 
 ```json
 {
-  "digest": "59452fe53523787bed55bf67872992ced68b64a46b4e636a1a95528b5bbba1a5",
+  "digest": "78724adfde501ea86c0dc647c38add92f989f2476201460659396a2660ef01c4",
   "learned": {
     "source_weights": {},
     "topics": {}
@@ -36,10 +36,10 @@
   },
   "schema_version": 3,
   "suggestions": [
-    "açık kaynak",
     "gta 6",
     "konsol oyunları",
     "oyun rehberi",
+    "pc oyunları",
     "sinema",
     "video oyunları",
     "yapay zeka",

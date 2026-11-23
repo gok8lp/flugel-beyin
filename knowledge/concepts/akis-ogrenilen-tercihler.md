@@ -1,11 +1,11 @@
 # V3 Sync Note
 
 - schema_version: `3`
-- digest: `53c474698488c81e80ff0e295da8968eef4166bd60b242e438a9eb112d2e649b`
+- digest: `d54e9c012a95b46c3d88187313034177b7e2bf9d93db5f20b0f803307ddc1322`
 
 ```json
 {
-  "digest": "53c474698488c81e80ff0e295da8968eef4166bd60b242e438a9eb112d2e649b",
+  "digest": "d54e9c012a95b46c3d88187313034177b7e2bf9d93db5f20b0f803307ddc1322",
   "learned": {
     "source_weights": {},
     "topics": {}
@@ -41,7 +41,7 @@
     "konsol oyunları",
     "oyun geliştirme",
     "oyun rehberi",
-    "pc oyunları",
+    "video oyunları",
     "yapay zeka",
     "yaratıcı teknoloji"
   ]

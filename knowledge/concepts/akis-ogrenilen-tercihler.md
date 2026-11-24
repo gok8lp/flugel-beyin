@@ -1,11 +1,11 @@
 # V3 Sync Note
 
 - schema_version: `3`
-- digest: `630c4126ad965e1c688b66b60acc2d8d780f74ec50d81f28bd0c2fd475d696be`
+- digest: `ace5bbe02f9dd9e2e376654b06c6026309e10b152d8c2fd46e96001e04467ec8`
 
 ```json
 {
-  "digest": "630c4126ad965e1c688b66b60acc2d8d780f74ec50d81f28bd0c2fd475d696be",
+  "digest": "ace5bbe02f9dd9e2e376654b06c6026309e10b152d8c2fd46e96001e04467ec8",
   "learned": {
     "source_weights": {},
     "topics": {}
@@ -35,8 +35,6 @@
     "tracked_topics": []
   },
   "schema_version": 3,
-  "suggestions": [
-    "gta 6"
-  ]
+  "suggestions": []
 }
 ```

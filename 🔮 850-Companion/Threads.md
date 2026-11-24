@@ -13,6 +13,7 @@
 - **Durum:** 13 Kasım 2026 Cuma Taha Akgül Spor Salonu maçları (U14 Erkek B ve U18 Erkek B, ikisinde de `referee2`) geçti; sonuç kayıtlı değil. Saat ve eşleşmeler simdi.md ile [[projeler/hakemlik]] arasında farklı yazılmış; ayrıntı [[notes/simdi-2026-11-hafta-2]].
 - **Açık işler (tasks/):** canlı sunucu arşivinin (`https://duduk.gokalpgoksu.com/v1/stats`) yeni hafta atamalarını yakalamasını izlemek; `assignr` yeni hafta yayın saatini loglardan gözlemlemek; ilk `BÖLGE` ödemesinde net maç ücretini kaydetmek.
 - **Sonraki adım:** 14-20 Kasım atamaları yayımlanınca `/v1/stats` ve değişiklik tespitini kontrol et ([[projeler/duduk]]).
+- **2026-11-24:** Basket botu Türkçe metin tarih hatası düzeltildi (yeni atama/sabah hatırlatması gitmiyordu); 24 Kasım 17:30 ve 20:30 maçları görünüyor. Düdük telefonda kasıyor: v0.3.0 debug APK → iOS kalitesi işi Canalp'a devredildi (`second-brain/DEVIR-canalp-duduk.md`, oturumu Gökalp açacak). Gemini basket-bot'a ICS takvim + çakışma uyarısı geliştiriyor (yüklenmedi).
 
 ### Gazi EEM 2026 Güz vize dönemi
 - **Sahip:** Gökalp.
@@ -22,6 +23,7 @@
 ### flugelserver ağ güvenliği
 - **Sahip:** Gökalp.
 - **Durum (2026-11-15):** Ev ağı entegrasyonu tamamlandı ([[knowledge/concepts/ev-agi-ve-dis-erisim]]): modem ve Tailscale DNS'i AdGuard'a yönlü, evde gokalpgoksu.com doğrudan HTTPS ve `.ev` adları, Mullvad proxy `:8889`, Wi-Fi ayarları, eski Tailscale cihazları silindi. **Funnel bilerek açık kalır** (Gökalp kararı; görev kapandı). `adguard.gokalpgoksu.com` A kaydı hâlâ 178.233.25.73'ü gösteriyor (CGNAT yüzünden işe yaramaz).
-- **Sonraki adım:** İstenirse Cloudflare'de `adguard.gokalpgoksu.com` A kaydını ve servissiz rotaları (tools, pdf, ai, convert, ui, bd, portainer, admin) temizle.
+- **Durum (2026-11-24):** AdGuard hız sınırı kapatıldı (ev tek istemci sayılıyordu); ölü adların DNS'i yerel akış tüneline alındı (tools/portainer/admin/adguard artık çalışıyor; office/convert/pdf/ai/bd/ui 404). 40+ yeni `*.gokalpgoksu.com` FLUGEL kapısı arkasında; Tailscale istemcileri kapıyı atlar (AdGuard `100.64.0.0/10` kuralı + `127.0.0.1:8198`). Laptop Tailscale `RouteAll: true`; laptop/modem ikinci DNS'e Gökalp isteğiyle dokunulmadı.
+- **Sonraki adım:** Cloudflare panelinde eski uzaktan yönetilen tünel rotalarını temizle; internete açık Portainer/Dockge/File Browser için Cloudflare Access ekle. Rapor: `second-brain/raporlar/sunucu-hata-taramasi-2026-11-24.md`.
 
 ## Closed Threads

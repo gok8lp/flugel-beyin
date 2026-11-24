@@ -31,6 +31,9 @@
 - AdGuard bridge ağında; ev ve Tailscale istemcilerini **172.18.0.1** olarak görür (docker-proxy). Cihaz bazında istatistik yok. gokalpgoksu.com kuralları `client=192.168.0.0/24|172.18.0.1` ile sınırlı.
 - AdGuard Ebeveyn Denetimi **kapalı** (Gökalp isteği, 2026-11-15). Reklam/zararlı/oltalama/kumar listeleri açık; SafeSearch kapalı.
 - DNS filtresi alan adı düzeyindedir: sosyal medya akışını dil/konu bazında süzemez.
+- **2026-11-24:** AdGuard `ratelimit` 20 → **0** ve `ratelimit_whitelist: [172.18.0.1]`. Sebep: istemciler /24 alt ağ ya da 172.18.0.1 olarak gruplandığı için bütün ev saniyede 20 sorguyla sınırlıydı (50 eşzamanlı sorgudan 40'ı düşüyordu; Chrome açılışta takılıyordu). AdGuard yalnız LAN + Tailscale'e açık (`DOCKER-USER` 192.168.0.0/16 dışını düşürür).
+- **2026-11-24:** gokalpgoksu.com yeniden yazma kurallarının istemci listesi `192.168.0.0/24|172.18.0.1|100.64.0.0/10` (Tailscale cihazları da 192.168.0.15'e çözer). `giris` evdeki HTTPS kapısı Tailscale kaynaklı isteği `127.0.0.1:8198`'e gönderir; orada FLUGEL parolası sorulmaz. İnternet (Cloudflare → 8098) ve ev LAN'ı parola sorar.
+- AdGuard üst sunucusu Quad9 yeni oluşturulan bir adın NXDOMAIN yanıtını ~30 dk önbellekler; yeni alt alan adı eklerken AdGuard kuralını DNS sorgusundan önce ekle.
 
 ## SSH
 - `ssh flugelserver` (100.86.88.1) Tailscale SSH'tır, sunucunun `authorized_keys`'ine bakmaz. `flugel@192.168.0.15` normal sshd'dir: yalnız anahtar (parola kapalı), anahtar `~/.ssh/authorized_keys`'te olmalı. Laptop anahtarı 2026-11-15'te eklendi.

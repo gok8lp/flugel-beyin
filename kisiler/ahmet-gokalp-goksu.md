@@ -8,7 +8,7 @@ etiketler:
   - hakem
   - gelistirici
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-24
 ---
 
 # Ahmet Gökalp Göksu (`gok8lp` / `flugel`)
@@ -32,6 +32,18 @@ guncelleme: 2026-11-11
    - **Düdük (`gok8lp/duduk`):** Ankara basketbol hakem atama, fikstür, puan durumu ve kazanç hesaplama Android uygulaması + Docker arka ucu.
    - **Flugel Manga (`gok8lp/koharia-reader`):** Komga, Kavita, Suwayomi ve yerel kitaplık destekli kişisel Android manga/EPUB okuyucu.
    - **FLUGEL Akış (`flugel-akis`):** 61 kaynaklı (RSS + YouTube) ve yerel Ollama (`gemma3`) destekli kişisel haber/medya akışı.
+
+## Nextcloud'dan derlenen kişisel bilgiler (2026-11-24)
+> Kaynak: `flugelserver` Nextcloud `flugel/files` (Claude Opus 5.5 taradı, salt okunur). Adres, telefon, kimlik, pasaport, vize ve SSN numaraları `kurallar/kisiler` gereği buraya yazılmadı.
+- **Doğum tarihi:** 21 Mayıs 2005. Türk vatandaşı, B sınıfı ehliyeti var (`Belgeler/CV/gokalpgoksu.pdf`).
+- **Eğitim:** Gazi Üniversitesi Teknoloji Fakültesi EEM, aktif öğrenci, ortalama AKTS ile hesaplanıyor, hazırlık okumadı. Transkript `Yedekler/Windows PC - Masaüstü/ahmetgokalpgoksu.transkript.pdf` içinde, not ayrıntısı buraya kopyalanmadı. Öğrenci numarası 24180202073 (lab raporu kapaklarında geçiyor).
+- **Hakemlik:** CV'ye göre 31 Mayıs 2025'ten beri TBF lisanslı basketbol hakemi.
+- **CV'deki beceriler:** iletişim, karar verme, işletim sistemleri, C++, medya sunucusu işletme. CV İngilizce ve Europass biçiminde.
+- **ABD Work and Travel 2026 (J-1):** Sponsor Spirit Cultural Exchange. İşveren Noah's Ark Waterpark (Herschend), Wisconsin Dells, WI. Pozisyon Park Services Host, 16.06.2026 – 10.09.2026, saatlik 13 $. Konaklama park içi yurtta, haftalık 77 $ ve 200 $ depozito, odada 4 kişi. İlk yurt dışı deneyimi. Belgeler `ABD Work and Travel 2026/` klasöründe.
+- **Aile (mülakat cevaplarından):** Annesi Çalışma ve Sosyal Güvenlik Bakanlığı'nda memur, babası bir pastanede çalışıyor.
+- **Ders arşivi:** EE207 Elektronik I Lab raporları (2026 bahar) `Okul/EE Lab Raporları/` içinde. 2026 güz dersleri `Dersler/` içinde, EE319 raporları `Dersler/EE319_Guc_Elektronigi_Lab_1/GUZEM/Odev - Deney N/` klasörlerinde. Sayısal Analiz C kodları (Gauss-Seidel vb.) `Yedekler/Windows PC - Masaüstü/sşlfsd/*.odt` dosyalarında.
+- **Windows PC alışkanlıkları (masaüstü yedeğinden):** Discord, FACEIT, TeamSpeak, BIAS FX 2 (gitar efekti), Wallpaper Engine, Lossless Scaling, MSI Afterburner, LM Studio, Proteus 8, Multisim, GitHub Desktop, Notion, Plex, Crunchyroll. Fotoğraf klasöründe Bocchi, kitaplarda Re:Zero var.
+- **Yazım tarzı:** [[kisiler/ahmet-gokalp-goksu-yazim-tarzi]]
 
 ## Dijital Profiller ve İletişim Yolu
 - **GitHub:** `https://github.com/gok8lp` (`gok8lp` — 23 depo)

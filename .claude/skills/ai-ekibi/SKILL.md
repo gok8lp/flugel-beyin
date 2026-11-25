@@ -30,6 +30,8 @@ codex exec --skip-git-repo-check -s read-only "PROMPT" < /dev/null
 # Dosya yazması gerekiyorsa (kullanıcı bu kapsamı zaten yetkilendirdiyse tekrar onay isteme):
 codex exec --skip-git-repo-check -s workspace-write -C /hedef/klasor "PROMPT" < /dev/null
 ```
+- **Model (2026-11-25):** Codex hesabı şu an ChatGPT (free); varsayılan `gpt-6.1-sol` bu hesapta desteklenmiyor ve iş hiç başlamadan biter. `-m gpt-6-luna` (gerekirse `-c model_reasoning_effort=high`) ver.
+- **Gemini headless komut izni:** `command(...)` allow kuralları beklenen eşleşmeyi yapmayabilir; 2026-11-25'te üç lane "auto-denied" ile boş döndü. Gemini'ye yalnız dosya okuma/yazma işi ver, kabuk komutu gerektiren doğrulamayı Codex'e ya da Claude alt ajanına ver.
 - `< /dev/null` şart: verilmezse stdin bekleyip takılır (2026-11-14 testinde 2 dakika takıldı).
 - Çıktının son satırları cevaptır; `tokens used` satırı maliyeti gösterir. Dosya okutmak ~10k token tutar.
 

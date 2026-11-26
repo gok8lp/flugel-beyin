@@ -20,6 +20,10 @@ class Ortam:
         self.proje = self.kok / "proje"
         self.proje.mkdir(parents=True)
         self.db = self.tmp / "memory.sqlite3"
+        con = sqlite3.connect(self.db)
+        con.execute("CREATE TABLE receipts (payload TEXT)")
+        con.commit()
+        con.close()
 
     def calistir(self, harness, girdi, ham=False):
         env = dict(os.environ, HOME=str(self.tmp), BITIS_DB=str(self.db),
@@ -36,7 +40,6 @@ class Ortam:
 
     def receipt_yaz(self):
         con = sqlite3.connect(self.db)
-        con.execute("CREATE TABLE receipts (payload TEXT)")
         simdi = datetime.now(timezone.utc).isoformat()
         con.execute("INSERT INTO receipts VALUES (?)",
                     (json.dumps({"created_at": simdi}),))

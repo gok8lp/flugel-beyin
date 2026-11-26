@@ -12,7 +12,7 @@ KONTROL=0; [ "${1:-}" = "--kontrol" ] && KONTROL=1
 eksik=0; kirik=0; dolayli=0; TARIH=$(date +%Y%m%d-%H%M%S)
 for skill in "$KAYNAK"/*/; do
   ad=$(basename "$skill")
-  case "$ad" in beyin|beyin-*) continue;; esac   # beyin skill'leri yalniz vault icinde anlamli
+  case "$ad" in beyin|beyin-doktor|beyin-guncelle|beyin-kontrol|beyin-yakala) continue;; esac   # beyin skill'leri yalniz vault icinde anlamli
   [ -f "$skill/SKILL.md" ] || continue
   for hedef in $HEDEFLER; do
     [ -d "$(dirname "$hedef")" ] || continue      # o ajan bu makinede kurulu degil

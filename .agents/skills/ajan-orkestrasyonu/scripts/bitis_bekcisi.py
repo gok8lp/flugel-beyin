@@ -22,14 +22,7 @@ BEYIN = "/home/gokalp/Documents/ai_workplace/flugel-beyin"
 
 
 def alan(veri, *adlar):
-    for ad in adlar:
-        if veri.get(ad):
-            return veri[ad]
-    return None
-
-
-def olay_adi(veri):
-    return alan(veri, "hook_event_name", "hookEventName")
+    return next((veri[a] for a in adlar if veri.get(a)), None)
 
 
 def oturum_kimligi(veri):
@@ -38,13 +31,7 @@ def oturum_kimligi(veri):
 
 
 def calisma_klasoru(veri):
-    cwd = alan(veri, "cwd")
-    yollar = veri.get("workspacePaths") or []
-    return cwd or (yollar[0] if yollar else None)
-
-
-def dongu_mu(veri):
-    return bool(alan(veri, "stop_hook_active", "continuationActive"))
+    return alan(veri, "cwd") or (veri.get("workspacePaths") or [None])[0]
 
 
 def durum_dosyasi(oturum):
@@ -64,14 +51,11 @@ def durum_yaz(oturum, durum):
     dosya.write_text(json.dumps(durum))
 
 
-def kokler():
-    ham = os.environ.get("BITIS_KOKLER", VARSAYILAN_KOKLER)
-    return [Path(k).resolve() for k in ham.split(":") if k]
-
-
 def kok_icinde_mi(cwd):
+    ham = os.environ.get("BITIS_KOKLER", VARSAYILAN_KOKLER)
+    kokler = [Path(k).resolve() for k in ham.split(":") if k]
     yol = Path(cwd).resolve()
-    return any(yol == k or k in yol.parents for k in kokler())
+    return any(yol == k or k in yol.parents for k in kokler)
 
 
 def degisenler(cwd, baslangic):
@@ -96,13 +80,6 @@ def mtime(yol):
         return 0.0
 
 
-def zaman_damgasi(iso):
-    zaman = datetime.fromisoformat(iso)
-    if zaman.tzinfo is None:
-        zaman = zaman.replace(tzinfo=timezone.utc)
-    return zaman.timestamp()
-
-
 def receipt_var_mi(baslangic):
     """DB yoksa ya da hata varsa True döner (fail open)."""
     yol = Path(os.environ.get("BITIS_DB", VARSAYILAN_DB)).expanduser()
@@ -121,7 +98,9 @@ def receipt_var_mi(baslangic):
 
 def yeni_receipt(payload, baslangic):
     try:
-        return zaman_damgasi(json.loads(payload)["created_at"]) >= baslangic
+        zaman = datetime.fromisoformat(json.loads(payload)["created_at"])
+        zaman = zaman if zaman.tzinfo else zaman.replace(tzinfo=timezone.utc)
+        return zaman.timestamp() >= baslangic
     except Exception:
         return False
 
@@ -142,19 +121,9 @@ def izin(harness):
     return {} if harness == "codex" else {"decision": "stop"}
 
 
-def engel(harness, neden):
-    karar = "block" if harness == "codex" else "continue"
-    return {"decision": karar, "reason": neden}
-
-
-def oturum_basladi(veri, oturum):
-    if durum_oku(oturum) is None:
-        durum_yaz(oturum, {"start": time.time(), "cwd": calisma_klasoru(veri)})
-
-
 def durdurulabilir_mi(veri, durum):
     """Engellenecekse değişen yolları, değilse None döner."""
-    if dongu_mu(veri) or durum is None or durum.get("hatirlatildi"):
+    if alan(veri, "stop_hook_active", "continuationActive") or durum is None or durum.get("hatirlatildi"):
         return None
     cwd = calisma_klasoru(veri) or durum.get("cwd")
     if not cwd or not kok_icinde_mi(cwd):
@@ -172,16 +141,18 @@ def durdur(veri, harness, oturum):
         return izin(harness)
     durum["hatirlatildi"] = True
     durum_yaz(oturum, durum)
-    return engel(harness, hatirlatma(harness, oturum, yollar))
+    karar = "block" if harness == "codex" else "continue"
+    return {"decision": karar, "reason": hatirlatma(harness, oturum, yollar)}
 
 
 def isle(harness):
     try:
         veri = json.loads(sys.stdin.read())
         oturum = oturum_kimligi(veri)
-        if olay_adi(veri) == "SessionStart":
-            oturum_basladi(veri, oturum)
-        elif olay_adi(veri) == "Stop":
+        if alan(veri, "hook_event_name", "hookEventName") == "SessionStart":
+            if durum_oku(oturum) is None:
+                durum_yaz(oturum, {"start": time.time(), "cwd": calisma_klasoru(veri)})
+        elif alan(veri, "hook_event_name", "hookEventName") == "Stop":
             return durdur(veri, harness, oturum)
     except Exception:
         pass
@@ -191,8 +162,7 @@ def isle(harness):
 def main():
     kur = argparse.ArgumentParser()
     kur.add_argument("--harness", choices=["codex", "antigravity"], required=True)
-    harness = kur.parse_args().harness
-    print(json.dumps(isle(harness), ensure_ascii=False))
+    print(json.dumps(isle(kur.parse_args().harness), ensure_ascii=False))
     return 0
 
 

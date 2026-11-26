@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""Beyin bakımı: bayat thread/görev, dizinsiz rapor, lint sağlığı. Yalnız okur, tek dosya yazar."""
+import argparse, json, os, re, subprocess, sys, tempfile, time
+from datetime import date
+from pathlib import Path
+
+VAULT = Path(os.environ.get("BEYIN_BAKIM_VAULT", "/home/gokalp/Documents/ai_workplace/flugel-beyin"))
+RAPORLAR = Path("/home/gokalp/Documents/ai_workplace/second-brain/raporlar")
+TARIH = re.compile(r"\d{4}-\d{2}-\d{2}")
+KAPALI = {"done", "tamam", "kapali", "kapalı"}
+
+
+def to_date(s):
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        return None
+
+
+def threads_sections(text):
+    parts = re.split(r"^### +", text, flags=re.M)[1:]
+    return [(p.split("\n", 1)[0].strip(), p) for p in parts]
+
+
+def stale_threads(vault, today, days=10):
+    text = (vault / "🔮 850-Companion/Threads.md").read_text(encoding="utf-8")
+    out = []
+    for title, body in threads_sections(text):
+        dates = [d for d in map(to_date, TARIH.findall(body)) if d]
+        if dates and (today - max(dates)).days > days:
+            out.append(f"{title}: en son {max(dates)} güncellendi. "
+                       "Şu an durum ne, sıradaki adım ne?")
+    return out
+
+
+def field(text, name):
+    m = re.search(rf'^\s*"?{name}"?\s*[:=]\s*"?([^",\n]+)', text, flags=re.M)
+    return m.group(1).strip() if m else None
+
+
+def task_info(path):
+    text = path.read_text(encoding="utf-8")
+    head = text.split("---")[1] if text.startswith("---") else ""
+    status = (field(head, "status") or field(head, "durum") or "").lower()
+    return field(head, "title") or path.stem, status
+
+
+def stale_tasks(vault, today, days=14):
+    out = []
+    for p in sorted((vault / "tasks").glob("*.md")):
+        title, status = task_info(p)
+        age = (time.time() - p.stat().st_mtime) / 86400
+        if status not in KAPALI and age > days:
+            out.append(f"{title}: hâlâ geçerli mi, bitti mi?")
+    return out
+
+
+def unindexed(raporlar, vault):
+    index = vault / "knowledge/ai-workplace-raporlar.md"
+    text = index.read_text(encoding="utf-8") if index.exists() else ""
+    return [p.name for p in sorted(raporlar.glob("*.md")) if p.name not in text]
+
+
+def run_beyin(vault, cmd):
+    script = os.environ.get("BEYIN_BAKIM_BEYIN_PY", str(vault / "beyin.py"))
+    if not script:
+        return None
+    try:
+        r = subprocess.run([sys.executable, script, "--vault", str(vault), "--json", cmd],
+                           capture_output=True, text=True, timeout=120, check=True)
+        return json.loads(r.stdout)
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return None
+
+
+def split_broken(vault, lint):
+    real, fake = [], 0
+    for b in lint.get("broken_links", []):
+        t = b["target"]
+        if t.startswith("receipts/") and (vault / t).exists():
+            fake += 1
+        else:
+            real.append(b)
+    return real, fake
+
+
+def triage_questions(triage):
+    out = []
+    for key in ("stale_tasks", "undated_tasks"):
+        for t in triage["tasks"].get(key, []):
+            title = t.get("title") or t.get("path") if isinstance(t, dict) else t
+            out.append(f"{title}: hâlâ geçerli mi, bitti mi?")
+    return out
+
+
+def build(vault, today, raporlar):
+    triage, lint = run_beyin(vault, "triage"), run_beyin(vault, "lint")
+    questions = stale_threads(vault, today) + stale_tasks(vault, today)
+    if triage:
+        questions += triage_questions(triage)
+    questions = list(dict.fromkeys(questions))
+    jobs = [f"Dizine eklenmemiş rapor: `{n}`" for n in unindexed(raporlar, vault)]
+    health = []
+    if lint:
+        real, fake = split_broken(vault, lint)
+        jobs += [f"Gerçek kırık bağlantı: {b['source']} -> {b['target']}" for b in real]
+        health += [f"- Yetim not: {lint['orphan_count']}",
+                   f"- Kırık bağlantı: {lint['broken_links_count']} (gerçek {len(real)}, lint yanlış alarmı {fake})"]
+    else:
+        health.append("- lint: okunamadı")
+    if triage:
+        n = triage["inbox"]["count"]
+        health.append(f"- Inbox: {n}")
+        if n >= 10:
+            jobs.append(f"Inbox'ta {n} not var, ayıkla")
+    else:
+        health.append("- triage: okunamadı")
+    return render(today, questions, jobs, health), len(questions), len(jobs)
+
+
+def render(today, questions, jobs, health):
+    q = [f"{i}. {t}" for i, t in enumerate(questions, 1)] or ["Soru yok"]
+    j = [f"- {t}" for t in jobs] or ["İş yok"]
+    lines = ["---", "tur: beyin-bakim", "otomatik: true", f"guncelleme: {today}", "---", "",
+             "# Beyin bakımı", "", "Bu dosya beyin-bakim tarafından her pazar yeniden yazılır.", "",
+             "## Gökalp'e sorular", *q, "", "## Ajan işleri", *j, "", "## Sağlık", *health, ""]
+    return "\n".join(lines)
+
+
+def write_atomic(path, text):
+    fd, tmp = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
+    with os.fdopen(fd, "w", encoding="utf-8") as f:
+        f.write(text)
+    os.replace(tmp, path)
+
+
+def notify(nq, nj):
+    try:
+        subprocess.run(["notify-send", "Beyin bakımı",
+                        f"{nq} soru, {nj} ajan işi. Bir AI oturumunda: beyin bakımını yap"], timeout=10)
+    except (OSError, subprocess.SubprocessError):
+        pass
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--kuru", action="store_true")
+    ap.add_argument("--vault", type=Path, default=VAULT)
+    ap.add_argument("--raporlar", type=Path, default=RAPORLAR)
+    a = ap.parse_args()
+    md, nq, nj = build(a.vault, date.today(), a.raporlar)
+    if a.kuru:
+        print(md)
+        return
+    write_atomic(a.vault / "knowledge/beyin-bakim.md", md)
+    if nq or nj:
+        notify(nq, nj)
+
+
+if __name__ == "__main__":
+    main()

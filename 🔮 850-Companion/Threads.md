@@ -22,6 +22,8 @@
 
 ### flugelserver ağ güvenliği
 - **Sahip:** Gökalp.
+- **Durum (2026-11-26):** Bakım yükü azaltıldı: Cup oto-güncelleme haftalık (pazar 07:30 TSİ), arıza zinciri 10 dk eşik ve beyne yalnız gerçek onarım kaydı, yedek kontrolü günlük, günlük durum notu [[knowledge/sunucu-durum]]. Rapor: `second-brain/raporlar/sunucu-sadelestirme-2026-11-26.md`.
+- **Sonraki adım:** Servis azaltma (raporda aday listesi) ve `/mnt/sidemain` %89.
 - **Durum (2026-11-15):** Ev ağı entegrasyonu tamamlandı ([[knowledge/concepts/ev-agi-ve-dis-erisim]]): modem ve Tailscale DNS'i AdGuard'a yönlü, evde gokalpgoksu.com doğrudan HTTPS ve `.ev` adları, Mullvad proxy `:8889`, Wi-Fi ayarları, eski Tailscale cihazları silindi. **Funnel bilerek açık kalır** (Gökalp kararı; görev kapandı). `adguard.gokalpgoksu.com` A kaydı hâlâ 178.233.25.73'ü gösteriyor (CGNAT yüzünden işe yaramaz).
 - **Durum (2026-11-24):** AdGuard hız sınırı kapatıldı (ev tek istemci sayılıyordu); ölü adların DNS'i yerel akış tüneline alındı (tools/portainer/admin/adguard artık çalışıyor; office/convert/pdf/ai/bd/ui 404). 40+ yeni `*.gokalpgoksu.com` FLUGEL kapısı arkasında; Tailscale istemcileri kapıyı atlar (AdGuard `100.64.0.0/10` kuralı + `127.0.0.1:8198`). Laptop Tailscale `RouteAll: true`; laptop/modem ikinci DNS'e Gökalp isteğiyle dokunulmadı.
 - **Sonraki adım:** Cloudflare panelinde eski uzaktan yönetilen tünel rotalarını temizle; internete açık Portainer/Dockge/File Browser için Cloudflare Access ekle. Rapor: `second-brain/raporlar/sunucu-hata-taramasi-2026-11-24.md`.

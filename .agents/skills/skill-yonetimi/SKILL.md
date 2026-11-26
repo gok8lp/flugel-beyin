@@ -24,9 +24,9 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 | Kod yazma | test-driven-development |
 | "Bitti/çalışıyor" iddiası | verification-before-completion (her zaman) |
 | Kod incelemesi isteme / alma | requesting-code-review / receiving-code-review |
-| Arayüz, web, görsel | ozgun-is + frontend-design (+ web-artifacts-builder, theme-factory) |
-| Poster, afiş | ozgun-is + canvas-design |
-| Sunum | ozgun-is + frontend-slides (HTML); dosya istenirse pptx |
+| Arayüz, web, görsel | ozgun-is + frontend-design (+ web-artifacts-builder, theme-factory) (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
+| Poster, afiş | ozgun-is + canvas-design (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
+| Sunum | ozgun-is + frontend-slides (HTML); dosya istenirse pptx (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
 | Web uygulaması testi | webapp-testing |
 | Değişiklik güvenlik incelemesi | differential-review |
 | Kod güvenlik taraması | static-analysis-semgrep |
@@ -35,21 +35,21 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 | Python betiği | modern-python |
 | Lab raporu, ödev | `flugel-beyin/kisiler/ahmet-gokalp-goksu-yazim-tarzi.md` (zorunlu) + ozgun-is metin slop listesi; föy/ölçüm yoksa uydurma, iste |
 | Akademik makale/bildiri | scientific-writing |
-| Word / PDF / Excel / PowerPoint dosyası | docx / pdf / xlsx / pptx |
-| Araştırma raporu | deep-research |
-| Sunucu işi | sunucu-ordusu (+ flugel-network-access, flugel-backup-recovery, flugel-compose-maintenance; flugel-* skill'leri yalnız Claude eklentisi; Codex/agy için sunucu-ordusu yeter) |
-| Beyin bakımı | beyin, beyin-doktor |
+| Word / PDF / Excel / PowerPoint dosyası | docx / pdf / xlsx / pptx (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
+| Araştırma raporu | deep-research (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
+| Sunucu işi | sunucu-ordusu (+ flugel-network-access, flugel-backup-recovery, flugel-compose-maintenance; flugel-* (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula); Codex/agy için sunucu-ordusu yeter) |
+| Beyin bakımı | beyin, beyin-doktor (yalnız vault içinde; dışarıda beyin-ara) |
 | Beyinde arama | `beyin-ara "<konu>"` (komut), beyin skill'i yalnız vault içinde |
 | Başka ajan çağırma | ai-ekibi |
 | Yaratıcı, özgün iş ("serbest takıl") | ozgun-is |
-| Yeni skill yazma | skill-creator |
+| Yeni skill yazma | skill-creator (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
 
 Kaynak ve lisans bilgisi: [references/kaynaklar.md](references/kaynaklar.md).
 
 ## Eksik skill
 ```bash
-~/Documents/ai_workplace/flugel-beyin/.agents/skills/skill-yonetimi/scripts/skill-dagit --kontrol   # yalnız eksikleri listeler
-~/Documents/ai_workplace/flugel-beyin/.agents/skills/skill-yonetimi/scripts/skill-dagit             # eksik symlink'leri ekler, var olanı ezmez
+~/Documents/ai_workplace/flugel-beyin/.agents/skills/skill-yonetimi/scripts/skill-dagit --kontrol   # yalnız eksik/kırık/dolaylı bağları listeler
+~/Documents/ai_workplace/flugel-beyin/.agents/skills/skill-yonetimi/scripts/skill-dagit             # eksikleri ekler, dolaylı bağı doğrudana çevirir; gerçek klasöre dokunmaz
 ```
 Vault'ta da yoksa "Yeni skill kurma" akışı. `beyin*` skill'leri yalnız vault'ta anlamlıdır, dağıtılmaz.
 

@@ -2,13 +2,14 @@
 # Vault'taki ortak skill'leri bu makinedeki tum ajanlarin global skill klasorlerine baglar.
 # Kullanim: skill-dagit [--kontrol]   (--kontrol: yalniz eksikleri listeler, degistirmez)
 # Var olan gercek klasorlere (symlink olmayan) dokunmaz; yalniz eksik baglari ekler.
+# Dolayli bag (symlink cozuluyor ama vault klasorune dogrudan isaret etmiyor, iki adimli zincir): --kontrol "dolayli: <yol>" yazar; normal modda ln -sfn ile dogrudan vault yoluna cevrilir.
 # Kirik symlink (hedefi cozulmeyen): --kontrol "kirik: <yol>" yazar; normal modda <yol>.kirik-<tarih> diye yeniden adlandirilir (silinmez), dogru bag kurulur.
 set -eu
 VAULT="${BEYIN_VAULT:-$HOME/Documents/ai_workplace/flugel-beyin}"
 KAYNAK="$VAULT/.agents/skills"
 HEDEFLER="$HOME/Documents/ai_workplace/.agents/skills $HOME/.claude/skills $HOME/.codex/skills $HOME/.gemini/config/skills"
 KONTROL=0; [ "${1:-}" = "--kontrol" ] && KONTROL=1
-eksik=0; kirik=0; TARIH=$(date +%Y%m%d-%H%M%S)
+eksik=0; kirik=0; dolayli=0; TARIH=$(date +%Y%m%d-%H%M%S)
 for skill in "$KAYNAK"/*/; do
   ad=$(basename "$skill")
   case "$ad" in beyin|beyin-*) continue;; esac   # beyin skill'leri yalniz vault icinde anlamli
@@ -20,11 +21,17 @@ for skill in "$KAYNAK"/*/; do
       kirik=$((kirik+1))
       if [ $KONTROL -eq 1 ]; then echo "kirik: $yol"; continue; fi
       mv "$yol" "$yol.kirik-$TARIH"; echo "kirik bag yeniden adlandirildi: $yol.kirik-$TARIH"
-    elif [ -e "$yol" ] || [ -L "$yol" ]; then
+    elif [ -L "$yol" ]; then                        # saglam symlink: dogrudan mi, zincir mi?
+      if [ "$(readlink "$yol")" != "$KAYNAK/$ad" ] && [ "$(readlink -f "$yol")" = "$(readlink -f "$KAYNAK/$ad")" ]; then
+        dolayli=$((dolayli+1))
+        if [ $KONTROL -eq 1 ]; then echo "dolayli: $yol"; else ln -sfn "$KAYNAK/$ad" "$yol"; echo "dogrudana cevrildi: $yol"; fi
+      fi
+      continue
+    elif [ -e "$yol" ]; then
       continue
     fi
     eksik=$((eksik+1))
     if [ $KONTROL -eq 1 ]; then echo "eksik: $yol"; else mkdir -p "$hedef"; ln -s "$KAYNAK/$ad" "$yol"; echo "baglandi: $yol"; fi
   done
 done
-echo "toplam eksik: $eksik, kirik: $kirik"
+echo "toplam eksik: $eksik, kirik: $kirik, dolayli: $dolayli"

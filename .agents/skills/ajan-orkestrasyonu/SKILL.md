@@ -33,14 +33,14 @@ Kullanıcı her zaman **ekip lideriyle** (ana oturum, hangi model olursa) konuş
 - **Codex/agy lider olduğunda mekanik bekçi yoktur;** aynı kuralı öz denetimle uygula.
 
 ## 2. Önce kotaya bak, modeli betik seçsin
-**ZORUNLU:** Her alt ajan çağrısından ÖNCE ai-limitler --sec <seviye> çalıştırılır, istisna yok. Lider kendi sağlayıcısının (bu oturum Claude 1 ise Claude 1) 5 saatlik penceresi %80'i geçtiyse Claude alt ajanı açmaz; işi Codex/Gemini'ye verir ve kendi çıktısını kısa tutar; %95'i geçtiyse kalan işi bir devir notuyla Codex'e devreder. Bu kural 2026-11-14'te Claude 1 %98'deyken Claude alt ajanları açıldığı için eklendi.
+**ZORUNLU:** Her alt ajan çağrısından ÖNCE ai-limitler --sec <seviye> çalıştırılır, istisna yok. Lider (ana oturum) kendi sağlayıcısının 5 saatlik penceresi %80'i geçtiyse Claude alt ajanı açmaz; işi Codex/Gemini'ye verir ve kendi çıktısını kısa tutar; %95'i geçtiyse kalan işi bir devir notuyla Codex'e devreder. Bu kural 2026-11-14'te Claude 1 %98'deyken Claude alt ajanları açıldığı için eklendi.
 
 ```bash
 ai-limitler                 # tüm kotalar (2 dk önbellek)
 ai-limitler --sec basit     # → "codex gpt-6-luna low" ya da "claude haiku"
-ai-limitler --sec orta      # → "codex gpt-6.1-sol medium" (plan ücretliyse; şu an geçerli tablo: references/modeller.md); şimdi luna high ya da claude sonnet
-ai-limitler --sec ust       # → "codex gpt-6-astra high" (plan ücretliyse; şu an geçerli tablo: references/modeller.md); şimdi claude opus ya da gemini argon
-ai-limitler --sec gorsel    # → "codex gpt-6-astra high" (plan ücretliyse; şu an geçerli tablo: references/modeller.md)
+ai-limitler --sec orta      # → "codex gpt-6-luna medium/high" ya da "claude sonnet"
+ai-limitler --sec ust       # → "claude opus" ya da "gemini hydrogen/argon"
+ai-limitler --sec gorsel    # → ücretsiz planda yok; kullanıcıya sor
 ai-limitler --sec ekip      # → üst/alt ajan kademesi (Claude kotasına göre)
 ```
 Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tarafın 5 saatlik penceresi %80'i geçtiyse betik zaten diğer tarafı seçer.
@@ -57,21 +57,21 @@ Lider Claude ise kendi kotasını Claude Code'da `/usage` ile ya da ayar sayfas�
 
 | Görev | Model (betiğin önerisi) | Çağrı |
 |---|---|---|
-| **Basit veri işi**: temizleme, biçim dönüştürme, ayıklama, özet | `--sec basit` → **GPT-6-Luna** (low) ya da **Claude Haiku 5.5**, kotası boş olan | `codex exec --skip-git-repo-check -s read-only -m gpt-6-luna -c model_reasoning_effort="low" "…" < /dev/null` · Claude: `Agent`, `model: "haiku"` |
-| **Orta backend**: API ucu, CRUD, test, hata ayıklama | `--sec orta` → **GPT-6.1-Sol** (medium) (plan ücretliyse; şu an geçerli tablo: references/modeller.md) | `codex exec … -m gpt-6-luna -c model_reasoning_effort="medium"` (ücretli planda: gpt-6.1-sol) |
-| **Üst backend**: performans, eşzamanlılık, güvenlik, büyük refactor | `--sec ust` → **GPT-6-Astra** (high) (plan ücretliyse; şu an geçerli tablo: references/modeller.md) | `codex exec … -m gpt-6-luna -c model_reasoning_effort="high"` (ücretli planda: gpt-6-astra) |
-| **Görsel üretimi** | `--sec gorsel` → **GPT-6-Astra** (plan ücretliyse; şu an geçerli tablo: references/modeller.md) + Codex'in görsel aracı (gpt-image). **Aynı anda en fazla 3** görsel ajanı | `codex exec … -m gpt-6-astra -s workspace-write -C <çıktı klasörü> "gpt-image ile … üret, <dosya>.png olarak kaydet"` |
+| **Basit veri işi**: temizleme, biçim dönüştürme, ayıklama, özet | `--sec basit` → Codex **gpt-6-luna** (low) ya da Claude **haiku**, kotası boş olan | `codex exec --skip-git-repo-check -s read-only -m gpt-6-luna -c model_reasoning_effort="low" "…" < /dev/null` · Claude: `Agent`, `model: "haiku"` |
+| **Orta backend**: API ucu, CRUD, test, hata ayıklama | `--sec orta` → Codex **luna** (medium/high) ya da Claude **sonnet** | `codex exec … -m gpt-6-luna -c model_reasoning_effort="medium"` · Claude: `Agent`, `model: "sonnet"` |
+| **Üst backend**: performans, eşzamanlılık, güvenlik, büyük refactor | `--sec ust` → Claude **opus** ya da Gemini **hydrogen** (zor kararda argon); Codex luna high | `Agent`, `model: "opus"` · `agy --model gemini-4-hydrogen-high …` · `codex exec … -m gpt-6-luna -c model_reasoning_effort="high"` |
+| **Görsel üretimi** | Ücretsiz planda yok; kullanıcıya sor | — |
 | **Bağlam toplama, keşif, okuma** | Claude **Sonnet** ya da **Haiku** (`Agent`, salt okunur), büyük belgelerde **Gemini** | `ai-limitler --sec basit` sonra `Agent` / `agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","list_dir(*)","grep_search(*)"]}}' -p "…" < /dev/null` |
-| **Kontrol ve doğrulama** | Uygulayandan **farklı** ve taze bir ajan: Claude **Sonnet/Opus**. Kritikse Codex **Sol** (ücretli planda) | `ai-limitler --sec orta` sonra `Agent` ya da `codex exec` |
-| **Planlama ve son karar** | Ana oturumun modeli (lider, yani sen) | Kendin |
+| **Kontrol ve doğrulama** | Uygulayandan **farklı** ve taze bir ajan: Claude **Sonnet/Opus**. Kritikse Claude **Opus** ya da Gemini | `ai-limitler --sec orta` sonra `Agent` ya da `codex exec` |
+| **Planlama ve son karar** | Ana oturum (hangi model olursa) | Kendin |
 
-**Codex planı notu (2026-11-26):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra "not supported" hatası verir. `ai-limitler --sec` bunu hesaba katar (ücretsiz planda orta → luna high, üst → Claude Opus ya da Gemini Argon). Tablodaki Sol/Astra çağrıları ancak Codex planı ücretli olduğunda geçerlidir.
+**Codex planı notu (2026-11-26):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra hata verir. Codex planı ücretli olursa sol/astra seçenekleri: references/modeller.md.
 
 **Skill adı:** Her lane'e işe uyan skill'in adını yaz (`skill-yonetimi` tablosu). Claude alt ajanına: "Önce <skill> skill'ini aç." Codex/agy'ye: "`~/.codex/skills/<ad>/SKILL.md` (agy için `~/.gemini/config/skills/<ad>/SKILL.md`) dosyasını oku ve uygula."
 
 **Emin olmadığın zor teknik/mimari karar:**
-1. Aynı görevi aynı bağlamla iki bağımsız modele ver: Claude **Fable 5.2** (`Agent`, `model: "fable"`) ve Codex **GPT-6-Astra** (high) (plan ücretliyse; şu an geçerli tablo: references/modeller.md) (ücretsiz planda: Gemini argon). Biri diğerinin cevabını görmesin.
-2. **Fikir alışverişi:** Fable'ın cevabını Astra'ya, Astra'nınkini Fable'a ver: "Zayıf noktası ne, seninkiyle nerede ayrışıyor?"
+1. Aynı görevi aynı bağlamla iki bağımsız modele ver: Claude **Fable 5.2** (`Agent`, `model: "fable"`) ve Gemini **argon**. Biri diğerinin cevabını görmesin.
+2. **Fikir alışverişi:** Fable'ın cevabını Gemini'ye, Gemini'nin cevabını Fable'a ver: "Zayıf noktası ne, seninkiyle nerede ayrışıyor?"
 3. Gerekirse üçüncü görüş: Gemini (`agy`).
 4. Kararı lider verir. Kullanıcıya iki görüşü, eleştirileri ve gerekçeli kararı ayrı ayrı sunar; geri dönüşü zor kararlarda son onay kullanıcıdadır.
 

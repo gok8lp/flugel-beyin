@@ -1,6 +1,6 @@
 ---
 name: sunucu-ordusu
-description: flugelserver'da iş yapmak için AI ordusu akışı. Kullanıcı sunucuda bir şey kurmak, düzeltmek, araştırmak, güncellemek ya da "sunucuda şunu yap" dediğinde kullan. Lider (Claude) bağlamı indeks+haritadan alır, okuma/analiz işini Gemini Flash ve Codex'e dağıtır, sudo/yazma adımlarını kendisi yapar.
+description: flugelserver'da iş yapmak için AI ordusu akışı. Kullanıcı sunucuda bir şey kurmak, düzeltmek, araştırmak, güncellemek ya da "sunucuda şunu yap" dediğinde kullan. Lider (ana oturum; Claude, Codex ya da Gemini) bağlamı indeks+haritadan alır, okuma/analiz işini Gemini Flash ve Codex'e dağıtır, sudo/yazma adımlarını kendisi yapar.
 ---
 
 # Sunucu ordusu
@@ -24,7 +24,7 @@ Her zaman önce `ai-limitler --sec <tur>` çalıştır. Model tablosu tek kaynak
 | Çok dosya okuma, log/konfig özeti, envanter, öneri listesi | Gemini `agy --model gemini-4-hydrogen-high` (Gökalp tercihi 2026-11-22; eski `gemini-3.8-flash-medium` yerine; paralel, çok lane) |
 | Betik/kod yazma, test | Codex `gpt-6-luna` (ücretsiz planda yalnız luna çalışır; sol/astra hata verir) |
 | Zor karar, hakemlik | Gemini `gemini-4-argon` (haftalık limitli: idareli); Codex Sol/Astra (plan ücretliyse) ücretsiz planda hata verir |
-| sudo, sunucuda yazma, sır içeren adım, son doğrulama | Lider (Claude) |
+| sudo, sunucuda yazma, sır içeren adım, son doğrulama | Lider = ana oturum (Claude, Codex ya da Gemini) |
 
 ## 3. Kesin kurallar
 1. **Dış modele sunucu erişimi verilmez.** Codex/Gemini'ye ssh/sudo komutu izni yok; lider sunucudan salt okunur çıktıyı alır, sır taramasından geçirir, dosya olarak verir.

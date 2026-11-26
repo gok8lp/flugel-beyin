@@ -64,7 +64,7 @@ cat ~/.local/state/ai-limitler/durum.json   # son okunan değer (Dux bar 3 dk'da
 |---|---|---|
 | C1 | Claude 1 (Gökalp hesabı, `~/.claude`) | CodexBar oauth |
 | C2 | Claude 2 (Canalp hesabı, `~/.claude-canalp`) | CodexBar oauth; giriş yoksa "giriş yok" yazar |
-| X | Codex (Plus) | Codex CLI |
+| X | Codex (abonelik bitti, 2026-11-27: ücretsiz plan, yalnız gpt-6-luna) | Codex CLI |
 | G | Gemini / Antigravity (Google AI Pro) | Antigravity uygulaması |
 
 Kural: Bir sağlayıcının **5 saatlik** penceresi %80'in üstündeyse ona iş verme; işi limiti düşük olana kaydır ve kullanıcıya söyle. Lider kendi sağlayıcısında %95'i geçtiyse kalan işi devir notuyla Codex'e devreder. "AG içi Claude/GPT" pencereleri Antigravity'nin kendi içindeki Claude/GPT kotasıdır, `agy` ile Gemini çağırmayı etkilemez. Üst barda **AI Limitleri** widget'ı aynı veriyi gösterir.

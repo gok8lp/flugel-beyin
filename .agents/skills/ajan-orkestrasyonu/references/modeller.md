@@ -6,7 +6,7 @@ Her zaman önce `ai-limitler --sec <tur>`; betik bu tabloyla uyumludur.
 ## Şu an geçerli
 | Sağlayıcı | Çalışan model | Not |
 |---|---|---|
-| Codex (`codex exec`) | `gpt-6-luna` (effort `low`/`medium`/`high`) | Hesap ChatGPT ücretsiz plan. `gpt-6.1-sol`, `gpt-6.1-terra`, `gpt-6-astra` "not supported" verir; plan yükselirse tabloyu güncelle. |
+| Codex (`codex exec`) | `gpt-6-luna` (effort `low`/`medium`/`high`) | Hesap ChatGPT ücretsiz plan (Gökalp, 2026-11-27: Codex aboneliği bitti, bu ay yenilenmedi; yenilenirse bu satırı güncelle). `gpt-6.1-sol`, `gpt-6.1-terra`, `gpt-6-astra` "not supported" verir; plan yükselirse tabloyu güncelle. |
 | Gemini (`agy --model`) | `gemini-4-hydrogen-high` | Alt ajan varsayılanı: ağır okuma/yazma. |
 | Gemini | `gemini-4-hydrogen-medium` | Hafif iş. |
 | Gemini | `gemini-4-argon` | Zor karar/hakem; haftalık limitli, idareli kullan. |

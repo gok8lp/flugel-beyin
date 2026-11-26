@@ -3,6 +3,7 @@
 ## Active Threads
 ### İkinci beyin: flugel-beyin derlemesi ve V3 geçişi
 - **Sahip:** Gökalp (ajanlarla birlikte).
+- **Durum (2026-11-27, gece):** Beyin otonomisi: Codex/Gemini bitiş bekçisi (test edildi) ve haftalık `beyin-bakim` (pazar 10:00 → `knowledge/beyin-bakim.md`). Codex hook güven onayı Gökalp'te.
 - **Durum (2026-11-27):** Ortak skill ve ajan sistemi kuruldu ve 7 tur sıfırdan ajan testiyle doğrulandı ([[knowledge/kararlar]] 2026-11-26 satırı; rapor `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md`). Yeni ajan girişi: `~/Documents/ai_workplace/YENI-AJAN.md`. Bilinen eksik: Claude limiti okunamıyor (`claude login` Gökalp'te); `beyin.py` salt okunur sandbox'ta yazma hatası (upstream, `beyin-ara` ile aşılıyor); lint'in `[[receipts/…md|…]]` yanlış alarmı (upstream).
 - **Durum (2026-11-15, Claude doctor kontrolü):** V3 sağlıklı: hook yolları ve global köprü ok, scheduled-check ok, güncel sürüm, bekleyen olay 0; 2026-11-15 onarımında lint kırık 0/yetim 0. Kökteki `hafiza`, `simdi`, `gelen-kutusu` yalnız yönlendirme; `kararlar`/`dersler` knowledge/'a taşınmış. Jev modu `on` ve **açık kalacak** (Gökalp kararı, 2026-11-15 19:51).
 - **Durum (2026-11-14):** Vault Avenox İkinci Beyin V3.13.0'a geçti ([[knowledge/kararlar]]). Eski çekirdek dosyalar (`hafiza`, `simdi`, `gelen-kutusu`, `kararlar`, `dersler`) companion, `knowledge/` ve `tasks/` yapısına taşındı; arşivlenmeleri lider ajanın kontrolünü bekliyor. Jev: kararlar kaydında "bir hafta gölge modda ölç, sonra `on`" yazıyor, ama 2026-11-14 `doctor` çıktısında Jev modu `on` görünüyor; hangisinin güncel niyet olduğu Gökalp'e sorulmalı.
@@ -16,10 +17,11 @@
 - **Sonraki adım:** 14-20 Kasım atamaları yayımlanınca `/v1/stats` ve değişiklik tespitini kontrol et ([[projeler/duduk]]).
 - **2026-11-24:** Basket botu Türkçe metin tarih hatası düzeltildi (yeni atama/sabah hatırlatması gitmiyordu); 24 Kasım 17:30 ve 20:30 maçları görünüyor. Düdük telefonda kasıyor: v0.3.0 debug APK → iOS kalitesi işi Canalp'a devredildi (`second-brain/DEVIR-canalp-duduk.md`, oturumu Gökalp açacak). Gemini basket-bot'a ICS takvim + çakışma uyarısı geliştiriyor (yüklenmedi).
 
-### Gazi EEM 2026 Güz vize dönemi
+### Gazi EEM 2026 Güz dönemi (Teknoloji Fakültesi, Elektrik-Elektronik)
 - **Sahip:** Gökalp.
+- **Durum (2026-11-27, Gökalp sohbette):** Vize dönemi çoktan bitti. Gökalp Gazi Üniversitesi Teknoloji Fakültesi Elektrik-Elektronik Mühendisliği öğrencisi. Vize sonuçları kayıtlı değil; dönem sonu (final) tarihleri ve kapsamı henüz beyinde yok.
 - **Durum:** EE317 Güç Elektroniği I vizesi 12 Kasım 2026 09:00'da yapıldı (kapsam D1–D4, tristör yok; [[notlar/ee317-vize-calismasi-2026-11-11]]); sonucu kayıtlı değil. simdi.md'deki EE313 ve EE333 "vize tekrarı" maddeleri bayat: [[projeler/okul-guz-2026]] bu iki vizeyi 7 ve 9 Kasım'da tamamlandı olarak gösteriyor.
-- **Sonraki adım:** Vize sonuçlarını ve EE346 sınav zamanını [[projeler/okul-guz-2026]] içinde güncelle ([[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]).
+- **Sonraki adım:** Final takvimi açıklanınca [[projeler/okul-guz-2026]] içine işle; vize sonuçları Gökalp söylerse eklenir. (Eski adım: Vize sonuçlarını ve EE346 sınav zamanını [[projeler/okul-guz-2026]] içinde güncelle ([[notlar/gazi-eem-vize-takvimi-ve-ders-notlari]]).
 
 ### flugelserver ağ güvenliği
 - **Sahip:** Gökalp.

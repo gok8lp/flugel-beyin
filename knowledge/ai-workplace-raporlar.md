@@ -99,4 +99,6 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 
 - `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md` — 2026-11-26 — awesome-claude-skills'ten 19 skill kuruldu; skill-yonetimi, ozgun-is, lider bekçisi, ai-limitler/Codex düzeltmeleri, YENI-AJAN.md; 7 tur sıfırdan ajan testi ve hakem puanları.
 
+- `second-brain/raporlar/beyin-otonomi-2026-11-27.md` — 2026-11-27 — Codex/Gemini bitiş bekçisi hook'u ve haftalık beyin-bakim zamanlayıcısı kuruldu, gerçek oturumlarla test edildi.
+
 Üst harita: [[knowledge/index]]

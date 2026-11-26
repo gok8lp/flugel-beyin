@@ -1,0 +1,23 @@
+#!/bin/sh
+# Vault'taki ortak skill'leri bu makinedeki tum ajanlarin global skill klasorlerine baglar.
+# Kullanim: skill-dagit [--kontrol]   (--kontrol: yalniz eksikleri listeler, degistirmez)
+# Var olan gercek klasorlere (symlink olmayan) dokunmaz; yalniz eksik baglari ekler.
+set -eu
+VAULT="${BEYIN_VAULT:-$HOME/Documents/ai_workplace/flugel-beyin}"
+KAYNAK="$VAULT/.agents/skills"
+HEDEFLER="$HOME/Documents/ai_workplace/.agents/skills $HOME/.claude/skills $HOME/.codex/skills $HOME/.gemini/config/skills"
+KONTROL=0; [ "${1:-}" = "--kontrol" ] && KONTROL=1
+eksik=0
+for skill in "$KAYNAK"/*/; do
+  ad=$(basename "$skill")
+  case "$ad" in beyin|beyin-*) continue;; esac   # beyin skill'leri yalniz vault icinde anlamli
+  [ -f "$skill/SKILL.md" ] || continue
+  for hedef in $HEDEFLER; do
+    [ -d "$(dirname "$hedef")" ] || continue      # o ajan bu makinede kurulu degil
+    yol="$hedef/$ad"
+    [ -e "$yol" ] || [ -L "$yol" ] && continue
+    eksik=$((eksik+1))
+    if [ $KONTROL -eq 1 ]; then echo "eksik: $yol"; else mkdir -p "$hedef"; ln -s "$KAYNAK/$ad" "$yol"; echo "baglandi: $yol"; fi
+  done
+done
+echo "toplam eksik: $eksik"

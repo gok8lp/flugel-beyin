@@ -1,5 +1,11 @@
 # Son oturum
 
+## 2026-11-27 00:23 · skill-ve-ajan-sistemi · cdb4bbd6
+- **Ne yaptık (Claude / Opus 5.5, lider; uygulayıcılar Sonnet/Haiku alt ajanları):** awesome-claude-skills listesinden incelenmiş 19 skill ortak köke kuruldu (superpowers, anthropics, trailofbits, frontend-slides, scientific-writing); `skill-yonetimi` (iş→skill tablosu, `skill-dagit`), `ozgun-is` (anti-slop), Claude lider bekçisi hook'u, `ai-limitler` düzeltmeleri (Codex ücretsiz plan, sandbox, ekip önerisi), Codex varsayılanı `gpt-6-luna`, `beyin-ara`, tek sayfa `~/Documents/ai_workplace/YENI-AJAN.md` ve üç global işaretçi.
+- **Test:** 7 tur sıfırdan ajan testi (Claude, Codex, Gemini) + bağımsız hakem. Hakem puanı 6. turda (2 yeni senaryo dahil) Claude 91, Codex 84, Gemini 94.
+- **Rapor:** `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md`.
+- **Açık (Gökalp):** `claude login` (CodexBar Claude limitini okuyamıyor); Düdük'te hangi dalda devam edileceği; Hakemlik ve vize thread'lerinin güncel durumu.
+
 ## 2026-11-26 22:45 · sunucu-sadelestirme · bb2b5e90
 - **Ne yaptık (Claude / Opus 5.5):** Beyni değerlendirdik, sonra flugelserver'a bağlanıp tekrarlayan bakım yükünü azalttık. Inbox'taki "onarım" kayıtlarının kaynağı her sabah 07:30'daki Cup oto-güncellemesiydi (Gluetun ve bağlı grup yeniden başlıyor). Güncelleme haftalığa (pazar) alındı. `flugel-ariza-zinciri` artık durmuş konteyner için 10 dk bekliyor ve yalnız-bildirim olayları beyne yazmıyor. Yedek kontrolü günlük oldu. Yeni [[knowledge/sunucu-durum]] her gün otomatik yazılıyor. 38 eski kayıt `_arsiv/onarim-bildirimleri-2026-11/` içine taşındı.
 - **Rapor:** `second-brain/raporlar/sunucu-sadelestirme-2026-11-26.md`.

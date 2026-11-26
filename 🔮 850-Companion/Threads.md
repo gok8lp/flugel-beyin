@@ -12,6 +12,7 @@
 
 ### Hakemlik ve Düdük
 - **Sahip:** Gökalp.
+- **Durum (2026-11-27, Düdük arşivinden):** 11 atama (13 Kas–2 Ara): 13 Kas Taha Akgül U14E-B 73-53 ve U18E-B 51-96 (2. hakem), 18 Kas MEB U16E-A 72-60 ve 62-79 (2. hakem), 24 Kas GİMSA U12/U11 AGL (2. hakem); yaklaşan 28 Kas Sincan U16E-C ×3 (1. hakem, Ali Barış Hazinedar), 2 Ara MEB U14K-A ×2 (2. hakem, Kaan Çam). Güncel liste her gün otomatik: [[knowledge/hakem-maclari]].
 - **Durum:** 13 Kasım 2026 Cuma Taha Akgül Spor Salonu maçları (U14 Erkek B ve U18 Erkek B, ikisinde de `referee2`) geçti; sonuç kayıtlı değil. Saat ve eşleşmeler simdi.md ile [[projeler/hakemlik]] arasında farklı yazılmış; ayrıntı [[notes/simdi-2026-11-hafta-2]].
 - **Açık işler (tasks/):** canlı sunucu arşivinin (`https://duduk.gokalpgoksu.com/v1/stats`) yeni hafta atamalarını yakalamasını izlemek; `assignr` yeni hafta yayın saatini loglardan gözlemlemek; ilk `BÖLGE` ödemesinde net maç ücretini kaydetmek.
 - **Sonraki adım:** 14-20 Kasım atamaları yayımlanınca `/v1/stats` ve değişiklik tespitini kontrol et ([[projeler/duduk]]).

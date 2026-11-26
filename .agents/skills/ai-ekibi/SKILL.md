@@ -30,7 +30,7 @@ codex exec --skip-git-repo-check -s read-only "PROMPT" < /dev/null
 # Dosya yazması gerekiyorsa (kullanıcı bu kapsamı zaten yetkilendirdiyse tekrar onay isteme):
 codex exec --skip-git-repo-check -s workspace-write -C /hedef/klasor "PROMPT" < /dev/null
 ```
-- **Model (2026-11-26):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra "not supported" hatası verir ve iş hiç başlamadan biter. `~/.codex/config.toml` varsayılanı 2026-11-26'da `gpt-6-luna` yapıldı. Gerekirse `-c model_reasoning_effort=high` ekle.
+- **Model (2026-11-26; tek kaynak: `../ajan-orkestrasyonu/references/modeller.md`):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra "not supported" hatası verir ve iş hiç başlamadan biter. `~/.codex/config.toml` varsayılanı 2026-11-26'da `gpt-6-luna` yapıldı. Gerekirse `-c model_reasoning_effort=high` ekle.
 - **Gemini headless komut izni (2026-11-26 testi):** `"command(ls *)"` çalıştı. Kural: çalıştırılacak her komutu kalıbıyla allow listesine yaz; listede olmayan komut otomatik reddedilir ve ajan boş döner (rc=0). Çıktıda "auto-denied" görürsen işi başarısız say, eksik izni ekleyip yeniden dene (aynı izinle tekrar deneme). Yazma için `--mode accept-edits` + `write_file(*)`, `edit_file(*)`.
 - **Skill:** Alt ajana verdiğin prompt'a işe uyan skill dosyasının yolunu ekle (`skill-yonetimi` tablosu), ör. `~/.codex/skills/<ad>/SKILL.md`.
 - `< /dev/null` şart: verilmezse stdin bekleyip takılır (2026-11-14 testinde 2 dakika takıldı).
@@ -44,7 +44,7 @@ agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","li
 - **İzin listesi şart:** headless modda izin sorulamaz; `--settings` allow listesi yoksa `read_file` otomatik reddedilir, ajan **hiçbir şey yapmadan rc=0 ile biter** ("no output produced… auto-denied"). 2026-11-14'te kontrol ajanı bu yüzden boş döndü. Komut çalıştırması gerekirse yalnız gereken komutu ekle: `"command(<komut>)"`. Çıktıda "auto-denied" ya da boş log varsa iş BAŞARISIZ sayılır.
 - `--print-timeout` bayrağı `-p`'den **önce** gelmeli; yoksa `-p` onu prompt sanır.
 - `< /dev/null` vermezsen stdin bekleyip takılabilir.
-- Model seçmek için `--model` (liste: `agy models`). **Varsayılan hafif:** okuma/özet/envanter lane'lerinde `--model gemini-3.8-flash-medium` (basit işte `-low`). Argon (`gemini-4-argon-*`) yalnız zor akıl yürütme, hakemlik veya mimari için; Gökalp tercihi (2026-11-15). Yazma yetkisi için `--mode accept-edits` (izin verilen kapsamda; yeni kapsam için kullanıcı onayı).
+- Model seçmek için `--model` (liste: `agy models`). **Varsayılan:** ağır okuma/yazma `--model gemini-4-hydrogen-high`, hafif iş `gemini-4-hydrogen-medium` (eski `gemini-3.8-flash-*` artık varsayılan değil; şu an geçerli tablo: `../ajan-orkestrasyonu/references/modeller.md`). Argon (`gemini-4-argon-*`) yalnız zor akıl yürütme, hakemlik veya mimari için; Gökalp tercihi (2026-11-15). Yazma yetkisi için `--mode accept-edits` (izin verilen kapsamda; yeni kapsam için kullanıcı onayı).
 - Giriş yoksa "login" ister: dur, kullanıcıdan kendi terminalinde `agy` ile giriş yapmasını iste. **Giriş kodunu asla sen girme.**
 - `~/.gemini/antigravity/bin/agentapi` yalnız Antigravity'nin kendi ajanı içinden çalışır (`ANTIGRAVITY_LS_ADDRESS` gerekir). Dışarıdan kullanma.
 

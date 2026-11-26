@@ -15,15 +15,15 @@ Kullanıcının isteği sunucuyu konu alıyorsa (sunucuda bul/kur/düzelt/incele
 - Harita: `flugel-beyin/knowledge/sunucu-haritasi.md` (yerele özel; dış modele GÖNDERME, gerekiyorsa ilgili kısmı sır taramasından geçirip özetle).
 - Canlı dosya arama (~1 sn, AI yok): `sunucu-ara ara "ifade"`, `sunucu-ara yol "*desen*"`. İndeks her pazar 04:00 UTC yenilenir; daha yeni değişiklik için sunucuda doğrudan bak.
 - `sunucu-ara` ssh ile sunucuya bağlanır, yani sunucu bağlantısıdır (§0 izni geçerli). Günlük canlı özet için önce bağlanmadan `flugel-beyin/knowledge/sunucu-durum.md` oku (her gün 08:30 TSİ otomatik yazılır).
-- Günlük özet ve açık işler: `second-brain/raporlar/sunucu-gunluk-ozet-*.md`.
+- Günlük özet ve açık işler: `/home/gokalp/Documents/ai_workplace/second-brain/raporlar/sunucu-gunluk-ozet-*.md`.
 
 ## 2. Kota ve model seçimi
-Her zaman önce `ai-limitler --sec <tur>` çalıştır. Varsayılan dağıtım:
+Her zaman önce `ai-limitler --sec <tur>` çalıştır. Model tablosu tek kaynak: `../ajan-orkestrasyonu/references/modeller.md`. Varsayılan dağıtım:
 | İş | Kime |
 |---|---|
 | Çok dosya okuma, log/konfig özeti, envanter, öneri listesi | Gemini `agy --model gemini-4-hydrogen-high` (Gökalp tercihi 2026-11-22; eski `gemini-3.8-flash-medium` yerine; paralel, çok lane) |
 | Betik/kod yazma, test | Codex `gpt-6-luna` (ücretsiz planda yalnız luna çalışır; sol/astra hata verir) |
-| Zor karar, hakemlik | Gemini `gemini-4-argon` (haftalık limitli: idareli); Codex Sol/Astra ücretsiz planda hata verir |
+| Zor karar, hakemlik | Gemini `gemini-4-argon` (haftalık limitli: idareli); Codex Sol/Astra (plan ücretliyse) ücretsiz planda hata verir |
 | sudo, sunucuda yazma, sır içeren adım, son doğrulama | Lider (Claude) |
 
 ## 3. Kesin kurallar
@@ -36,11 +36,11 @@ Her zaman önce `ai-limitler --sec <tur>` çalıştır. Varsayılan dağıtım:
 
 ## 4. Akış
 1. Hedefi tek cümleye indir; harita + indeksle ilgili servis/dosyaları bul.
-2. Lider salt okunur topla: `ssh flugelserver '...'` → `second-brain/raporlar/<is>/girdi/` (sır taramalı).
+2. Lider salt okunur topla: `ssh flugelserver '...'` → `/home/gokalp/Documents/ai_workplace/second-brain/raporlar/<is>/girdi/` (sır taramalı).
 3. Lane kartlarıyla Gemini/Codex'e dağıt (paralel; her lane kendi çıktı dosyası).
 4. Çıktıları karşılaştır; çelişki varsa ikinci model hakem.
 5. Lider uygular (yedek → değişiklik → doğrulama).
-6. Rapor `second-brain/raporlar/` + gerekiyorsa harita notunu `note-edit` ile güncelle (beyin entegrasyonu: AGENTS.md bölüm 6).
+6. Rapor `/home/gokalp/Documents/ai_workplace/second-brain/raporlar/` + gerekiyorsa harita notunu `note-edit` ile güncelle (beyin entegrasyonu: AGENTS.md bölüm 6).
 
 ## 5. Bilinen sunucu gerçekleri (2026-11-15)
 - Bağlantı: `ssh flugelserver` (Tailscale 100.86.88.1, kullanıcı flugel, `sudo -n` NOPASSWD).

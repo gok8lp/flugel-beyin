@@ -33,7 +33,8 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 | Bağımlılık riski | supply-chain-risk-auditor |
 | Android APK güvenlik taraması (Düdük, Flugel Manga APK'sı) | firebase-apk-scanner |
 | Python betiği | modern-python |
-| Lab raporu, bilimsel yazı | scientific-writing + `flugel-beyin/kisiler/ahmet-gokalp-goksu-yazim-tarzi.md` (YZ yazısı gibi okunmasın) |
+| Lab raporu, ödev | `flugel-beyin/kisiler/ahmet-gokalp-goksu-yazim-tarzi.md` (zorunlu) + ozgun-is metin slop listesi; föy/ölçüm yoksa uydurma, iste |
+| Akademik makale/bildiri | scientific-writing |
 | Word / PDF / Excel / PowerPoint dosyası | docx / pdf / xlsx / pptx |
 | Araştırma raporu | deep-research |
 | Sunucu işi | sunucu-ordusu (+ flugel-network-access, flugel-backup-recovery, flugel-compose-maintenance; flugel-* skill'leri yalnız Claude eklentisi; Codex/agy için sunucu-ordusu yeter) |

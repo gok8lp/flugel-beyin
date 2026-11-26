@@ -17,6 +17,8 @@ guncelleme: 2026-11-26
 
 > Üst bağlantı: [[HARITA]] · Odak: [[simdi]] · Bağlam: [[hafiza]] · Kararlar: [[kararlar]] · Sorumlu: [[kisiler/ahmet-gokalp-goksu]]
 
+**Aktif çalışma:** `/home/gokalp/Projects/duduk` (kanonik; `origin/HEAD` → `master`, 2026-11-26 doğrulandı; çalışma kopyası o an `ad-eslestirme-v0.2.2` dalında); `duduk-ios-kalite` ve `duduk-lane-*` geçici çalışma kopyaları. Depo içindeki eski `DEVIR.md` ortam/yol bilgisi bayattır, güncel bilgi bu not.
+
 ## Genel Bakış ve Amaç
 **Düdük** (`gok8lp/duduk`), Ankara basketbol il temsilciliği bünyesindeki hakem ve masa görevlisi atamalarını, lig fikstürlerini, puan durumlarını, hakem istatistiklerini ve 2026-2027 sezonu görevli ücretlerini takip etmek için geliştirilen kişisel bir Android uygulaması (`com.flugel.duduk`) ve `flugelserver` üzerinde çalışan Docker tabanlı arka uç servisidir.
 

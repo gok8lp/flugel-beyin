@@ -97,4 +97,6 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 - `second-brain/raporlar/duduk-elle-duzeltme-takas-2026-11-24.md` — 2026-11-24 — Düdük sunucusuna, assignr'de henüz görünmeyen 24 Kasım maç takası için elle düzeltme katmanı eklendi.
 - `second-brain/raporlar/duduk-ios-kalite-2026-11-24.md` — 2026-11-24 — Düdük iOS/Instagram kalite turu: ölçüm, tasarım sistemi ve yeni özellikler v0.4.1 APK olarak hazırlandı; push yapılmadı.
 
+- `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md` — 2026-11-26 — awesome-claude-skills'ten 19 skill kuruldu; skill-yonetimi, ozgun-is, lider bekçisi, ai-limitler/Codex düzeltmeleri, YENI-AJAN.md; 7 tur sıfırdan ajan testi ve hakem puanları.
+
 Üst harita: [[knowledge/index]]

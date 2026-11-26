@@ -21,4 +21,6 @@ Her zaman önce `ai-limitler --sec <tur>`; betik bu tabloyla uyumludur.
 | Ağır / mimari | Claude opus ya da Gemini argon |
 | Kontrol | Uygulayandan farklı model |
 
+Kural: Codex `gpt-6-luna` (ücretsiz) zayıf modeldir: lider, sunucu işi ya da çok adımlı iş verme; yalnız kabul ölçütü net, tek adımlı lane (okuma, küçük betik, biçim dönüştürme). Lider ya da ağır iş için Gemini hydrogen-high / argon ya da Claude.
+
 Bilinmeyen model adı uydurma; liste: `agy models`, `~/.codex/models_cache.json`.

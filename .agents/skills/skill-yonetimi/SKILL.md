@@ -11,6 +11,7 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 - İşe %1 bile uyan bir skill varsa ÖNCE onu aç, talimatına uy.
 - "Basit iş", "hızlı olsun", "zaten biliyorum" bahane değildir.
 - Bir işe birden çok skill uyar: sırayla aç. Aynı iş için en fazla 2-3 skill.
+- Öncelik: kullanıcı doğrudan çıktı istediyse ozgun-is'teki soru istisnası, brainstorming/frontend-slides'ın "önce soru sor" adımından önce gelir.
 - Açılış: Claude `Skill` aracı; Codex `~/.codex/skills/<ad>/SKILL.md`; agy çalışma alanındaki `.agents/skills/<ad>/SKILL.md` ya da `~/.gemini/config/skills/<ad>/SKILL.md` (ikisi aynı yere bağlı) dosyasını oku ve uygula.
 
 ## İş → zorunlu skill
@@ -26,7 +27,7 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 | Kod incelemesi isteme / alma | requesting-code-review / receiving-code-review |
 | Arayüz, web, görsel | ozgun-is + frontend-design (+ web-artifacts-builder, theme-factory) (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
 | Poster, afiş | ozgun-is + canvas-design (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
-| Sunum | ozgun-is + frontend-slides (HTML); dosya istenirse pptx (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
+| Sunum | ozgun-is + frontend-slides (HTML); kullanıcı doğrudan çıktı istediyse ozgun-is'teki soru istisnası frontend-slides'ın "önce soru sor" adımından önce gelir; dosya istenirse pptx (Claude eklentisi; Codex/agy'de dosyası yok, gerekirse benzer adımı elle uygula) |
 | Web uygulaması testi | webapp-testing |
 | Değişiklik güvenlik incelemesi | differential-review |
 | Kod güvenlik taraması | static-analysis-semgrep |

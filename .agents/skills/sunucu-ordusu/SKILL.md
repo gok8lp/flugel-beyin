@@ -1,6 +1,6 @@
 ---
 name: sunucu-ordusu
-description: flugelserver'da iş yapmak için AI ordusu akışı. Kullanıcı sunucuda bir şey kurmak, düzeltmek, araştırmak, güncellemek ya da "sunucuda şunu yap" dediğinde kullan. Lider (ana oturum; Claude, Codex ya da Gemini) bağlamı indeks+haritadan alır, okuma/analiz işini Gemini Flash ve Codex'e dağıtır, sudo/yazma adımlarını kendisi yapar.
+description: flugelserver'da iş yapmak için AI ordusu akışı. Kullanıcı sunucuda bir şey kurmak, düzeltmek, araştırmak, güncellemek ya da "sunucuda şunu yap" dediğinde kullan. Lider (ana oturum; Claude, Codex ya da Gemini) bağlamı indeks+haritadan alır, okuma/analiz işini Gemini (hydrogen) ve Codex'e dağıtır, sudo/yazma adımlarını kendisi yapar.
 ---
 
 # Sunucu ordusu

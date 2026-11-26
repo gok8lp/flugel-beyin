@@ -20,7 +20,7 @@ guncelleme: 2026-11-26
 > Üst bağlantı: [[HARITA]] · Odak: [[simdi]] · Bağlam: [[hafiza]] · Kararlar: [[kararlar]] · Öğrenci: [[kisiler/ahmet-gokalp-goksu]]
 
 ## Genel Bakış
-Gazi Üniversitesi Teknoloji Fakültesi Elektrik-Elektronik Mühendisliği (EEM) 3. sınıf 2026-2027 Güz dönemi dersleri, laboratuvarları, kaynak envanteri ve ara sınav (vize) hazırlık takibidir. Ders materyalleri PC'de `~/Downloads/Taildrop/` altında ve `flugelserver` Nextcloud üzerinde `/mnt/sidemain/cloud/nextcloud/flugel/files/Dersler` dizininde tutulmaktadır.
+Gazi Üniversitesi Teknoloji Fakültesi Elektrik-Elektronik Mühendisliği (EEM) 3. sınıf 2026-2027 Güz dönemi dersleri, laboratuvarları, kaynak envanteri ve ara sınav (vize) hazırlık takibidir. Ders materyalleri PC'de `~/Downloads/Taildrop/` altında (eski bilgi, 2026-11-26: laptopta Taildrop/yerel kopya yok; dosyalar sunucudaki Nextcloud'da, aşağıya bak) ve `flugelserver` Nextcloud üzerinde `/mnt/sidemain/cloud/nextcloud/flugel/files/Dersler` dizininde tutulmaktadır.
 
 ## Ders dosyaları nerede
 - **Nextcloud (sunucu):** `Dersler/` altında; sunucu yolu `/mnt/sidemain/cloud/nextcloud/flugel/files/Dersler` (yukarıdaki Genel Bakış).

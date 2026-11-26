@@ -103,3 +103,4 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 
 Üst harita: [[knowledge/index]]
 - `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md` — 2026-11-27 — flugelserver Syncthing GUI şifresi Gökalp'in terminalde girdiği şifreyle yenilendi; yedek /srv/backups/syncthing-sifre-20261126-222350, giriş 204 ile doğrulandı.
+- `second-brain/raporlar/sifre-kasasi-ve-dondurme-2026-11-27.md` — 2026-11-27 — Vaultwarden şifre kasası (Tailscale kapısı, rbw + Super+Alt+P), 21 uygulama + gokalpgoksu.com ortak kapısı benzersiz şifreye döndürüldü (betik ~/Documents/ai_workplace/sifre-dondur); Jellyfin açık.

@@ -64,3 +64,13 @@ Bağlantılar: [[HARITA]] · [[Core]] · [[knowledge/kararlar]] · [[Veri Tuzakl
 - **Sıfırdan ajan testi + bağımsız hakem işe yarıyor:** Test ajanlarının kendi verdiği puan (58–82) gürültülü; gizli ölçütle puanlayan taze hakem gerçek ilerlemeyi gösterdi (Claude 87→94, Gemini 92→98) ve şikayetleri sistem sorunu / test sınırı / ortam eksikliği diye ayırdı. Yeni ve görülmemiş senaryo eklemek ezberi önler.
 - **Beyin köprüsü dış projede kabukla yazılan dosyayı görmez:** `beyin.py bridge` Stop kontrolü yalnız `apply_patch`/`Edit` düzenlemesini sayar; Codex ve agy çoğu dosyayı kabukla yazdığı için receipt hatırlatması gelmiyordu. Çözüm: dosya mtime'ına bakan `bitis_bekcisi.py`. Codex hook'ları ayrıca ilk etkileşimli açılışta "Trust all and continue" onayı ister; onaysız hiç çalışmaz (agy istemez). Kaynak: `second-brain/raporlar/beyin-otonomi-2026-11-27.md`.
 
+
+## 7. Şifre kasası ve döndürme dersleri (2026-11-27)
+- `rbw` Vaultwarden 1.37'ye kayıt **ekleyemez** (422, `encryptedFor` eksik); okuma çalışır. Yazma için resmi `bw` (npm `@bitwarden/cli`; Arch paketi nodejs-lts ile çakışır).
+- Syncthing REST `basic auth` CSRF yüzünden hep 403 döner; şifre doğrulaması `POST /rest/noauth/auth/password` (204/403). GUI kökü basic auth başarılıysa `sessionid` çerezi verir (Tailscale kapısından otomatik giriş bununla).
+- `immich-admin reset-admin-password` borudan girdi almaz, takılır → Postgres `"user".password` bcrypt.
+- linuxserver Nextcloud `occ` sarmalayıcısı `-e OC_PASS`'ı geçirmez → `docker exec -u abc ... php /app/www/public/occ`.
+- Paperless `/api/` yanlış basic auth'a 302 döner; test için Django `check_password` kullan. Actual Budget argon2id (konteynerin argon2 modülü), Speedtest SQLite `$2y$`.
+- Jellyfin 10.11'de DB'ye PBKDF2 yazmak da, geçici API anahtarıyla `/Users/{id}/Password` da tutmadı (nedeni bulunmadı).
+- `grep -E '...(USER|NAME)...='` gibi geniş desen `LD_SUPERUSER_PASSWORD` satırını da yakalar; .env taramasında `PASS` içeren satırları önce dışla.
+- `pkill -f <desen>` aynı komut satırında desen geçiyorsa kendi kabuğunu öldürür.

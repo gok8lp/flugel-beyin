@@ -9,7 +9,7 @@ description: Kullanıcı yaratıcı ol, serbest takıl, güzel ya da özgün yap
 Serbestlik **yön seçimindedir**, kalite kapısında değil. "Serbest takıl" = sıradan varsayılanı reddet, gerekçeli risk al. Rastgelelik değildir.
 
 ## Akış (zorunlu, sırayla)
-1. **brainstorming** skill'ini aç. Kullanıcı doğrudan fikir/çıktı istiyorsa brainstorming'in soru adımını atla: varsayımlarını tek satırda yaz ve devam et (Gökalp ara soru sevmez).
+1. **brainstorming** skill'ini aç. Kullanıcı doğrudan çıktı istiyorsa brainstorming, frontend-slides ve benzeri skill'lerin 'önce soru sor' adımlarını atla: varsayımlarını tek satırda yaz ve devam et; yalnız sonucu değiştirecek tek bilgi eksikse tek soru sor.
 2. **Somutlaştır:** kim için, nerede kullanılacak, Gökalp'in gerçek içeriği/verisi. Yer tutucu, lorem, uydurma istatistik yok.
 3. **Üç yön:** birbirinden belirgin farklı 3 yön çıkar. Her birine bir gerçek dünya esin kaynağı (bir dönem, zanaat, yer, nesne; "modern ve minimalist" esin değildir) ve bir risk yaz. Üç yön farklı alanlardan gelsin (aynı tema iki kez olmaz). Birini gerekçeyle seç.
 4. **İmza karar:** beklenmedik ama işe hizmet eden tek bir şey koy.

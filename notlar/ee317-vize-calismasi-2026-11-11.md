@@ -19,7 +19,7 @@ Bağlantılar: [[HARITA]] · [[claude-hafizasi]] · [[hafiza]]
 - Arkadaşın tavsiyesi: "grafiklere iyi çalış", "soruları çöz".
 
 ## Dosyalar
-- Kök: `/home/flugel/Downloads/Taildrop/EE317_Guc_Elektronigi_1/`
+- Kök: `/home/flugel/Downloads/Taildrop/EE317_Guc_Elektronigi_1/` (eski yol; 2026-11-26 itibarıyla laptopta yok, dosyalar sunucudaki Nextcloud'da: bkz. [[projeler/okul-guz-2026]])
 - Hocanın slaytları: `Ders_Slaytlari/1_…diyotlar.pdf`, `2_EE317_YDD.pdf`, `3_EE317_TDD.pdf`, `4_EE317_3faz_TDD.pdf`
 - Soru haritası (H01–H10 ve çözüm denetimi): `Calisma_Seti/EE317_Soru_Haritasi_ve_Ders_Devri.md`
 - Ortak çalışma (Claude + Codex + Antigravity): `Ortak_Calisma/` — plan `YOL_HARITASI.md` (v5 = slayt sırası), ilerleme `ILERLEME.md`

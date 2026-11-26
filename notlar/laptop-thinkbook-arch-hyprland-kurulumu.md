@@ -160,3 +160,8 @@ Eklenenler:
 | `~/.config/hypr.yedek-noctalia-oncesi/`, `-sonrasi/` | Noctalia öncesi/sonrası |
 | `~/.config/hypr.yedek-ambxst-oncesi/`, `-sonrasi/` | Ambxst öncesi/sonrası |
 | `/etc/greetd/config.toml.yedek-orijinal` | greetd varsayılan ayarı |
+
+## 2026-11-27: AppFlowy yerine Notion (Super+R)
+- `appflowy-bin` kaldırıldı (pacman -Rns, snapper anlık görüntüsü #233); kullanıcı verisi `~/Documents/ai_workplace/_arsiv/appflowy-veri-20261127/` altında.
+- Notion resmi Linux uygulaması olmadığı için Chrome uygulama penceresi: `~/.local/bin/notion` (`google-chrome-stable --app=https://www.notion.so`), `~/.local/share/applications/notion.desktop`, pencere sınıfı `chrome-www.notion.so__-Default`.
+- Super+R "todo" özel alanı (`~/.config/hypr/toggles.json` → todo: obsidian + notion; `hyprland/ozel-alanlar.lua` döşeme kuralı). Yedekler: `~/Documents/ai_workplace/yedekler/notion-gecis-20261127/`.

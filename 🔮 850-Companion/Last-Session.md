@@ -1,5 +1,10 @@
 # Son oturum
 
+## 2026-11-27 01:27 · syncthing-sifre · c6d1fcbc
+- **Ne yaptık (Claude / Opus 5.5):** flugelserver Syncthing GUI şifresi değişti (kullanıcı `flugel`); şifreyi Gökalp terminalde girdi, ajan görmedi. Yedek `/srv/backups/syncthing-sifre-20261126-222350/`.
+- **Ders:** Syncthing şifre doğrulaması `POST /rest/noauth/auth/password` ile yapılır (204/403); `/rest/*` basic auth CSRF yüzünden hep 403.
+- **Rapor:** `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md`.
+
 ## 2026-11-27 00:23 · skill-ve-ajan-sistemi · cdb4bbd6
 - **Ne yaptık (Claude / Opus 5.5, lider; uygulayıcılar Sonnet/Haiku alt ajanları):** awesome-claude-skills listesinden incelenmiş 19 skill ortak köke kuruldu (superpowers, anthropics, trailofbits, frontend-slides, scientific-writing); `skill-yonetimi` (iş→skill tablosu, `skill-dagit`), `ozgun-is` (anti-slop), Claude lider bekçisi hook'u, `ai-limitler` düzeltmeleri (Codex ücretsiz plan, sandbox, ekip önerisi), Codex varsayılanı `gpt-6-luna`, `beyin-ara`, tek sayfa `~/Documents/ai_workplace/YENI-AJAN.md` ve üç global işaretçi.
 - **Test:** 7 tur sıfırdan ajan testi (Claude, Codex, Gemini) + bağımsız hakem. Hakem puanı 6. turda (2 yeni senaryo dahil) Claude 91, Codex 84, Gemini 94.

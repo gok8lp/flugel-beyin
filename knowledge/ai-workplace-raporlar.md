@@ -102,3 +102,4 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 - `second-brain/raporlar/beyin-otonomi-2026-11-27.md` — 2026-11-27 — Codex/Gemini bitiş bekçisi hook'u ve haftalık beyin-bakim zamanlayıcısı kuruldu, gerçek oturumlarla test edildi.
 
 Üst harita: [[knowledge/index]]
+- `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md` — 2026-11-27 — flugelserver Syncthing GUI şifresi Gökalp'in terminalde girdiği şifreyle yenilendi; yedek /srv/backups/syncthing-sifre-20261126-222350, giriş 204 ile doğrulandı.

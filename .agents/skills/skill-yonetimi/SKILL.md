@@ -11,7 +11,7 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 - İşe %1 bile uyan bir skill varsa ÖNCE onu aç, talimatına uy.
 - "Basit iş", "hızlı olsun", "zaten biliyorum" bahane değildir.
 - Bir işe birden çok skill uyar: sırayla aç. Aynı iş için en fazla 2-3 skill.
-- Açılış: Claude `Skill` aracı; Codex `~/.codex/skills/<ad>/SKILL.md`; agy `~/.gemini/config/skills/<ad>/SKILL.md` dosyasını oku ve uygula.
+- Açılış: Claude `Skill` aracı; Codex `~/.codex/skills/<ad>/SKILL.md`; agy çalışma alanındaki `.agents/skills/<ad>/SKILL.md` ya da `~/.gemini/config/skills/<ad>/SKILL.md` (ikisi aynı yere bağlı) dosyasını oku ve uygula.
 
 ## İş → zorunlu skill
 

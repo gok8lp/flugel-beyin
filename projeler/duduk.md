@@ -17,6 +17,8 @@ guncelleme: 2026-11-26
 
 > Üst bağlantı: [[HARITA]] · Odak: [[simdi]] · Bağlam: [[hafiza]] · Kararlar: [[kararlar]] · Sorumlu: [[kisiler/ahmet-gokalp-goksu]]
 
+**Aktif dal (Gökalp kararı, 2026-11-27):** çalışma `ios-kalite` dalında devam eder (v0.4.1; klasör `/home/gokalp/Projects/duduk-ios-kalite`).
+
 **Aktif çalışma:** `/home/gokalp/Projects/duduk` (kanonik; `origin/HEAD` → `master`, 2026-11-26 doğrulandı; çalışma kopyası o an `ad-eslestirme-v0.2.2` dalında); `duduk-ios-kalite` ve `duduk-lane-*` geçici çalışma kopyaları. Depo içindeki eski `DEVIR.md` ortam/yol bilgisi bayattır, güncel bilgi bu not.
 
 ## Genel Bakış ve Amaç

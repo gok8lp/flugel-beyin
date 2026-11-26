@@ -21,6 +21,14 @@ Kullanıcı her zaman **ekip lideriyle** (ana oturum, Claude Opus 5.5) konuşur.
 
 **İstisna:** Soru cevaplamak, plan ve rapor yazmak, bir-iki komutluk kontrol ve kullanıcıyla konuşmak liderin işidir; bunlar için ajan yollama. Kod yazma ve dosya değiştirme içeren her iş alt ajana gider.
 
+### Kayma yasağı
+- Lider rolünde dosya düzenlemeye, kod yazmaya ya da uzun dosya okumaya başlamak üzereyken DUR ve bunu lane kartına çevir.
+- "Küçük iş, kendim yaparım", "ajan yavaş", "daha hızlı olur" gerekçe değildir.
+- Alt ajan başarısız olursa aynı yöntemi tekrarlama; başka model/ayarla yeniden dağıt. İki farklı ajan da başarısız olursa kullanıcıya bildir ya da gerekçeni raporda yazarak kendin yap.
+- Her lider cevabının sonuna şu satırı yaz: `Dağıtılan lane: N / kendi yaptığım düzenleme: M`.
+- **Claude'da mekanik bekçi:** `scripts/lider_bekci.py`, `~/.claude/settings.json`'da UserPromptSubmit ve PreToolUse (Edit|Write|NotebookEdit) hook'u. İstemde "ana ajansın", "lider ol", "alttakilere iş ver", "orkestre et", "ekip lideri" geçince o oturum için 12 saatlik lider modu açar. Ana ajanın izinli yerler (raporlar, planlar, beyin companion/tasks/knowledge/receipts, Claude belleği, /tmp, scratchpad) dışındaki düzenlemesini reddeder; alt ajanlar (hook girdisinde `agent_id` dolu) serbesttir. Kapatmak için istemde "lider modu kapat" yaz. Olay günlüğü: `~/.local/state/lider-bekci/olaylar.log`.
+- **Codex/agy lider olduğunda mekanik bekçi yoktur;** aynı kuralı öz denetimle uygula.
+
 ## 2. Önce kotaya bak, modeli betik seçsin
 **ZORUNLU:** Her alt ajan çağrısından ÖNCE ai-limitler --sec <seviye> çalıştırılır, istisna yok. Lider kendi sağlayıcısının (bu oturum Claude 1 ise Claude 1) 5 saatlik penceresi %80'i geçtiyse Claude alt ajanı açmaz; işi Codex/Gemini'ye verir ve kendi çıktısını kısa tutar; %95'i geçtiyse kalan işi bir devir notuyla Codex'e devreder. Bu kural 2026-11-14'te Claude 1 %98'deyken Claude alt ajanları açıldığı için eklendi.
 
@@ -34,6 +42,13 @@ ai-limitler --sec ekip      # → üst/alt ajan kademesi (Claude kotasına göre
 ```
 Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tarafın 5 saatlik penceresi %80'i geçtiyse betik zaten diğer tarafı seçer.
 
+**Limit okunamazsa** (ör. Claude OAuth süresi dolmuş): `ai-limitler` "ayarlardan elle bak" satırı ve sayfayı yazar. Sayfalar:
+- Claude: https://claude.ai/settings/usage (ya da Claude Code'da `/usage`)
+- Codex: https://chatgpt.com/codex/settings/usage (ya da codex içinde `/status`)
+- Antigravity: uygulamada Settings → Usage/Plan
+
+Tarayıcıyı ya da computer-use'u (fare/imleç) kullanarak o sayfayı aç, yüzdeyi kendin oku. Okuyamıyorsan o sağlayıcıyı "dolu" say. Parola ya da giriş kodu girme; giriş isteniyorsa kullanıcıya bırak. Elle okunan değeri lane raporuna yaz.
+
 ## 3. Görev → model
 
 | Görev | Model (betiğin önerisi) | Çağrı |
@@ -45,6 +60,10 @@ Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tara
 | **Bağlam toplama, keşif, okuma** | Claude **Sonnet** ya da **Haiku** (`Agent`, salt okunur), büyük belgelerde **Gemini** | `ai-limitler --sec basit` sonra `Agent` / `agy --print-timeout 120s --settings '{"permissions":{"allow":["read_file(*)","list_dir(*)","grep_search(*)"]}}' -p "…" < /dev/null` |
 | **Kontrol ve doğrulama** | Uygulayandan **farklı** ve taze bir ajan: Claude **Sonnet/Opus**. Kritikse Codex **Sol** | `ai-limitler --sec orta` sonra `Agent` ya da `codex exec` |
 | **Planlama ve son karar** | Claude **Opus 5.5** (lider, yani sen) | Kendin |
+
+**Codex planı notu (2026-11-26):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra "not supported" hatası verir. `ai-limitler --sec` bunu hesaba katar (ücretsiz planda orta → luna high, üst → Claude Opus ya da Gemini Argon). Tablodaki Sol/Astra çağrıları ancak Codex planı ücretli olduğunda geçerlidir.
+
+**Skill adı:** Her lane'e işe uyan skill'in adını yaz (`skill-yonetimi` tablosu). Claude alt ajanına: "Önce <skill> skill'ini aç." Codex/agy'ye: "`~/.codex/skills/<ad>/SKILL.md` (agy için `~/.gemini/config/skills/<ad>/SKILL.md`) dosyasını oku ve uygula."
 
 **Emin olmadığın zor teknik/mimari karar:**
 1. Aynı görevi aynı bağlamla iki bağımsız modele ver: Claude **Fable 5.2** (`Agent`, `model: "fable"`) ve Codex **GPT-6-Astra** (high). Biri diğerinin cevabını görmesin.
@@ -68,7 +87,7 @@ Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tara
 3. **Uygulama:** Yetkilendirilmiş kapsamda dağıt; kullanıcı bu yazma işini zaten açıkça onayladıysa tekrar onay isteme. Yetki kapsamı dışındaki işlem için izin al. Kritik işlerde `AGENTS.md` yedek kurallarını uygula.
 4. **Teslim:** **“Bitti” bir iddiadır.** Değişen/yeni tam yollar, diff özeti, kabul ölçütüne bağlı doğrulama komutu **ve gerçek çıktısı**, başarısızlıklar ve kalan riskler olmadan teslimi kabul etme. Git kullanımı yasaksa diff özetini dosya karşılaştırmasıyla üret; yasağı aşma.
 5. **Kontrol:** Uygulayandan farklı, taze bağlamlı **salt okunur** kontrol ajanı kaynakları ve testleri bağımsız doğrular; yalnız uygulayanın özetine dayanmaz. Her ölçüt için kabul/ret ve kanıt verir. Sorunu uygulayan düzeltir; değişen sonuç tekrar denetlenir. Kontrol çağrısı da §2 kota kapısından geçer.
-6. **Rapor/devir:** [Rapor şemasını](references/rapor-semasi.md) kullan; yaklaşık 30 satırda bulgu, dosya:satır, kanıt, karar ihtiyacı ve belirsizliği aktar. Ham log yerine yol ve kısa ilgili çıktı ver; token tüketimi biliniyorsa kaydet, bilinmiyorsa uydurma. Kapsamı biten lane yeni iş üretmeden dursun.
+6. **Rapor/devir:** [Rapor şemasını](references/rapor-semasi.md) kullan; yaklaşık 30 satırda bulgu, dosya:satır, kanıt, karar ihtiyacı ve belirsizliği aktar. Ham log yerine yol ve kısa ilgili çıktı ver; token tüketimi biliniyorsa kaydet, bilinmiyorsa uydurma. Kapsamı biten lane yeni iş üretmeden dursun. **İş sonunda beyin entegrasyonu:** `AGENTS.md` bölüm 6 adımları: rapor `second-brain/raporlar/` altına, `knowledge/ai-workplace-raporlar.md`'ye bir dizin satırı, kalıcı karar `knowledge/kararlar.md`, ders `knowledge/dersler.md`, iş `task-create`, odak `Threads.md`, `Last-Session.md` oturum kartı (en üste), en son `beyin.py receipt`. Sır, parola, token, .env beyne yazılmaz.
 
 ## 6. Canlılık, süre ve durdurma
 [Stdlib filo gözeticisi](scripts/filo.py), her lane için PID, başlangıç zamanı, log yolu, zaman aşımı ve sonucu JSON'a atomik kaydeder. Önce `--help` ile mevcut seçenekleri doğrula:

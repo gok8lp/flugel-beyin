@@ -30,8 +30,9 @@ codex exec --skip-git-repo-check -s read-only "PROMPT" < /dev/null
 # Dosya yazması gerekiyorsa (kullanıcı bu kapsamı zaten yetkilendirdiyse tekrar onay isteme):
 codex exec --skip-git-repo-check -s workspace-write -C /hedef/klasor "PROMPT" < /dev/null
 ```
-- **Model (2026-11-25):** Codex hesabı şu an ChatGPT (free); varsayılan `gpt-6.1-sol` bu hesapta desteklenmiyor ve iş hiç başlamadan biter. `-m gpt-6-luna` (gerekirse `-c model_reasoning_effort=high`) ver.
-- **Gemini headless komut izni:** `command(...)` allow kuralları beklenen eşleşmeyi yapmayabilir; 2026-11-25'te üç lane "auto-denied" ile boş döndü. Gemini'ye yalnız dosya okuma/yazma işi ver, kabuk komutu gerektiren doğrulamayı Codex'e ya da Claude alt ajanına ver.
+- **Model (2026-11-26):** Codex hesabı ChatGPT ücretsiz planda; yalnız `gpt-6-luna` çalışır, sol/astra "not supported" hatası verir ve iş hiç başlamadan biter. `~/.codex/config.toml` varsayılanı 2026-11-26'da `gpt-6-luna` yapıldı. Gerekirse `-c model_reasoning_effort=high` ekle.
+- **Gemini headless komut izni (2026-11-26 testi):** `"command(ls *)"` çalıştı. Kural: çalıştırılacak her komutu kalıbıyla allow listesine yaz; listede olmayan komut otomatik reddedilir ve ajan boş döner (rc=0). Çıktıda "auto-denied" görürsen işi başarısız say, eksik izni ekleyip yeniden dene (aynı izinle tekrar deneme). Yazma için `--mode accept-edits` + `write_file(*)`, `edit_file(*)`.
+- **Skill:** Alt ajana verdiğin prompt'a işe uyan skill dosyasının yolunu ekle (`skill-yonetimi` tablosu), ör. `~/.codex/skills/<ad>/SKILL.md`.
 - `< /dev/null` şart: verilmezse stdin bekleyip takılır (2026-11-14 testinde 2 dakika takıldı).
 - Çıktının son satırları cevaptır; `tokens used` satırı maliyeti gösterir. Dosya okutmak ~10k token tutar.
 

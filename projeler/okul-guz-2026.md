@@ -12,7 +12,7 @@ etiketler:
   - ee346
 durum: aktif
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-26
 ---
 
 # Gazi EEM 2026-2027 Güz Dönemi ve Vize Çalışma Planı
@@ -21,6 +21,13 @@ guncelleme: 2026-11-11
 
 ## Genel Bakış
 Gazi Üniversitesi Teknoloji Fakültesi Elektrik-Elektronik Mühendisliği (EEM) 3. sınıf 2026-2027 Güz dönemi dersleri, laboratuvarları, kaynak envanteri ve ara sınav (vize) hazırlık takibidir. Ders materyalleri PC'de `~/Downloads/Taildrop/` altında ve `flugelserver` Nextcloud üzerinde `/mnt/sidemain/cloud/nextcloud/flugel/files/Dersler` dizininde tutulmaktadır.
+
+## Ders dosyaları nerede
+- **Nextcloud (sunucu):** `Dersler/` altında; sunucu yolu `/mnt/sidemain/cloud/nextcloud/flugel/files/Dersler` (yukarıdaki Genel Bakış).
+- **Laptopta yerel kopya yok:** `ls -d ~/Nextcloud* ~/nextcloud*` sonuç vermedi, `find ~ -maxdepth 3 -type d -iname Dersler` boş döndü, `~/Downloads/Taildrop/` da yok (2026-11-26). Dosyalar sunucudaki Nextcloud'da.
+- **EE319 deney düzeni:** `Nextcloud: Dersler/EE319_Guc_Elektronigi_Lab_1/GUZEM/Odev - Deney 7/` (D7 raporu: 12 sayfa PDF + DOCX). Başka deney klasörlerinin düzenini görmedim; sunucuya bu görevde bağlanılmadı. Kaynak: `🔮 850-Companion/Last-Session.md` (2026-11-24 girişi) ve `kisiler/ahmet-gokalp-goksu-yazim-tarzi.md`.
+- **Eski EE207 raporları:** `Nextcloud: Okul/EE Lab Raporları/Deney 1 - Ahmet Gökalp Göksu.pdf` (yazım tarzı örneği; kaynak: yazım tarzı notu).
+- **Yazım tarzı:** rapor yazarken [[kisiler/ahmet-gokalp-goksu-yazim-tarzi]] notuna bak. EE319 D3/D4 ve D7'nin ilk sürümü YZ tarzındaydı, D7 sonradan yeniden yazıldı; teslimden önce Gökalp gözden geçirecek.
 
 ## 2026-2027 Güz Dönemi Ders Tablosu
 

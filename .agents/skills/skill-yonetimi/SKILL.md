@@ -31,13 +31,14 @@ Skill, o işin en iyi bilinen yoludur. Kullanınca iş daha iyi çıkar; atlayı
 | Değişiklik güvenlik incelemesi | differential-review |
 | Kod güvenlik taraması | static-analysis-semgrep |
 | Bağımlılık riski | supply-chain-risk-auditor |
-| Android APK (Düdük, Flugel Manga) | firebase-apk-scanner |
+| Android APK güvenlik taraması (Düdük, Flugel Manga APK'sı) | firebase-apk-scanner |
 | Python betiği | modern-python |
 | Lab raporu, bilimsel yazı | scientific-writing + `flugel-beyin/kisiler/ahmet-gokalp-goksu-yazim-tarzi.md` (YZ yazısı gibi okunmasın) |
 | Word / PDF / Excel / PowerPoint dosyası | docx / pdf / xlsx / pptx |
 | Araştırma raporu | deep-research |
-| Sunucu işi | sunucu-ordusu (+ flugel-network-access, flugel-backup-recovery, flugel-compose-maintenance) |
+| Sunucu işi | sunucu-ordusu (+ flugel-network-access, flugel-backup-recovery, flugel-compose-maintenance; flugel-* skill'leri yalnız Claude eklentisi; Codex/agy için sunucu-ordusu yeter) |
 | Beyin bakımı | beyin, beyin-doktor |
+| Beyinde arama | `beyin-ara "<konu>"` (komut), beyin skill'i yalnız vault içinde |
 | Başka ajan çağırma | ai-ekibi |
 | Yaratıcı, özgün iş ("serbest takıl") | ozgun-is |
 | Yeni skill yazma | skill-creator |

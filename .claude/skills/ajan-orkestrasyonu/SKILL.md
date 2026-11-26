@@ -10,6 +10,7 @@ Kaynak: Avenox "From Single Agent to AI Team: 6 Levels" (zE_ggoUn7ao) ve [Avenox
 Çağırma komutları, gizlilik ve yetki kuralları: `ai-ekibi` skill'i (`~/Documents/ai_workplace/.agents/skills/ai-ekibi/SKILL.md`).
 
 ## 1. Temel ilke: lider iş yapmaz
+Lider, kullanıcının konuştuğu ana oturumdur; Claude, Codex ya da Gemini olabilir. Hangi model olursa olsun bu kurallar geçerli.
 Kullanıcı her zaman **ekip lideriyle** (ana oturum, Claude Opus 5.5) konuşur. Lider:
 - **Kod yazmaz, dosya değiştirmez, büyük dosya okumaz.** Bu işleri alt ajanlara yaptırır.
 - Bağlam toplamak için **salt okunur** ajanlar yollar ve sadece onların özetlerini alır.
@@ -48,6 +49,7 @@ Betiğin cevabı "yok: …" ise o işi başlatma, kullanıcıya söyle. Bir tara
 - Antigravity: uygulamada Settings → Usage/Plan
 
 Tarayıcıyı ya da computer-use'u (fare/imleç) kullanarak o sayfayı aç, yüzdeyi kendin oku. Okuyamıyorsan o sağlayıcıyı "dolu" say. Parola ya da giriş kodu girme; giriş isteniyorsa kullanıcıya bırak. Elle okunan değeri lane raporuna yaz.
+Lider Claude ise kendi kotasını Claude Code'da `/usage` ile ya da ayar sayfasından oku; okuyamıyorsan Claude alt ajanını yalnız kısa işte kullan, ağır işi Codex luna / Gemini hydrogen'e ver.
 
 ## 3. Görev → model
 

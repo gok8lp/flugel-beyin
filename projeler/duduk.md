@@ -10,7 +10,7 @@ etiketler:
   - docker
 durum: aktif
 olusturma: 2026-11-11
-guncelleme: 2026-11-11
+guncelleme: 2026-11-26
 ---
 
 # Düdük — Ankara Basketbol Hakem Atama, Fikstür ve İstatistik Uygulaması
@@ -45,8 +45,11 @@ Proje **aktif** ve 8 ana geliştirme aşaması tamamlanmış durumdadır:
 ## Geliştirme Ortamı ve Canlı Uçlar
 2026-11-14'te [[hafiza]] dosyasından taşındı (o dosyaya eski `memory.md`'den birleştirilmişti).
 
-- **Depo:** `https://github.com/gok8lp/duduk` (**Private**, sürüm `v0.1.0`), yerel dizin `/home/flugel/Projects/duduk`.
-- **Derleme ve test:** `cd /home/flugel/Projects/duduk && JAVA_HOME=/usr/lib/jvm/java-17-openjdk ./gradlew :app:assembleDebug :app:testDebugUnitTest`
+- **Depo:** `https://github.com/gok8lp/duduk` (**Private**). Kanonik depo bu; `origin/HEAD -> origin/master` (kaynak: `git -C ~/Projects/duduk remote -v` ve `symbolic-ref refs/remotes/origin/HEAD`, 2026-11-26).
+- **Yerel dizin:** Laptop (gokalp): `/home/gokalp/Projects/duduk` (doğrulandı; o gün `ad-eslestirme-v0.2.2` dalında, `092421b`). PC/sunucu (flugel): `/home/flugel/Projects/duduk` (11 Kasım notundan kalma yol, bu oturumda doğrulanmadı).
+- **Kardeş klasörler (`~/Projects/duduk-*`):** aynı `origin`'e bağlı ayrı çalışma kopyaları, kanonik değil: `duduk-ios-kalite` (dal `ios-kalite`, v0.4.x işi) ve `duduk-lane-{bildirim,dagilim,kartpaylas,kurallar,notlar,siradaki,takvim}` (dal `lane/<ad>`, paralel özellik şeritleri; içlerinde `BIRLESTIRME-NOTU.md` var).
+- **Güncel sürüm:** git etiketleri `v0.4.0` (2026-11-24), `v0.3.0`, `v0.2.2`, `v0.2.1`, `v0.2.0` (`git tag --sort=-creatordate`). v0.4.1 etiketsiz, `ios-kalite` dalında `0eeabfc`. En yeni rapor: `/home/gokalp/Documents/ai_workplace/second-brain/raporlar/duduk-ios-kalite-2026-11-24.md` (v0.4.1, 197 test, 0 hata). Diğer raporlar: `duduk-v030-release-2026-11-22.md`, `duduk-ad-eslestirme-2026-11-22.md`, `duduk-elle-duzeltme-takas-2026-11-24.md`, `duduk-hltv-DEVIR-claude1-2026-11-22.md`. (Aşağıdaki "Son Commit Geçmişi" 11 Kasım'a aittir, eskidir.)
+- **Derleme/test kuralı:** Android derleme bu PC'de değil, flugelserver'da yapılır: `ssh flugelserver` → `~/ai-sandbox/android-calistir.sh duduk ./gradlew :app:assembleDebug :app:testDebugUnitTest` (kaynak: `/home/gokalp/Documents/ai_workplace/AGENTS.md` bölüm 1). Eski komut (`/home/flugel/Projects/duduk` içinde doğrudan `./gradlew`, 11 Kasım) geçersiz sayılır.
 - **Canlı uç yolları:** `/v1/health`, `/v1/bundle`, `/v1/stats`; sunucuda konteyner `duduk-server` → `127.0.0.1:18420` (`~/duduk-server`, Compose: `~/duduk-server/docker-compose.yml`).
 - **Canlı uçlar:**
   1. Cloudflare Tunnel (`akis.yml`): `https://duduk.gokalpgoksu.com`

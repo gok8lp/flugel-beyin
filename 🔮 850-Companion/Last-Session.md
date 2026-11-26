@@ -3,6 +3,7 @@
 ## 2026-11-27 02:45 · sifre-kasasi · c6d1fcbc
 - **Ne yaptık (Claude / Opus 5.5):** Vaultwarden kasası Tailscale kimlik kapısının arkasında, kayıt kapalı; laptopta rbw + Super+Alt+P (seç-yaz). `sifre-dondur` betiğiyle 21 uygulama ve gokalpgoksu.com ortak kapısı (`flugel`, bcrypt) 32 karakter benzersiz şifreye döndü, her biri girişle doğrulandı. Syncthing kullanıcı `gokalpgoksu`, Tailscale'den şifresiz açılıyor; LAN portu kapandı.
 - **Açık (Gökalp/sonraki ajan):** Jellyfin şifresi (iki yöntem tutmadı, değişmedi); Komga/Kavita yerel şifreleri; kapı şifresini kullanan telefon uygulamaları yeni şifreyi Bitwarden'dan alacak.
+- **Ek (02:48):** gokalpgoksu.com'da Tailscale'den Syncthing, Sonarr/Radarr/Prowlarr, Uptime Kuma girişsiz (kapı internet yolunu korur); kalan uygulama girişleri OIDC/proxy-auth ile ayrı iş.
 - **Rapor:** `second-brain/raporlar/sifre-kasasi-ve-dondurme-2026-11-27.md`.
 
 ## 2026-11-27 01:27 · syncthing-sifre · c6d1fcbc

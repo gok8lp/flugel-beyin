@@ -27,6 +27,7 @@
 ### flugelserver ağ güvenliği
 - **Sahip:** Gökalp.
 - **Durum (2026-11-26):** Bakım yükü azaltıldı: Cup oto-güncelleme haftalık (pazar 07:30 TSİ), arıza zinciri 10 dk eşik ve beyne yalnız gerçek onarım kaydı, yedek kontrolü günlük, günlük durum notu [[knowledge/sunucu-durum]]. Rapor: `second-brain/raporlar/sunucu-sadelestirme-2026-11-26.md`.
+- **Medya istemcileri (2026-11-27):** Laptopa plex-desktop + jellyfin-desktop (AUR) kuruldu. Jellyfin: Tailscale `:12443` / `100.86.88.1:8096`, LAN `192.168.0.15:8096`. Plex: `:44443` / `:32400`, `plex.gokalpgoksu.com`. Funnel 443 artık Jellyfin değil. Rapor: `second-brain/raporlar/plex-jellyfin-istemci-kurulumu-2026-11-27.md`.
 - **Şifreler (2026-11-27):** Vaultwarden kasası (yalnız Tailscale kimliği), 21 uygulama + gokalpgoksu.com ortak kapısı benzersiz şifreye döndü (`~/Documents/ai_workplace/sifre-dondur`). Açık: Jellyfin şifresi, Komga/Kavita yerel şifreleri.
 - **Sonraki adım:** Jellyfin şifresi; servis azaltma (raporda aday listesi) ve `/mnt/sidemain` %89.
 - **Durum (2026-11-15):** Ev ağı entegrasyonu tamamlandı ([[knowledge/concepts/ev-agi-ve-dis-erisim]]): modem ve Tailscale DNS'i AdGuard'a yönlü, evde gokalpgoksu.com doğrudan HTTPS ve `.ev` adları, Mullvad proxy `:8889`, Wi-Fi ayarları, eski Tailscale cihazları silindi. **Funnel bilerek açık kalır** (Gökalp kararı; görev kapandı). `adguard.gokalpgoksu.com` A kaydı hâlâ 178.233.25.73'ü gösteriyor (CGNAT yüzünden işe yaramaz).

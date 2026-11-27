@@ -74,3 +74,4 @@ Bağlantılar: [[HARITA]] · [[Core]] · [[knowledge/kararlar]] · [[Veri Tuzakl
 - Jellyfin 10.11'de DB'ye PBKDF2 yazmak da, geçici API anahtarıyla `/Users/{id}/Password` da tutmadı (nedeni bulunmadı).
 - `grep -E '...(USER|NAME)...='` gibi geniş desen `LD_SUPERUSER_PASSWORD` satırını da yakalar; .env taramasında `PASS` içeren satırları önce dışla.
 - `pkill -f <desen>` aynı komut satırında desen geçiyorsa kendi kabuğunu öldürür.
+- 2026-11-27: Laptopta `yay --sudoloop` `sudo -v` çağırır ve NOPASSWD olsa da parola ister; arka planda AUR kurulumu için `yay --sudoflags -n` kullan.

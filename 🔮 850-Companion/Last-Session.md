@@ -1,5 +1,11 @@
 # Son oturum
 
+## 2026-11-27 17:13 · medya-istemcileri · baf076b8
+- **Ne yaptık (Claude / Opus 5.5):** Laptopa AUR'dan `plex-desktop` 1.115 ve `jellyfin-desktop` 2.0.0 kuruldu, iki pencere de Hyprland'de açıldı. Adresler sunucuda salt okunur doğrulandı (Tailscale Serve, LAN, plex.gokalpgoksu.com). Jellyfin'in gokalpgoksu.com adresi yok, Funnel 443 artık Jellyfin'e gitmiyor.
+- **Ders:** `yay --sudoloop` (`sudo -v`) NOPASSWD'de bile parola istiyor; `--sudoflags -n` kullan.
+- **Açık:** Uygulamalara giriş ve oynatma Gökalp'te; Jellyfin şifresi/OIDC.
+- **Rapor:** `second-brain/raporlar/plex-jellyfin-istemci-kurulumu-2026-11-27.md`.
+
 ## 2026-11-27 02:45 · sifre-kasasi · c6d1fcbc
 - **Ne yaptık (Claude / Opus 5.5):** Vaultwarden kasası Tailscale kimlik kapısının arkasında, kayıt kapalı; laptopta rbw + Super+Alt+P (seç-yaz). `sifre-dondur` betiğiyle 21 uygulama ve gokalpgoksu.com ortak kapısı (`flugel`, bcrypt) 32 karakter benzersiz şifreye döndü, her biri girişle doğrulandı. Syncthing kullanıcı `gokalpgoksu`, Tailscale'den şifresiz açılıyor; LAN portu kapandı.
 - **Açık (Gökalp/sonraki ajan):** Jellyfin şifresi (iki yöntem tutmadı, değişmedi); Komga/Kavita yerel şifreleri; kapı şifresini kullanan telefon uygulamaları yeni şifreyi Bitwarden'dan alacak.

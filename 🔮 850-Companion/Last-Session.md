@@ -1,5 +1,9 @@
 # Son oturum
 
+## 2026-11-27 22:05 · dolphin-telefon · 0972a018
+- **Ne yaptık (Claude / Opus 5.5):** Dolphin panellerine × düğmesi, Yerler'e Son Dosyalar/Son Konumlar, KDE Connect servis + güvenlik duvarı, sağ panel boşta %8 işlemci sorunu düzeltildi.
+- **Açık:** Telefon eşleştirme, disk önbelleği temizliği onayı, yeniden başlatma testi.
+
 ## 2026-11-27 21:53 · dolphin-syncthing · 0972a018
 - **Ne yaptık (Claude / Opus 5.5):** Dolphin siyah ve okunur (qt6ct sarmalayıcı + FlugelSiyah), simgeli araç çubuğu, F4/Ctrl+Alt+T terminal, önizlemeler, ark, kio-admin. Syncthing iki uçta 1 sn algılama (~3 sn senkron). `acilis-kontrol` betiği.
 - **Açık:** Kısayol/tema seçimi Gökalp'te; yeniden başlatma testi.
@@ -14,12 +18,6 @@
 - **Ders:** `yay --sudoloop` (`sudo -v`) NOPASSWD'de bile parola istiyor; `--sudoflags -n` kullan.
 - **Açık:** Uygulamalara giriş ve oynatma Gökalp'te; Jellyfin şifresi/OIDC.
 - **Rapor:** `second-brain/raporlar/plex-jellyfin-istemci-kurulumu-2026-11-27.md`.
-
-## 2026-11-27 02:45 · sifre-kasasi · c6d1fcbc
-- **Ne yaptık (Claude / Opus 5.5):** Vaultwarden kasası Tailscale kimlik kapısının arkasında, kayıt kapalı; laptopta rbw + Super+Alt+P (seç-yaz). `sifre-dondur` betiğiyle 21 uygulama ve gokalpgoksu.com ortak kapısı (`flugel`, bcrypt) 32 karakter benzersiz şifreye döndü, her biri girişle doğrulandı. Syncthing kullanıcı `gokalpgoksu`, Tailscale'den şifresiz açılıyor; LAN portu kapandı.
-- **Açık (Gökalp/sonraki ajan):** Jellyfin şifresi (iki yöntem tutmadı, değişmedi); Komga/Kavita yerel şifreleri; kapı şifresini kullanan telefon uygulamaları yeni şifreyi Bitwarden'dan alacak.
-- **Ek (02:48):** gokalpgoksu.com'da Tailscale'den Syncthing, Sonarr/Radarr/Prowlarr, Uptime Kuma girişsiz (kapı internet yolunu korur); sonra (02:54) AdGuard, Dockge, File Browser, Linkding, n8n da girişsiz; Immich/Nextcloud tek tık OIDC; Vikunja, Semaphore, BookStack, Actual, Homebox, Portainer, Jellyfin, Speedtest açık (tarayıcıyla OIDC kurulumu gerekir).
-- **Rapor:** `second-brain/raporlar/sifre-kasasi-ve-dondurme-2026-11-27.md`.
 
 ## Önceki oturumlar
 

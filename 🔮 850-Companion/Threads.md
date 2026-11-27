@@ -6,10 +6,6 @@
 - **Durum (2026-11-27, gece):** Beyin otonomisi: Codex/Gemini bitiş bekçisi (test edildi) ve haftalık `beyin-bakim` (pazar 10:00 → `knowledge/beyin-bakim.md`). Codex hook güven onayı Gökalp'te.
 - **Durum (2026-11-27):** Ortak skill ve ajan sistemi kuruldu ve 7 tur sıfırdan ajan testiyle doğrulandı ([[knowledge/kararlar]] 2026-11-26 satırı; rapor `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md`). Yeni ajan girişi: `~/Documents/ai_workplace/YENI-AJAN.md`. Bilinen eksik: Claude limiti okunamıyor (`claude login` Gökalp'te); `beyin.py` salt okunur sandbox'ta yazma hatası (upstream, `beyin-ara` ile aşılıyor); lint'in `[[receipts/…md|…]]` yanlış alarmı (upstream).
 - **Durum (2026-11-15, Claude doctor kontrolü):** V3 sağlıklı: hook yolları ve global köprü ok, scheduled-check ok, güncel sürüm, bekleyen olay 0; 2026-11-15 onarımında lint kırık 0/yetim 0. Kökteki `hafiza`, `simdi`, `gelen-kutusu` yalnız yönlendirme; `kararlar`/`dersler` knowledge/'a taşınmış. Jev modu `on` ve **açık kalacak** (Gökalp kararı, 2026-11-15 19:51).
-- **Durum (2026-11-14):** Vault Avenox İkinci Beyin V3.13.0'a geçti ([[knowledge/kararlar]]). Eski çekirdek dosyalar (`hafiza`, `simdi`, `gelen-kutusu`, `kararlar`, `dersler`) companion, `knowledge/` ve `tasks/` yapısına taşındı; arşivlenmeleri lider ajanın kontrolünü bekliyor. Jev: kararlar kaydında "bir hafta gölge modda ölç, sonra `on`" yazıyor, ama 2026-11-14 `doctor` çıktısında Jev modu `on` görünüyor; hangisinin güncel niyet olduğu Gökalp'e sorulmalı.
-- **11 Kasım hedefi (simdi.md'den):** 23 GitHub deposu, `flugelserver` Docker/medya/manga arşivleri ve Düdük belgelerinin `raw/` + `wiki/` + `notlar/` + `projeler/` altına eksiksiz derlenmesi ve `python3 brain.py lint` ile 0 problem; `second-brain-hud.html` canlı HUD panosu ve Obsidian Graph View renk kümeleri ([[ikinci-beyin-sistemi]]). Bu hedeflerin bitip bitmediği eski dosyalarda kayıtlı değil.
-- **Sonraki adım:** V3 geçişi tamamlandı; açık karar kalmadı. Eski 11 Kasım derleme hedefi (23 GitHub deposu, arşivler) ayrıca istenirse değerlendirilir.
-
 ### Hakemlik ve Düdük
 - **Sahip:** Gökalp.
 - **Durum (2026-11-27, Düdük arşivinden):** 11 atama (13 Kas–2 Ara): 13 Kas Taha Akgül U14E-B 73-53 ve U18E-B 51-96 (2. hakem), 18 Kas MEB U16E-A 72-60 ve 62-79 (2. hakem), 24 Kas GİMSA U12/U11 AGL (2. hakem); yaklaşan 28 Kas Sincan U16E-C ×3 (1. hakem, Ali Barış Hazinedar), 2 Ara MEB U14K-A ×2 (2. hakem, Kaan Çam). Güncel liste her gün otomatik: [[knowledge/hakem-maclari]].
@@ -38,6 +34,8 @@
 - **Sahip:** Gökalp.
 - **Durum (2026-11-27):** Tek çekirdek `linux` 7.3.6 (LTS kaldırıldı, systemd-boot varsayılanı `arch-linux.efi`). Hyprland eklentisi `dynamic-cursors` açılışta `~/.local/bin/hypr-eklenti-derle` ile yüklenir, sürüm uyumsuzsa kendini yeniden derler. Quickshell yerelde Qt 6.12.1 ile derlendi (`0.3.2-1.1`). Kilit ekranı tuş takımı yaması `dux-ozel/yamalar/02-kilit-numpad.patch`; eski `kilit-numlock` servisi arşivde. Rapor: `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md`.
 - **Dolphin + Syncthing (2026-11-27):** Dolphin `/usr/local/bin/dolphin` sarmalayıcısıyla qt6ct + `FlugelSiyah` şemasında açılır (GTK teması açık olduğu için adlar siyah çiziliyordu). Terminal: F4 panel, Ctrl+Alt+T Ghostty (`--gtk-single-instance=false`, yoksa klasör kaçıyor). Syncthing iki uçta algılama 1 sn. Rapor: `second-brain/raporlar/2026-11-27-dolphin-tema-syncthing.md`.
+- **Telefon + son dosyalar (2026-11-27):** KDE Connect `kdeconnectd.service` (kullanıcı, enabled) + ufw yalnız LAN/Tailscale; telefonlarda eşleştirme Gökalp'te. Son Dosyalar için `plasma-kactivitymanagerd` servisi. Disk %81: yay önbelleği 11 GB, pacman 8 GB, temizlik onay bekliyor.
 - **Sonraki adım:** Yeniden başlatıp `acilis-kontrol` çalıştır; kilit ekranında tuş takımıyla parola dene (elle denenmedi). Giriş ekranında da aynı sorun varsa dux-greeter için çözüm ara.
 
 ## Closed Threads
+Arşivlenen metin: `🔮 850-Companion/Arşiv/Threads-2026-11.md`

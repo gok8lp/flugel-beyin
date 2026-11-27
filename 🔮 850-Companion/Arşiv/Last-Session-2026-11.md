@@ -66,3 +66,15 @@ Henüz bir çalışma sonucu kaydedilmedi. Anlamlı çalışma sonunda sonuç, g
 
 
 <!-- /beyin-compact-v1 -->
+
+## 2026-11-27 18:34 UTC, Last-Session.md, 977 karakter taşındı
+
+<!-- beyin-compact-v1: {"kind": "move", "source": "🔮 850-Companion/Last-Session.md", "id": "f5c5f9ad3bad2421b9a80a8e66548b4ad517a679a9ad2afb067579503d6eddbf", "chars": 977, "sha256": "4d829aa489f0f210c1486c430e6595418849f1d8179af013aa9666b274e3157f"} -->
+## 2026-11-27 00:23 · skill-ve-ajan-sistemi · cdb4bbd6
+- **Ne yaptık (Claude / Opus 5.5, lider; uygulayıcılar Sonnet/Haiku alt ajanları):** awesome-claude-skills listesinden incelenmiş 19 skill ortak köke kuruldu (superpowers, anthropics, trailofbits, frontend-slides, scientific-writing); `skill-yonetimi` (iş→skill tablosu, `skill-dagit`), `ozgun-is` (anti-slop), Claude lider bekçisi hook'u, `ai-limitler` düzeltmeleri (Codex ücretsiz plan, sandbox, ekip önerisi), Codex varsayılanı `gpt-6-luna`, `beyin-ara`, tek sayfa `~/Documents/ai_workplace/YENI-AJAN.md` ve üç global işaretçi.
+- **Test:** 7 tur sıfırdan ajan testi (Claude, Codex, Gemini) + bağımsız hakem. Hakem puanı 6. turda (2 yeni senaryo dahil) Claude 91, Codex 84, Gemini 94.
+- **Rapor:** `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md`.
+- **Açık (Gökalp):** `claude login` (CodexBar Claude limitini okuyamıyor); Düdük'te hangi dalda devam edileceği; Hakemlik ve vize thread'lerinin güncel durumu.
+
+
+<!-- /beyin-compact-v1 -->

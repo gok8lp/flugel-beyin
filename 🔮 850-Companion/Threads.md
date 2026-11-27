@@ -34,4 +34,9 @@
 - **Durum (2026-11-24):** AdGuard hız sınırı kapatıldı (ev tek istemci sayılıyordu); ölü adların DNS'i yerel akış tüneline alındı (tools/portainer/admin/adguard artık çalışıyor; office/convert/pdf/ai/bd/ui 404). 40+ yeni `*.gokalpgoksu.com` FLUGEL kapısı arkasında; Tailscale istemcileri kapıyı atlar (AdGuard `100.64.0.0/10` kuralı + `127.0.0.1:8198`). Laptop Tailscale `RouteAll: true`; laptop/modem ikinci DNS'e Gökalp isteğiyle dokunulmadı.
 - **Sonraki adım:** Cloudflare panelinde eski uzaktan yönetilen tünel rotalarını temizle; internete açık Portainer/Dockge/File Browser için Cloudflare Access ekle. Rapor: `second-brain/raporlar/sunucu-hata-taramasi-2026-11-24.md`.
 
+### Laptop bakımı (ThinkBook, Arch + Hyprland + Dux)
+- **Sahip:** Gökalp.
+- **Durum (2026-11-27):** Tek çekirdek `linux` 7.3.6 (LTS kaldırıldı, systemd-boot varsayılanı `arch-linux.efi`). Hyprland eklentisi `dynamic-cursors` açılışta `~/.local/bin/hypr-eklenti-derle` ile yüklenir, sürüm uyumsuzsa kendini yeniden derler. Quickshell yerelde Qt 6.12.1 ile derlendi (`0.3.2-1.1`). Kilit ekranı tuş takımı yaması `dux-ozel/yamalar/02-kilit-numpad.patch`; eski `kilit-numlock` servisi arşivde. Rapor: `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md`.
+- **Sonraki adım:** Yeniden başlatıp açılış günlüğünü kontrol et; kilit ekranında tuş takımıyla parola dene (elle denenmedi). Giriş ekranında da aynı sorun varsa dux-greeter için çözüm ara.
+
 ## Closed Threads

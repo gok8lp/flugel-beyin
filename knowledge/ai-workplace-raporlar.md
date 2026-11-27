@@ -82,6 +82,7 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 
 ## Diğer (2026-11-16 sonrası)
 
+- `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md` — 2026-11-27 — Laptop: Hyprland açılış hatası (dynamic-cursors sürüm uyumsuzluğu) ve Quickshell/Qt uyumsuzluğu giderildi, LTS kaldırılıp tek çekirdek (7.3.6) bırakıldı, kilit ekranı 24 saat/tarih/güç düğmesi ve tuş takımı rakam yaması, wireless-regdb/rtkit, ts-proxy dispatcher düzeltmesi.
 - `second-brain/raporlar/2026-11-26-laptop-numlock-tpm-tailscale.md` — 2026-11-26 — Kilit ekranı NumLock servisi eklendi, giriş ekranı için greetd ayarı yapıldı; disk şifresi (TPM2) ve okul ağında Tailscale notları kaydedildi.
 - `second-brain/raporlar/touchpad-gecikme-tani-2026-11-26.md` — 2026-11-26 — Laptop touchpad'inde zamanla artan gecikme sorununun tanısı yapıldı; kayıt ve araştırma raporu hazırlandı.
 - `second-brain/raporlar/acilis-duzeni-2026-11-17.md` — 2026-11-17 — Laptop açılış düzenindeki communication alanı, Mullvad penceresi, KDE Wallet ve beyaz ekran sorunlarının nedenleri belirlendi.

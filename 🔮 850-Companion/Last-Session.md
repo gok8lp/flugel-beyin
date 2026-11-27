@@ -1,5 +1,10 @@
 # Son oturum
 
+## 2026-11-27 21:35 · laptop-acilis · 0972a018
+- **Ne yaptık (Claude / Opus 5.5):** Sağ üstteki Hyprland hatası `dynamic-cursors` sürüm uyumsuzluğuydu (yeniden derlendi, kendini onaran betik). Quickshell Qt 6.12.1 ile yeniden derlendi. LTS kaldırıldı, tek çekirdek 7.3.6. Kilit ekranı: 24 saat, tarih, güç düğmesi, tuş takımı rakam yaması. wireless-regdb (TR), rtkit, ts-proxy dispatcher düzeltmesi, spd5118 kara liste.
+- **Açık:** Yeniden başlatma testi ve kilit ekranında tuş takımı denemesi Gökalp'te.
+- **Rapor:** `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md`.
+
 ## 2026-11-27 17:13 · medya-istemcileri · baf076b8
 - **Ne yaptık (Claude / Opus 5.5):** Laptopa AUR'dan `plex-desktop` 1.115 ve `jellyfin-desktop` 2.0.0 kuruldu, iki pencere de Hyprland'de açıldı. Adresler sunucuda salt okunur doğrulandı (Tailscale Serve, LAN, plex.gokalpgoksu.com). Jellyfin'in gokalpgoksu.com adresi yok, Funnel 443 artık Jellyfin'e gitmiyor.
 - **Ders:** `yay --sudoloop` (`sudo -v`) NOPASSWD'de bile parola istiyor; `--sudoflags -n` kullan.
@@ -16,12 +21,6 @@
 - **Ne yaptık (Claude / Opus 5.5):** flugelserver Syncthing GUI şifresi değişti (kullanıcı `flugel`); şifreyi Gökalp terminalde girdi, ajan görmedi. Yedek `/srv/backups/syncthing-sifre-20261126-222350/`.
 - **Ders:** Syncthing şifre doğrulaması `POST /rest/noauth/auth/password` ile yapılır (204/403); `/rest/*` basic auth CSRF yüzünden hep 403.
 - **Rapor:** `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md`.
-
-## 2026-11-27 00:23 · skill-ve-ajan-sistemi · cdb4bbd6
-- **Ne yaptık (Claude / Opus 5.5, lider; uygulayıcılar Sonnet/Haiku alt ajanları):** awesome-claude-skills listesinden incelenmiş 19 skill ortak köke kuruldu (superpowers, anthropics, trailofbits, frontend-slides, scientific-writing); `skill-yonetimi` (iş→skill tablosu, `skill-dagit`), `ozgun-is` (anti-slop), Claude lider bekçisi hook'u, `ai-limitler` düzeltmeleri (Codex ücretsiz plan, sandbox, ekip önerisi), Codex varsayılanı `gpt-6-luna`, `beyin-ara`, tek sayfa `~/Documents/ai_workplace/YENI-AJAN.md` ve üç global işaretçi.
-- **Test:** 7 tur sıfırdan ajan testi (Claude, Codex, Gemini) + bağımsız hakem. Hakem puanı 6. turda (2 yeni senaryo dahil) Claude 91, Codex 84, Gemini 94.
-- **Rapor:** `second-brain/raporlar/skill-ve-ajan-sistemi-2026-11-26.md`.
-- **Açık (Gökalp):** `claude login` (CodexBar Claude limitini okuyamıyor); Düdük'te hangi dalda devam edileceği; Hakemlik ve vize thread'lerinin güncel durumu.
 
 ## Önceki oturumlar
 

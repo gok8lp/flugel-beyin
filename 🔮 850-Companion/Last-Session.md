@@ -1,5 +1,9 @@
 # Son oturum
 
+## 2026-11-27 21:53 · dolphin-syncthing · 0972a018
+- **Ne yaptık (Claude / Opus 5.5):** Dolphin siyah ve okunur (qt6ct sarmalayıcı + FlugelSiyah), simgeli araç çubuğu, F4/Ctrl+Alt+T terminal, önizlemeler, ark, kio-admin. Syncthing iki uçta 1 sn algılama (~3 sn senkron). `acilis-kontrol` betiği.
+- **Açık:** Kısayol/tema seçimi Gökalp'te; yeniden başlatma testi.
+
 ## 2026-11-27 21:35 · laptop-acilis · 0972a018
 - **Ne yaptık (Claude / Opus 5.5):** Sağ üstteki Hyprland hatası `dynamic-cursors` sürüm uyumsuzluğuydu (yeniden derlendi, kendini onaran betik). Quickshell Qt 6.12.1 ile yeniden derlendi. LTS kaldırıldı, tek çekirdek 7.3.6. Kilit ekranı: 24 saat, tarih, güç düğmesi, tuş takımı rakam yaması. wireless-regdb (TR), rtkit, ts-proxy dispatcher düzeltmesi, spd5118 kara liste.
 - **Açık:** Yeniden başlatma testi ve kilit ekranında tuş takımı denemesi Gökalp'te.
@@ -16,11 +20,6 @@
 - **Açık (Gökalp/sonraki ajan):** Jellyfin şifresi (iki yöntem tutmadı, değişmedi); Komga/Kavita yerel şifreleri; kapı şifresini kullanan telefon uygulamaları yeni şifreyi Bitwarden'dan alacak.
 - **Ek (02:48):** gokalpgoksu.com'da Tailscale'den Syncthing, Sonarr/Radarr/Prowlarr, Uptime Kuma girişsiz (kapı internet yolunu korur); sonra (02:54) AdGuard, Dockge, File Browser, Linkding, n8n da girişsiz; Immich/Nextcloud tek tık OIDC; Vikunja, Semaphore, BookStack, Actual, Homebox, Portainer, Jellyfin, Speedtest açık (tarayıcıyla OIDC kurulumu gerekir).
 - **Rapor:** `second-brain/raporlar/sifre-kasasi-ve-dondurme-2026-11-27.md`.
-
-## 2026-11-27 01:27 · syncthing-sifre · c6d1fcbc
-- **Ne yaptık (Claude / Opus 5.5):** flugelserver Syncthing GUI şifresi değişti (kullanıcı `flugel`); şifreyi Gökalp terminalde girdi, ajan görmedi. Yedek `/srv/backups/syncthing-sifre-20261126-222350/`.
-- **Ders:** Syncthing şifre doğrulaması `POST /rest/noauth/auth/password` ile yapılır (204/403); `/rest/*` basic auth CSRF yüzünden hep 403.
-- **Rapor:** `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md`.
 
 ## Önceki oturumlar
 

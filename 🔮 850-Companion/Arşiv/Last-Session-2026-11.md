@@ -78,3 +78,14 @@ Henüz bir çalışma sonucu kaydedilmedi. Anlamlı çalışma sonunda sonuç, g
 
 
 <!-- /beyin-compact-v1 -->
+
+## 2026-11-27 18:52 UTC, Last-Session.md, 472 karakter taşındı
+
+<!-- beyin-compact-v1: {"kind": "move", "source": "🔮 850-Companion/Last-Session.md", "id": "715dacfb793762f4bfd3b5de79e68381ed45f4344fecec09ed62519f96a8efe4", "chars": 472, "sha256": "b2da02d33e0cdf0b9a4e5b9e15fdc92181ceb71191e8f670e67524f6a5dc97c9"} -->
+## 2026-11-27 01:27 · syncthing-sifre · c6d1fcbc
+- **Ne yaptık (Claude / Opus 5.5):** flugelserver Syncthing GUI şifresi değişti (kullanıcı `flugel`); şifreyi Gökalp terminalde girdi, ajan görmedi. Yedek `/srv/backups/syncthing-sifre-20261126-222350/`.
+- **Ders:** Syncthing şifre doğrulaması `POST /rest/noauth/auth/password` ile yapılır (204/403); `/rest/*` basic auth CSRF yüzünden hep 403.
+- **Rapor:** `second-brain/raporlar/syncthing-sifre-degisimi-2026-11-27.md`.
+
+
+<!-- /beyin-compact-v1 -->

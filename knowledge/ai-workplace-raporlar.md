@@ -82,6 +82,7 @@ Bu kasanın dışındaki `~/Documents/ai_workplace/second-brain` klasörü, Aven
 
 ## Diğer (2026-11-16 sonrası)
 
+- `second-brain/raporlar/2026-11-27-dolphin-tema-syncthing.md` — 2026-11-27 — Dolphin siyah okunur tema (qt6ct sarmalayıcı, FlugelSiyah), simgeli araç çubuğu ve terminal kısayolları, önizleme/konsole/ark/kio-admin; Syncthing algılama 10→1 sn, LAN adresi.
 - `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md` — 2026-11-27 — Laptop: Hyprland açılış hatası (dynamic-cursors sürüm uyumsuzluğu) ve Quickshell/Qt uyumsuzluğu giderildi, LTS kaldırılıp tek çekirdek (7.3.6) bırakıldı, kilit ekranı 24 saat/tarih/güç düğmesi ve tuş takımı rakam yaması, wireless-regdb/rtkit, ts-proxy dispatcher düzeltmesi.
 - `second-brain/raporlar/2026-11-26-laptop-numlock-tpm-tailscale.md` — 2026-11-26 — Kilit ekranı NumLock servisi eklendi, giriş ekranı için greetd ayarı yapıldı; disk şifresi (TPM2) ve okul ağında Tailscale notları kaydedildi.
 - `second-brain/raporlar/touchpad-gecikme-tani-2026-11-26.md` — 2026-11-26 — Laptop touchpad'inde zamanla artan gecikme sorununun tanısı yapıldı; kayıt ve araştırma raporu hazırlandı.

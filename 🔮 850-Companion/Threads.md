@@ -37,6 +37,7 @@
 ### Laptop bakımı (ThinkBook, Arch + Hyprland + Dux)
 - **Sahip:** Gökalp.
 - **Durum (2026-11-27):** Tek çekirdek `linux` 7.3.6 (LTS kaldırıldı, systemd-boot varsayılanı `arch-linux.efi`). Hyprland eklentisi `dynamic-cursors` açılışta `~/.local/bin/hypr-eklenti-derle` ile yüklenir, sürüm uyumsuzsa kendini yeniden derler. Quickshell yerelde Qt 6.12.1 ile derlendi (`0.3.2-1.1`). Kilit ekranı tuş takımı yaması `dux-ozel/yamalar/02-kilit-numpad.patch`; eski `kilit-numlock` servisi arşivde. Rapor: `second-brain/raporlar/2026-11-27-laptop-acilis-cekirdek-kilit.md`.
-- **Sonraki adım:** Yeniden başlatıp açılış günlüğünü kontrol et; kilit ekranında tuş takımıyla parola dene (elle denenmedi). Giriş ekranında da aynı sorun varsa dux-greeter için çözüm ara.
+- **Dolphin + Syncthing (2026-11-27):** Dolphin `/usr/local/bin/dolphin` sarmalayıcısıyla qt6ct + `FlugelSiyah` şemasında açılır (GTK teması açık olduğu için adlar siyah çiziliyordu). Terminal: F4 panel, Ctrl+Alt+T Ghostty (`--gtk-single-instance=false`, yoksa klasör kaçıyor). Syncthing iki uçta algılama 1 sn. Rapor: `second-brain/raporlar/2026-11-27-dolphin-tema-syncthing.md`.
+- **Sonraki adım:** Yeniden başlatıp `acilis-kontrol` çalıştır; kilit ekranında tuş takımıyla parola dene (elle denenmedi). Giriş ekranında da aynı sorun varsa dux-greeter için çözüm ara.
 
 ## Closed Threads
